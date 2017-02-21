@@ -25,6 +25,7 @@ data=s.get(url,headers=header)
 re1=re.compile('_xsrf" value="(.+)"')
 print(data.text,data.encoding,data.status_code,data.cookies,data.headers)
 #读取html编码，赋值改变编码模式,响应状态,获取cookies,获取头部
+#files=open('1.txt','rb')上传文件
 print('+++++++++++++++')
 p={
 '_xsrf':re1.findall(data.text)[0],
