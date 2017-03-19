@@ -1,7 +1,7 @@
 #coding:utf-8
 import paramiko
 import time
-#import logger
+import logger
 class ssh():
 	def __init__(self,username,password,ip,port):
 		self.username=username
@@ -14,6 +14,9 @@ class ssh():
 	def connect(self):
 		self.client=paramiko.SSHClient()
 		self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+		logger.info('connect linux')
+		logger.debug('logging debug test')
+		logger.debug('logging debug test2')
 		while not self.state:
 			try:
 				self.client.connect(self.ip,self.port,self.username,self.password)
