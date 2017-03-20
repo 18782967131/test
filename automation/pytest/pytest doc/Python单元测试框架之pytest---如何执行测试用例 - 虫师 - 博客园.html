@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.cnblogs.com/fnng/p/4765112.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/bundle-Minyx2_Lite.css">
+<link type="text/css" rel="stylesheet" href="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/91739.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/bundle-Minyx2_Lite-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/fnng/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/fnng/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/fnng/wlwmanifest.xml">
+<script type="text/javascript" src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/encoder.js.下载"></script><script src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/jquery.js.下载" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'fnng', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+<script src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/bundle-Minyx2_Lite.js.下载" language="javascript" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+
+<div id="container">
+    <a class="minyx" href="http://www.cnblogs.com/">代码改变世界</a>
+    <ul id="topMnu">
+        <!-- 统计数据 -->
+        <li>
+            
+                <div id="blog_stats">
+Posts - 262, 
+Articles - 1, 
+Comments - 2239
+<!----></div>
+            
+        </li>
+        <!-- 这边可以增加一些链接 -->
+        <!-- 博客园 -->
+        <li><a href="http://www.cnblogs.com/">Cnblogs</a></li>
+        <!-- 管理 -->
+        <li id="topMnu-dashboard">
+            <a id="lnkDashboard" href="http://www.cnblogs.com/fnng/admin/EditPosts.aspx">Dashboard</a></li>
+        <li>
+            <a id="lnkLogin" href="http://passport.cnblogs.com/login.aspx?ReturnUrl=http://www.cnblogs.com/fnng/p/4765112.html">Login</a></li>
+    </ul>
+
+    <script type="text/javascript">
+        var m = window.__blog.topMenuRendered;
+        if (m) { m(__$("topMnu")); }
+    </script>
+
+    <div id="header">
+        <ul id="menu">
+            <!-- 首页，当前section加上current类 -->
+            <li id="menu-home" class="current">
+                <a id="lnkHome" href="http://www.cnblogs.com/fnng/">Home</a></li>
+            <!-- 联系 -->
+            <li id="menu-contact">
+                <a id="lnkContact" href="http://space.cnblogs.com/msg/send/%e8%99%ab%e5%b8%88">Contact</a></li>
+            <!-- 相册 -->
+            <li id="menu-gallary">
+                <a id="lnkGallery" href="http://www.cnblogs.com/fnng/gallery.html">Gallery</a></li>
+            <!-- Rss订阅 -->
+            <li id="rss">
+                <a id="lnkRss" href="http://www.cnblogs.com/fnng/rss">RSS</a></li>
+        </ul>
+        <div id="newmsg"></div>
+        <h1>
+            <!-- 主标题 -->
+            <a id="lnkBlogTitle" href="http://www.cnblogs.com/fnng/">虫师</a>
+            <!-- 子标题 -->
+            <small>
+                大人不华，君子务实。
+独立博客：http://www.testpub.cn</small>
+        </h1>
+    </div>
+
+    <script type="text/javascript">
+        var m = window.__blog.headerRendered;
+        if (m) { m(__$("header")); }
+    </script>
+
+    <div id="wrapper">
+        <div id="content">
+            <script type="text/javascript">
+                var m = window.__blog.preRenderPosts;
+                if (m) { m(); }
+            </script>
+            
+<div id="post_detail">
+<div class="post" id="post">
+    <a name="top"></a>
+    <h2><a id="cb_post_title_url" href="http://www.cnblogs.com/fnng/p/4765112.html">Python单元测试框架之pytest---如何执行测试用例</a></h2>
+    <small>2015-08-27 23:23 by 虫师, <span id="post_view_count">7549</span> 阅读, <span id="post_comment_count">0</span> 评论, <a href="http://www.cnblogs.com/fnng/p/4765112.html#" onclick="AddToWz(4765112);return false;">收藏</a>,  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=4765112" rel="nofollow">编辑</a></small>
+    <div class="entry">
+        <div id="cnblogs_post_body"><p>&nbsp;</p>
+<p><span style="font-size: 18pt; background-color: #c0c0c0;"><strong>介绍 &nbsp;</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p>　　pytest是一个成熟的全功能的Python测试工具，可以帮助你写出更好的程序。</p>
+<p>适合从简单的单元到复杂的功能测试</p>
+<ul>
+<li>l&nbsp;模块化parametrizeable装置（在2.3，持续改进）</li>
+<li>l&nbsp;参数化测试函数（用例）</li>
+<li>l&nbsp;标记测试功能与属性</li>
+<li>l&nbsp;Skip和xfail：处理不成功的测试用例（在2.4改进）</li>
+<li>l&nbsp;通过xdist插件分发测试到多个CPU</li>
+<li>l&nbsp;不断地重新运行失败的测试</li>
+<li>l&nbsp;灵活约定的Python测试发现</li>
+</ul>
+<p>Home&nbsp;Page:&nbsp;<a href="http://pytest.org/" target="_blank">http://pytest.org</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18pt; background-color: #c0c0c0;"><strong>安装</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p>&gt;pip&nbsp;install&nbsp;-U&nbsp;pytest&nbsp;&nbsp;&nbsp;#&nbsp;通过pip安装</p>
+<p>&gt;py.test&nbsp;--version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;查看pytest版本</p>
+<p>　This&nbsp;is&nbsp;pytest&nbsp;version&nbsp;2.7.2,&nbsp;imported&nbsp;from&nbsp;C:\Python27\lib\site-packages\pytest.pyc</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18pt; background-color: #c0c0c0;"><strong>简单的测试 &nbsp;</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p>　　</p>
+<p>　　让我们创建第一个文件，对个简单的功能进行测试。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="font-size: 15px;"><span style="color: #008000;">#</span><span style="color: #008000;">coding=utf-8</span>
+
+<span style="color: #008000;">#</span><span style="color: #008000;"> 功能</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> func(x):
+    </span><span style="color: #0000ff;">return</span> x + 1
+
+<span style="color: #008000;">#</span><span style="color: #008000;"> 测试用例</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> test_answer():
+    </span><span style="color: #0000ff;">assert</span> func(3) == 5</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;切换到测试文件所在的目录，通过“py.test”命令运行测试。</p>
+<p><strong><span style="color: #0000ff;">&gt;py.test&nbsp;</span></strong></p>
+<p>执行结果如下图：</p>
+<p><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/272314512193907.png" alt=""></p>
+<p>&nbsp;</p>
+<p>===================================================================</p>
+<p><span style="line-height: 1.5;">在一个测试类中创建多个测试用例：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="font-size: 15px;"><span style="color: #008000;">#</span><span style="color: #008000;">coding=utf-8</span>
+
+<span style="color: #0000ff;">class</span><span style="color: #000000;"> TestClass:
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_one(self):
+        x </span>= <span style="color: #800000;">"</span><span style="color: #800000;">this</span><span style="color: #800000;">"</span>
+        <span style="color: #0000ff;">assert</span> <span style="color: #800000;">"</span><span style="color: #800000;">h</span><span style="color: #800000;">"</span> <span style="color: #0000ff;">in</span><span style="color: #000000;"> x
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_two(self):
+        x </span>= <span style="color: #800000;">"</span><span style="color: #800000;">hello</span><span style="color: #800000;">"</span>
+        <span style="color: #0000ff;">assert</span> x == <span style="color: #800000;">"</span><span style="color: #800000;">hi</span><span style="color: #800000;">"</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><span style="line-height: 1.5;">运行测试：</span></p>
+<p><strong><span style="color: #0000ff;">&gt;py.test&nbsp;-q&nbsp;test_class.py</span></strong></p>
+<p><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/272316285624179.png" alt=""></p>
+<p><span style="line-height: 1.5;">-q&nbsp;&nbsp;</span><span style="font-family: 宋体;">为</span><span style="font-family: &#39;Times New Roman&#39;;">quiet</span><span style="font-family: 宋体;">。表示在安静的模式输出报告诉。加不加这个参有什么区别呢？&nbsp;读者可以对比一下两次输出的日志。其实，就是少了一些</span><span style="font-family: &#39;Times New Roman&#39;;">pytest</span><span style="font-family: 宋体;">的版本信息。</span></p>
+<p>&nbsp;</p>
+<p>===================================================================</p>
+<p>&nbsp;</p>
+<p>从<span style="font-family: &#39;Times New Roman&#39;;">Python</span><span style="font-family: 宋体;">代码中调用</span><span style="font-family: &#39;Times New Roman&#39;;">pytest</span></p>
+<p>pytest<span style="font-family: 宋体;">中同样提供了</span><span style="font-family: &#39;Times New Roman&#39;;">main()&nbsp;</span><span style="font-family: 宋体;">来函数来执行测试用例。</span></p>
+<p class="pre">pytest/</p>
+<p class="pre">├──&nbsp;test_sample.py</p>
+<p class="pre">├──&nbsp;test_class.py</p>
+<p class="pre">└──&nbsp;test_main.py</p>
+<p>此目录为我们练习的目录，打开<span style="font-family: &#39;Times New Roman&#39;;">test_mian.py</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="font-size: 15px;"><span style="color: #0000ff;">import</span><span style="color: #000000;"> pytest
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_main():
+    </span><span style="color: #0000ff;">assert</span> 5 != 5
+
+<span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    pytest.main()</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;<span style="line-height: 1.5;">直接运行该程序，</span><span style="font-family: &#39;Times New Roman&#39;;">sublime&nbsp;</span><span style="font-family: 宋体;">中按</span><span style="font-family: &#39;Times New Roman&#39;;">Ctrl+B&nbsp;</span><span style="font-family: 宋体;">运行。结果如下：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="font-size: 15px;">============================= test session starts =============================<span style="color: #000000;">
+platform win32 </span>-- Python 2.7.10 -- py-1.4.30 -- pytest-2.7.2<span style="color: #000000;">
+rootdir: D:\pyse\pytest, inifile: 
+collected </span>4<span style="color: #000000;"> items
+
+<span style="color: #ff0000;">test_class.py .F
+test_main.py F
+test_sample.py F
+
+</span></span>================================== FAILURES ===================================
+<span style="color: #800080;">_____________________________</span> TestClass.test_two <span style="color: #800080;">______________________________</span><span style="color: #000000;">
+
+self </span>= &lt;test_class.TestClass instance at 0x000000000304F548&gt;
+
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> test_two(self):
+            x </span>= <span style="color: #800000;">"</span><span style="color: #800000;">hello</span><span style="color: #800000;">"</span>
+&gt;           <span style="color: #0000ff;">assert</span> x == <span style="color: #800000;">"</span><span style="color: #800000;">hi</span><span style="color: #800000;">"</span><span style="color: #000000;">
+E           </span><span style="color: #0000ff;">assert</span> <span style="color: #800000;">'</span><span style="color: #800000;">hello</span><span style="color: #800000;">'</span> == <span style="color: #800000;">'</span><span style="color: #800000;">hi</span><span style="color: #800000;">'</span><span style="color: #000000;">
+E             </span>-<span style="color: #000000;"> hello
+E             </span>+<span style="color: #000000;"> hi
+
+test_class.py:</span>11<span style="color: #000000;">: AssertionError
+</span><span style="color: #800080;">__________________________________</span> test_main <span style="color: #800080;">__________________________________</span>
+
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> test_main():
+</span>&gt;       <span style="color: #0000ff;">assert</span> 5 != 5<span style="color: #000000;">
+E    </span><span style="color: #0000ff;">assert</span> 5 != 5<span style="color: #000000;">
+
+test_main.py:</span>4<span style="color: #000000;">: AssertionError
+</span><span style="color: #800080;">_________________________________</span> test_answer <span style="color: #800080;">_________________________________</span>
+
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> test_answer():
+</span>&gt;       <span style="color: #0000ff;">assert</span> func(3) == 5<span style="color: #000000;">
+E    </span><span style="color: #0000ff;">assert</span> 4 == 5<span style="color: #000000;">
+E     </span>+  where 4 = func(3<span style="color: #000000;">)
+
+test_sample.py:</span>9<span style="color: #000000;">: AssertionError
+</span>===================== 3 failed, 1 passed <span style="color: #0000ff;">in</span> 0.03 seconds ======================<span style="color: #000000;">
+[Finished </span><span style="color: #0000ff;">in</span> 0.3s]</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p>　　从执行结果看到，<span style="font-family: &#39;Times New Roman&#39;;">main()&nbsp;</span><span style="font-family: 宋体;">默认执行了当前文件所在的目录下的所有测试文件。</span></p>
+<p>　　那么，如果我们只想运行某个测试文件呢？可以向<span style="font-family: &#39;Times New Roman&#39;;">main()</span><span style="font-family: 宋体;">中添加参数，就像在</span><span style="font-family: &#39;Times New Roman&#39;;">cmd</span><span style="font-family: 宋体;">命令提示符下面一样：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="font-size: 15px;"><span style="color: #008000;">#</span><span style="color: #008000;">coding=utf-8</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> pytest
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_main():
+    </span><span style="color: #0000ff;">assert</span> 5 != 5
+
+<span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    pytest.main(</span><span style="color: #800000;">"</span><span style="color: #800000;">-q test_main.py</span><span style="color: #800000;">"</span>)   <span style="color: #008000;">#</span><span style="color: #008000;"> 指定测试文件</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;运行结果：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="font-size: 15px;"><span style="color: #000000;">F
+</span>================================== FAILURES ===================================
+<span style="color: #800080;">__________________________________</span> test_main <span style="color: #800080;">__________________________________</span>
+
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> test_main():
+</span>&gt;       <span style="color: #0000ff;">assert</span> 5 != 5<span style="color: #000000;">
+E    </span><span style="color: #0000ff;">assert</span> 5 != 5<span style="color: #000000;">
+
+test_main.py:</span>4<span style="color: #000000;">: AssertionError
+</span>1 failed <span style="color: #0000ff;">in</span> 0.01 seconds</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p>那如果我想运行某个目录下的测试用例呢？指定测试目录即可。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="font-size: 15px;"><span style="color: #008000;">#</span><span style="color: #008000;">coding=utf-8</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> pytest
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_main():
+    </span><span style="color: #0000ff;">assert</span> 5 != 5
+
+<span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    pytest.main(</span><span style="color: #800000;">"</span><span style="color: #800000;">d:/pyse/pytest/</span><span style="color: #800000;">"</span>)  <span style="color: #008000;">#</span><span style="color: #008000;"> 指定测试目录</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18pt; background-color: #c0c0c0;"><strong>&nbsp;创建运行测试脚本</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>　　有时候我们的测试用例文件分散在不同的层级目录下，通过命令行的方式运行测试显示不太方便，如何编写一个运行所有测试用例的脚本呢？ pytest可以自动帮我们生成这样的脚本。</p>
+<p><strong><span style="color: #0000ff;">&gt;py.test --genscript=runtests.py</span></strong></p>
+<p><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/311516-20150829104628875-1227637976.jpg" alt=""></p>
+<p>打开生成的测runtests.py文件：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="font-size: 15px;">sources = <span style="color: #800000;">"""</span><span style="color: #800000;">
+eNrsve2S3EiSIDa3+jhtnvZ293Ra6SSdCZMUF0AzK1nk9OzM1nV2L4dNznKnm6TxY6dX1XVJVAJV
+halMIAkgWVU3O2d6Ar3CPYQeQn/1QjKTf8UnAplZ7O6ZPTNxpiszgQiPCA8PD3cPD/f/449+9/5H
+yds/W99M58v6fDqfl1XZzefv/9nbvxuPxxE8Oy+r8+jRy2dREq+bOt8siqaNo6zKo3hRV+1mRb/h
+a1UsuiKPPpRZdFncXNVN3qYRABmN3v/R23+OLbRd/v6/ePOf/tmPflSu1nXTRe1NOxotllnbRq+7
+PKlPfwMw0qNR
+……
+</span><span style="color: #800000;">"""</span>
+
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> sys
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> base64
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> zlib
+
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> DictImporter(object):
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__init__</span><span style="color: #000000;">(self, sources):
+        self.sources </span>=<span style="color: #000000;"> sources
+
+    </span><span style="color: #0000ff;">def</span> find_module(self, fullname, path=<span style="color: #000000;">None):
+        </span><span style="color: #0000ff;">if</span> fullname == <span style="color: #800000;">"</span><span style="color: #800000;">argparse</span><span style="color: #800000;">"</span> <span style="color: #0000ff;">and</span> sys.version_info &gt;= (2,7<span style="color: #000000;">):
+            </span><span style="color: #008000;">#</span><span style="color: #008000;"> we were generated with &lt;python2.7 (which pulls in argparse)</span>
+            <span style="color: #008000;">#</span><span style="color: #008000;"> but we are running now on a stdlib which has it, so use that.</span>
+            <span style="color: #0000ff;">return</span><span style="color: #000000;"> None
+        </span><span style="color: #0000ff;">if</span> fullname <span style="color: #0000ff;">in</span><span style="color: #000000;"> self.sources:
+            </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> self
+        </span><span style="color: #0000ff;">if</span> fullname + <span style="color: #800000;">'</span><span style="color: #800000;">.__init__</span><span style="color: #800000;">'</span> <span style="color: #0000ff;">in</span><span style="color: #000000;"> self.sources:
+            </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> self
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> None
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> load_module(self, fullname):
+        </span><span style="color: #008000;">#</span><span style="color: #008000;"> print "load_module:",  fullname</span>
+        <span style="color: #0000ff;">from</span> types <span style="color: #0000ff;">import</span><span style="color: #000000;"> ModuleType
+        </span><span style="color: #0000ff;">try</span><span style="color: #000000;">:
+            s </span>=<span style="color: #000000;"> self.sources[fullname]
+            is_pkg </span>=<span style="color: #000000;"> False
+        </span><span style="color: #0000ff;">except</span><span style="color: #000000;"> KeyError:
+            s </span>= self.sources[fullname + <span style="color: #800000;">'</span><span style="color: #800000;">.__init__</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+            is_pkg </span>=<span style="color: #000000;"> True
+
+        co </span>= compile(s, fullname, <span style="color: #800000;">'</span><span style="color: #800000;">exec</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        module </span>=<span style="color: #000000;"> sys.modules.setdefault(fullname, ModuleType(fullname))
+        module.</span><span style="color: #800080;">__file__</span> = <span style="color: #800000;">"</span><span style="color: #800000;">%s/%s</span><span style="color: #800000;">"</span> % (<span style="color: #800080;">__file__</span><span style="color: #000000;">, fullname)
+        module.</span><span style="color: #800080;">__loader__</span> =<span style="color: #000000;"> self
+        </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> is_pkg:
+            module.</span><span style="color: #800080;">__path__</span> =<span style="color: #000000;"> [fullname]
+
+        do_exec(co, module.</span><span style="color: #800080;">__dict__</span>) <span style="color: #008000;">#</span><span style="color: #008000;"> noqa</span>
+        <span style="color: #0000ff;">return</span><span style="color: #000000;"> sys.modules[fullname]
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> get_source(self, name):
+        res </span>=<span style="color: #000000;"> self.sources.get(name)
+        </span><span style="color: #0000ff;">if</span> res <span style="color: #0000ff;">is</span><span style="color: #000000;"> None:
+            res </span>= self.sources.get(name + <span style="color: #800000;">'</span><span style="color: #800000;">.__init__</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> res
+
+</span><span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">"</span><span style="color: #800000;">__main__</span><span style="color: #800000;">"</span><span style="color: #000000;">:
+    </span><span style="color: #0000ff;">if</span> sys.version_info &gt;= (3<span style="color: #000000;">, 0):
+        </span><span style="color: #0000ff;">exec</span>(<span style="color: #800000;">"</span><span style="color: #800000;">def do_exec(co, loc): exec(co, loc)\n</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">import</span><span style="color: #000000;"> pickle
+        sources </span>= sources.encode(<span style="color: #800000;">"</span><span style="color: #800000;">ascii</span><span style="color: #800000;">"</span>) <span style="color: #008000;">#</span><span style="color: #008000;"> ensure bytes</span>
+        sources =<span style="color: #000000;"> pickle.loads(zlib.decompress(base64.decodebytes(sources)))
+    </span><span style="color: #0000ff;">else</span><span style="color: #000000;">:
+        </span><span style="color: #0000ff;">import</span><span style="color: #000000;"> cPickle as pickle
+        </span><span style="color: #0000ff;">exec</span>(<span style="color: #800000;">"</span><span style="color: #800000;">def do_exec(co, loc): exec co in loc\n</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+        sources </span>=<span style="color: #000000;"> pickle.loads(zlib.decompress(base64.decodestring(sources)))
+
+    importer </span>=<span style="color: #000000;"> DictImporter(sources)
+    sys.meta_path.insert(0, importer)
+
+    entry </span>= <span style="color: #800000;">"</span><span style="color: #800000;">import pytest; raise SystemExit(pytest.cmdline.main())</span><span style="color: #800000;">"</span><span style="color: #000000;">
+    do_exec(entry, locals()) </span><span style="color: #008000;">#</span><span style="color: #008000;"> noqa</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;好吧！其实， 我也不理解这段代码的含义，但是执行它的可运行测试用例了。</p>
+<p class="pre"><span style="line-height: 1.5;">pytest/</span></p>
+<p>├──&nbsp;test_case/</p>
+<p>│&nbsp;&nbsp;&nbsp;├── test_sample.py</p>
+<p>│&nbsp;&nbsp;&nbsp;├──&nbsp;test_class.py</p>
+<p>│&nbsp;&nbsp;&nbsp;├── __init__.py</p>
+<p>│ &nbsp; └──&nbsp;test_case2/</p>
+<p>│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;├── test_main.py</p>
+<p>│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;├── test_time.py</p>
+<p>│ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;└──&nbsp;__init__.py</p>
+<p>└──&nbsp;runtests.py</p>
+<p>&nbsp;</p>
+<p>执行runtest.py文件。</p>
+<p><strong><span style="color: #0000ff;">&gt;python runtest.py</span></strong></p>
+<p><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/311516-20150829110642281-721829803.jpg" alt=""></p>
+<p>当然，你也可以打开runtests.py 文件运行它。</p>
+<p>&nbsp;</p>
+<p>===================================================================</p>
+<p>*&nbsp;<span style="font-family: 宋体;">最后，</span><span style="font-family: &#39;Times New Roman&#39;;">pytest</span><span style="font-family: 宋体;">是如果识别测试用例的呢？</span><span style="font-family: 宋体;">它默认使用检查以</span><span style="font-family: &#39;Times New Roman&#39;;">test_ *.py 或*_test.py命名的文件名，在文件内部查找以test_</span><span style="font-family: 宋体;">打头的方法或函数，并执行它们。</span></p>
+<p>pytest<span style="font-family: 宋体;">还有许多需要讨论的地方，做为这个系列的第一节，先介绍到这里。</span></p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+        <div class="clear"></div>
+        <div id="blog_post_info_block">
+        <div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(4765112,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;f93e222f-6da1-e011-a53f-842b2b196315&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/fnng/" target="_blank"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/u311516.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/fnng/">虫师</a><br>
+            <a href="http://home.cnblogs.com/u/fnng/followees">关注 - 31</a><br>
+            <a href="http://home.cnblogs.com/u/fnng/followers">粉丝 - 4667</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;f93e222f-6da1-e011-a53f-842b2b196315&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(4765112,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(4765112,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+        <div class="clear"></div>
+        <div id="post_next_prev"><a href="http://www.cnblogs.com/fnng/p/4753511.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/fnng/p/4753511.html" title="发布于2015-08-23 23:13">《selenium2 Java 自动化测试实战（第二版）》 更新2016.5.3</a><br><a href="http://www.cnblogs.com/fnng/p/4768239.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/fnng/p/4768239.html" title="发布于2015-08-29 00:40">Python单元测试框架之pytest -- 生成测试报告</a><br></div>
+    </div>
+</div>
+    <ul class="postmetadata">
+        <li class="icon_cat" id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/fnng/category/454439.html" target="_blank">python</a></li>
+        <li class="icon_bullet" id="EntryTag"></li>
+    </ul>
+</div>
+<script type="text/javascript">var allowComments=true,cb_blogId=91739,cb_entryId=4765112,cb_blogApp=currentBlogApp,cb_blogUserGuid='f93e222f-6da1-e011-a53f-842b2b196315',cb_entryCreatedDate='2015/8/27 23:23:00';loadViewCount(cb_entryId);</script>
+<script type="text/javascript">
+    var m = window.__blog.postRendered;
+    if (m) { m(__$("post")); }
+</script>
+<script type="text/javascript">
+    var m = window.__blog.postRenderPosts;
+    if (m) { m(); }
+</script>
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/fnng/p/4765112.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/fnng/p/4765112.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://vcloud.163.com/?adchannel=bp_cnblogs2" target="_blank">【推荐】用1%的研发投入，搭载3倍性能的网易视频云技术</a><br><a href="http://rongcloud.cn/reports/journal2" target="_blank">【推荐】融云发布 App 社交化白皮书 IM 提升活跃超 8 倍</a><br></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"><a href="http://www.gcpowertools.com.cn/products/componentone.htm?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=C1&amp;utm_campaign=community" target="_blank"><img width="300" height="250" src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/24442-20161031104644908-57254170.png" alt=""></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/557291/" target="_blank">微软推出Visual Studio Mobile Center： 汇聚移动开发所需云服务</a><br> ·  <a href="http://news.cnblogs.com/n/557317/" target="_blank">连亚马逊都发现“纯电商”没有出路，淘宝你慌了吗？| 译站</a><br> ·  <a href="http://news.cnblogs.com/n/557315/" target="_blank">Adobe CC入华：这朵世界级的创意云是如何落地中国的？</a><br> ·  <a href="http://news.cnblogs.com/n/557286/" target="_blank">微软正式宣布Visual Studio 2017候选发布版本</a><br> ·  <a href="http://news.cnblogs.com/n/557275/" target="_blank">.NET Core 1.1发布，微软.NET框架核心类库</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="ad_c2" class="c_ad_block"><a href="https://www.jiguang.cn/devservice/?from=cnblogs01" target="_blank"><img width="468" height="60" src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/24442-20161114133622451-1554357151.jpg" alt=""></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/555750/" target="_blank">循序渐进地代码重构</a><br> ·  <a href="http://kb.cnblogs.com/page/554496/" target="_blank">技术的正宗与野路子</a><br> ·  <a href="http://kb.cnblogs.com/page/553682/" target="_blank">陈皓：什么是工程师文化？</a><br> ·  <a href="http://kb.cnblogs.com/page/551422/" target="_blank">没那么难，谈CSS的设计模式</a><br> ·  <a href="http://kb.cnblogs.com/page/550625/" target="_blank">程序猿媳妇儿注意事项</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+        </div>
+
+        <script type="text/javascript">
+            var m = window.__blog.contentRendered;
+            if (m) { m(__$("content")); }
+        </script>
+
+        <div id="sidebar">
+            
+<div id="about">
+<div>
+<h2 id="about_title">About</h2>
+<div id="about_body">
+<div id="blog-news"><p style="margin-bottom: 3.75pt; margin-top: 3.75pt; line-height: 15.75pt;"><a href="http://item.jd.com/11858013.html"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/311516-20160113191626944-842201220.jpg" alt="" style="line-height: 1.5;"></a><a target="_blank" href="http://product.dangdang.com/1353137284.html"><span style="line-height: 15.75pt;"> </span></a><span style="line-height: 15.75pt;">
+  </span></p>
+  <p>独立blog：</p>
+  <p><span style="line-height: 1.5;"><a href="http://www.testpub.cn/">http://www.testpub.cn/</a></span></p>
+  <p>&nbsp;</p>
+  <p><span style="font-weight: bold; font-size: 10.5pt; font-family: Verdana;">虫师</span></p>
+  <p><span style="font-size: 10pt; font-family: Verdana; ">&nbsp; &nbsp; &nbsp;毕业于一个三流的学校，大学时与舍友贪玩各种网游，但很少旷课，热爱计算机行业，毕业后没钱培训，在一朋友帮助下，租房闭关苦学java，希望能成为一名苦B程序猿，一次偶然机会步入软件测试，从此在测试的道路坚定不移。因为是找bug(虫)的测试员，故名虫师。</span></p>
+  <p style="margin-bottom:3.7500pt; margin-top:3.7500pt; text-autospace:ideograph-other; line-height:15.7500pt; "><span style="font-size: 10.5pt; font-family: Verdana; ">-----------------------------</span>
+  </p>
+  <div>
+   <span style="color: red;">selenium进阶3群：304533796</span><br>
+   <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=66d7222f6b0d3dbe21e1503fa2d461dbf7585cce8e28031755d2f9ad2259d123"><img border="0" src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/group.png" alt="selenium进阶2群" title="selenium进阶2群"></a>
+   <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=5997473683caa59c4d285724dea458f38495e0bb2372724baa2d7a8c861116ef"><img border="0" src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/group.png" alt="selenium进阶4群" title="selenium进阶4群"></a>
+  </div>
+  <p><span style="font-size: 10.5pt; font-family: Verdana; ">----------------------------</span></p>
+  <br>
+  <strong><a href="http://itest.info/courses/2">
+    <span style="color: red;">Python selenium 自动化测试2016年8月28号开班</span></a></strong>
+  <br>
+ <br>
+  <strong><a href="http://itest.info/courses/6">
+    <span style="color: red;">Python Web接口开发与测试2016年10月份开班</span></a></strong>
+  <br>
+  <p><br></p>
+  <div>
+  </div>
+  <p style="margin-bottom: 3.75pt; margin-top: 3.75pt; line-height: 13.75pt;"><img src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/t_test.png" alt="" style="line-height: 1.5;"><a target="_blank" href="http://product.dangdang.com/1353137284.html"><span style="line-height: 13.75pt;"> </span></a><span style="line-height: 13.75pt;"></span></p><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/fnng/">虫师</a><br>园龄：<a href="http://home.cnblogs.com/u/fnng/" title="入园时间：2011-06-28">5年4个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/fnng/followers/">4667</a><br>关注：<a href="http://home.cnblogs.com/u/fnng/followees/">31</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;f93e222f-6da1-e011-a53f-842b2b196315&#39;)">+加关注</a></div></div></div>
+<script type="text/javascript">loadBlogNews();</script>
+</div>
+</div>
+</div>
+
+            <script type="text/javascript">
+                var m = window.__blog.aboutRendered;
+                if (m) { m(__$("about")); }
+            </script>
+            
+<div id="mySearchWrapper">
+    <div id="mySearch">
+        <input type="image" src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/btnsearch.gif" id="btnZzk" class="submit" onclick="zzk_go();return false;">
+        <label class="lb_search"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="keyword"></label>
+    </div>
+</div>
+
+            <script type="text/javascript">
+                var m = window.__blog.searchFormRendered;
+                if (m) { m(__$("searchform")); }
+            </script>
+            <div id="sideMain">
+            <div id="side-recent-comments">
+        <h2>最新评论</h2>
+        <ul class="voice">
+                <li>
+                    <a href="http://www.cnblogs.com/fnng/archive/2012/08/09/2631002.html#3558592">Re:性能测试知多少---性能测试流程</a>
+                    <br>
+                    <a class="child" href="http://www.cnblogs.com/fnng/archive/2012/08/09/2631002.html#3558592">
+                        来的比较晚，请问虫师大大，性能测试群是多少
+                        -- 小曹-重新上路
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.cnblogs.com/fnng/archive/2012/04/01/2429114.html#3558581">Re:一个测试员的工作与学习</a>
+                    <br>
+                    <a class="child" href="http://www.cnblogs.com/fnng/archive/2012/04/01/2429114.html#3558581">
+                        @buguhl
+selenium进阶2群 287899100
+你试试，还没满···
+                        -- 省略
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.cnblogs.com/fnng/archive/2012/04/01/2429114.html#3558579">Re:一个测试员的工作与学习</a>
+                    <br>
+                    <a class="child" href="http://www.cnblogs.com/fnng/archive/2012/04/01/2429114.html#3558579">
+                        @小麦旋风
+selenium进阶2群 287899100
+虫师的群！！哈哈~~还没满，你可以试试
+                        -- 省略
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.cnblogs.com/fnng/archive/2012/04/01/2429114.html#3558495">Re:一个测试员的工作与学习</a>
+                    <br>
+                    <a class="child" href="http://www.cnblogs.com/fnng/archive/2012/04/01/2429114.html#3558495">
+                        我是今天无意中搜索测试相关知识找到博主的文，关于你的大学至找到工作最后离职换工作我都看了。我是今年毕业的，做测试一个月零八天。现在做的测试也就是写测试用例，然后每天重复测试，基本上没我什么事。但我想在......
+                        -- buguhl
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.cnblogs.com/fnng/p/3980093.html#3558147">Re:自动化基础普及之selenium是啥？</a>
+                    <br>
+                    <a class="child" href="http://www.cnblogs.com/fnng/p/3980093.html#3558147">
+                        解释的很清晰，之前就只迷惑在用例的组织上呢。
+                        -- yogayan
+                    </a>
+                </li>
+        </ul>
+    </div></div>
+            <div id="sideRight">
+            <div id="side-archives">
+        <h2>随笔档案</h2>
+        <ul class="date">
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/10.html">2016年10月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/09.html">2016年9月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/08.html">2016年8月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/07.html">2016年7月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/06.html">2016年6月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/05.html">2016年5月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/04.html">2016年4月(4)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/03.html">2016年3月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/02.html">2016年2月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2016/01.html">2016年1月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/12.html">2015年12月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/11.html">2015年11月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/10.html">2015年10月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/09.html">2015年9月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/08.html">2015年8月(5)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/07.html">2015年7月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/06.html">2015年6月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/05.html">2015年5月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/04.html">2015年4月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/03.html">2015年3月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2015/01.html">2015年1月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/12.html">2014年12月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/11.html">2014年11月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/10.html">2014年10月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/09.html">2014年9月(4)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/08.html">2014年8月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/07.html">2014年7月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/06.html">2014年6月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/05.html">2014年5月(6)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/04.html">2014年4月(5)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/03.html">2014年3月(4)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/02.html">2014年2月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2014/01.html">2014年1月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/12.html">2013年12月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/11.html">2013年11月(2)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/10.html">2013年10月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/09.html">2013年9月(4)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/08.html">2013年8月(10)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/07.html">2013年7月(6)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/06.html">2013年6月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/05.html">2013年5月(9)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/04.html">2013年4月(7)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/03.html">2013年3月(9)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/02.html">2013年2月(10)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2013/01.html">2013年1月(6)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/12.html">2012年12月(8)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/11.html">2012年11月(8)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/10.html">2012年10月(9)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/09.html">2012年9月(6)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/08.html">2012年8月(11)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/07.html">2012年7月(10)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/06.html">2012年6月(7)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/05.html">2012年5月(7)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/04.html">2012年4月(1)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/03.html">2012年3月(5)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/02.html">2012年2月(7)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2012/01.html">2012年1月(4)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2011/12.html">2011年12月(4)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2011/11.html">2011年11月(5)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2011/10.html">2011年10月(3)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2011/09.html">2011年9月(8)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2011/08.html">2011年8月(4)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2011/07.html">2011年7月(6)</a></li>
+                <li><a href="http://www.cnblogs.com/fnng/archive/2011/06.html">2011年6月(1)</a></li>
+        </ul>
+    </div></div>
+            <div id="sideLeft">
+            <div id="side-categories">
+        <h2>随笔分类</h2>
+        <ul class="folder">
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/411274.html">Apache(6)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/695788.html">appium(5)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/410088.html">AppScan(2)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/410087.html">AWStats(1)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/408725.html">BlueStacks(1)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/387355.html">curl-loader(2)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/581256.html">django(13)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/347981.html">git(2)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/310693.html">Java(6)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/345478.html">jmeter(13)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/345477.html">junit(3)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/355466.html">linux(16)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/389403.html">loadrunner(14)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/345480.html">maven2(2)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/389402.html">oracle(10)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/753331.html">PHP(1)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/454439.html">python(36)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/598667.html">Robot Framework(8)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/349036.html">selenium(39)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/411276.html">WebLog Expert(1)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/310692.html">测试工具(6)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/401609.html">测试流程(2)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/321617.html">测试思想(12)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/732258.html">接口测试(7)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/681778.html">前端技术(1)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/412001.html">协议分析工具(1)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/387349.html">性能测试思想(21)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/387356.html">页面性能测试(3)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/382389.html">杂谈(20)</a>
+                </li>
+                <li>
+                    
+                    <a href="http://www.cnblogs.com/fnng/category/451824.html">中间件(2)</a>
+                </li>
+        </ul>
+    </div><div id="side-top-posts-custom">
+    <h2>推荐排行榜</h2>
+    <div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/fnng/p/4333977.html">1. Robot Framework自动化测试 ---视频与教程免费分享(113)</a></li><li><a href="http://www.cnblogs.com/fnng/archive/2012/11/25/2787175.html">2. 一个计算机毕业生的经历(64)</a></li><li><a href="http://www.cnblogs.com/fnng/archive/2011/12/02/2272610.html">3. maven环境快速搭建(50)</a></li><li><a href="http://www.cnblogs.com/fnng/p/4064008.html">4. 一个前快播员工眼中的快播(42)</a></li><li><a href="http://www.cnblogs.com/fnng/p/3653793.html">5. 在做自动化测试之前你需要知道的(39)</a></li></ul></div>
+</div><div id="side-top-posts">
+    <h2>阅读排行榜</h2>
+    <div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/fnng/p/3576154.html">1. python实现简单爬虫功能(318413)</a></li><li><a href="http://www.cnblogs.com/fnng/archive/2011/12/02/2272610.html">2. maven环境快速搭建(195716)</a></li><li><a href="http://www.cnblogs.com/fnng/archive/2011/07/18/2110023.html">3. Eclipse连接MySQL数据库（傻瓜篇）(127318)</a></li><li><a href="http://www.cnblogs.com/fnng/p/3670789.html">4. python 多线程就这么简单(125437)</a></li><li><a href="http://www.cnblogs.com/fnng/p/3565912.html">5. python使用mysql数据库(122900)</a></li></ul></div>
+</div>    
+    
+    
+
+
+        
+<div id="side-link-382669">
+            <h2>友情链接</h2>
+            <ul class="chain">
+                        <li>
+                            <a href="http://blog.csdn.net/fnngj" target="_self">CSDN技术博客</a>
+                        </li>
+                        <li>
+                            <a href="http://www.cnblogs.com/jackei/" target="_self">Jackei测试博客</a>
+                        </li>
+                        <li>
+                            <a href="http://www.cnblogs.com/testermark/" target="_self">tester mark</a>
+                        </li>
+                        <li>
+                            <a href="http://www.testpub.cn/" target="_self">虫师独立博客</a>
+                        </li>
+                        <li>
+                            <a href="http://my.oschina.net/hyp3" target="_self">原配的性能测试</a>
+                        </li>
+                        <li>
+                            <a href="https://yq.aliyun.com/u/defnngj" target="_self">云栖社区blog</a>
+                        </li>
+                        <li>
+                            <a href="http://itest.info/" target="_self">重定向科技</a>
+                        </li>
+            </ul>
+        </div></div>
+            
+                <div id="sideContainer"></div>
+                <script type="text/javascript">
+                    $.ajax({
+                        url: '/' + currentBlogApp + '/mvc/blog/Minyx2_Lite_SideColumn.aspx',
+                        data: '{}',
+                        type: 'post',
+                        dataType: 'text',
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (data) {
+                            if (data) {
+                                $("#sideContainer").html(data);
+                                loadBlogDefaultCalendar();
+                                loadBlogSideBlocks();
+                                var m = window.__blog.sideContainerRendered;
+                                if (m) { m(__$("sideContainer")); }
+                                window.__blog.sidebar.__layout();
+                            }
+                        }
+                    });
+
+                </script>
+            
+        </div>
+
+        <script type="text/javascript">
+            var m = window.__blog.sidebarRendered;
+            if (m) { m(__$("sidebar")); }
+        </script>
+
+        <div id="footer">
+            
+<p id="logoFoot">
+    <a href="http://www.spiga.com.mx/" title="Agencia Interactiva Spiga">www.spiga.com.mx</a>
+</p>
+<div class="footText">
+<p>
+Copyright ©2016 虫师
+</p>
+<p>
+<a href="http://www.cnblogs.com/">博客园</a>
+</p>
+</div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var m = window.__blog.wrapperRendered;
+        if (m) { m(__$("wrapper")); }
+    </script>
+
+</div>
+<script type="text/javascript">
+    var m = window.__blog.containerRendered;
+    if (m) { m(__$("container")); }
+</script>
+<!--PageEndHtml Block Begin-->
+<script src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/stat.php" language="JavaScript">
+</script><script src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=3347352" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/pic2.gif"></a>
+<div align="center"><a href="http://www.amazingcounters.com/"><img border="0" src="./Python单元测试框架之pytest---如何执行测试用例 - 虫师 - 博客园_files/counter.php" alt="Web Page Counters"></a><br><a href="http://www.coupons-coupon-codes.com/staples/">Computer Desks</a></div>
+
+
+<!--评论，生成气泡效果标签代码-->
+  <script type="text/javascript" language="javascript"> 
+      $(document).ready(function() {
+          var commentTime = setInterval(function(){if($("#comments_pager_bottom").length>0){CommentBubble();clearTimeout(commentTime);}},50);
+      }); 
+      function CommentBubble()
+      {
+  var w1 = '<div class="list">' +
+          '<table class="out" border="0" cellspacing="0" cellpadding="0"> ' +
+             '<tr>' +
+                 '<td class="icontd" align="right" valign="bottom">' +
+                     '<img src="" width="70px" height="57px"/>' +
+                 '</td>' +
+                 '<td align="left" valign="bottom" class="q">' +
+                     '<table border="0" cellpadding="0" cellspacing="0" style=""> ' +
+                         '<tr><td class="topleft"></td><td class="top"></td><td class="topright"></td></tr> ' +
+                         '<tr><td class="left"></td> <td align="left" class="conmts"><p>';
+  
+  
+         var w2 = '</p> </td> <td class="right"></td></tr> ' +
+                         '<tr><td class="bottomleft"></td><td class="bottom"></td><td class="bottomright"></td></tr> ' +
+                     '</table>' +
+                 '</td> ' +
+             '</tr> ' +
+         '</table> ' +
+     '</div>';
+  
+         $.each($(".blog_comment_body"), function(i, t) {
+             $(t).html(w1 + $(t).html() + w2);
+         });
+ $(".louzhu").closest(".feedbackItem").find(".out").removeClass("out").addClass("inc");
+         /*.find(".q").attr("align","right");*/
+         }
+ </script>
+<!--PageEndHtml Block End-->
+
+
+</body></html>

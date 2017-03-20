@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/bundle-ThinkInside.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/bundle-ThinkInside-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/zz0412/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/zz0412/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/zz0412/wlwmanifest.xml">
+<script src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/jquery.js.下载" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'zz0412', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/zz0412/"><img id="blogLogo" src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/zz0412/">爱自己</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/zz0412/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E7%88%B1%E8%87%AA%E5%B7%B1">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/zz0412/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/zz0412/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 61&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 56</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html">Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><div class="Section0">
+<p class="p19"><span style="line-height: 1.5;">&nbsp;</span></p>
+</div>
+<div class="Section1">
+<h1>1&nbsp;简述</h1>
+<p class="p0">众所周知，<span style="font-family: Verdana;">Jenkins</span><span style="font-family: 宋体;">默认提供了一个邮件通知，能在构建失败、构建不稳定等状态后发送邮件。但是它本身有很多局限性，比如它的邮件通知无法提供详细的邮件内容、无法定义发送邮件的格式、无法定义灵活的邮件接收配置等等。在这样的情况下，我们找到了</span><a href="http://wiki.jenkins-ci.org/display/JENKINS/Email-ext+plugin">Jenkins&nbsp;Email&nbsp;Extension&nbsp;Plugin</a>。该插件能允许你自定义邮件通知的方方面面，比如在发送邮件时你可以自定义发送给谁，发送具体什么内容等等。本文不会告诉你如何安装该插件，关于插件的安装请参考<a href="http://www.cnblogs.com/zz0412/p/jenkins02.html">这里</a>。</p>
+<h1>2&nbsp;配置</h1>
+<p class="p0">它主要包含两个部分：全局配置和项目配置。</p>
+<h2>2.1&nbsp;全局配置</h2>
+<p class="p0">当然，在一个项目中应用<span style="font-family: Verdana;">email-ext</span><span style="font-family: 宋体;">插件之前，您必须做一些</span>全局的配置。现在先跳转到<span style="font-family: Verdana;">Jenkins</span><span style="font-family: 宋体;">的</span><span style="font-family: Verdana;">“</span><span style="font-family: 宋体;">系统</span>设置”<span style="font-family: 宋体;">页面，如下图：</span></p>
+<p class="p0">&nbsp;<img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/14104652-c8563d62e20348c9850d366ce1582ddf.png" alt=""></p>
+<p class="p0">找到标题为<span style="font-family: Verdana;">“</span>Extended&nbsp;E-mail&nbsp;Notification”<span style="font-family: 宋体;">的片段，你就能配置一些</span>全局的<span style="font-family: Verdana;">email-ext</span><span style="font-family: 宋体;">属性。这些属性必须匹配你</span><span style="font-family: Verdana;">SMTP</span><span style="font-family: 宋体;">邮件服务器的设置。这一节不仅能配置成</span><span style="font-family: Verdana;">Jenkins</span><span style="font-family: 宋体;">原有邮件通知的镜像</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">虽然有很多配置是一样的，但这是个不同的扩展点</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">，而且还增加了一些额外的功能。输入框中名为&nbsp;</span><span style="font-family: Verdana;">Default&nbsp;Subject&nbsp;</span><span style="font-family: 宋体;">和&nbsp;</span><span style="font-family: Verdana;">Default&nbsp;Content&nbsp;</span><span style="font-family: 宋体;">的项允许你在</span>全局级别配置邮件的内容。这样做的话，可以使您为所有的项目按您的需求做更好的、更简单的配置。如下图。</p>
+<p class="p0">&nbsp;<img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/14104702-0469a5255b4b44ff997618cd3787c10e.png" alt=""></p>
+<p class="p0">释放个我的配置：</p>
+<p class="p0">Default&nbsp;Subject：构建通知<span style="font-family: Verdana;">:$PROJECT_NAME&nbsp;-&nbsp;Build&nbsp;#&nbsp;$BUILD_NUMBER&nbsp;-&nbsp;$BUILD_STATUS!</span></p>
+<p class="p0">Default&nbsp;Content：</p>
+<p class="p0">&lt;hr/&gt;</p>
+<p class="p0">(<span style="font-family: 宋体;">本邮件是程序自动下发的，请勿回复！</span><span style="font-family: Verdana;">)&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">项目名称：<span style="font-family: Verdana;">$PROJECT_NAME&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">构建编号：<span style="font-family: Verdana;">$BUILD_NUMBER&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">svn<span style="font-family: 宋体;">版本号：</span><span style="font-family: Verdana;">${SVN_REVISION}&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">构建状态：<span style="font-family: Verdana;">$BUILD_STATUS&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">触发原因：<span style="font-family: Verdana;">${CAUSE}&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">构建日志地址：<span style="font-family: Verdana;">&lt;a&nbsp;href="${BUILD_URL}console"&gt;${BUILD_URL}console&lt;/a&gt;&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">构建地址：<span style="font-family: Verdana;">&lt;a&nbsp;href="$BUILD_URL"&gt;$BUILD_URL&lt;/a&gt;&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">变更集<span style="font-family: Verdana;">:${JELLY_SCRIPT,template="html"}&lt;br/&gt;&lt;hr/&gt;</span></p>
+<p class="p0">下面解释一下常用的属性。</p>
+<h3>2.1.1&nbsp;全局属性详解</h3>
+<p class="p0">1.&nbsp;Override&nbsp;Global&nbsp;Settings：如果不选，该插件将使用默认的<span style="font-family: Verdana;">E-mail&nbsp;Notification</span><span style="font-family: 宋体;">通知选项。反之，您可以通过指定不同于</span><span style="font-family: Verdana;">(&nbsp;</span><span style="font-family: 宋体;">默认选项</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">的设置来进行覆盖。</span></p>
+<p class="p0">2.&nbsp;Default&nbsp;Content&nbsp;Type：指定构建后发送邮件内容的类型，有<span style="font-family: Verdana;">Text</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">HTML</span><span style="font-family: 宋体;">两种</span><span style="font-family: Verdana;">.</span></p>
+<p class="p0">3.&nbsp;Use&nbsp;List-ID&nbsp;Email&nbsp;Header：为所有的邮件设置一个<span style="font-family: Verdana;">List-ID</span><span style="font-family: 宋体;">的邮件信头，这样你就可以在邮件客户端使用过滤。它也能阻止邮件发件人大部分的自动回复</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">诸如离开办公室、休假等等</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">。你可以使用你习惯的任何名称或者</span><span style="font-family: Verdana;">ID</span><span style="font-family: 宋体;">号，但是他们必须符合如下其中一种格式</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">真实的</span><span style="font-family: Verdana;">ID</span><span style="font-family: 宋体;">必须要包含在</span><span style="font-family: Verdana;">&lt;</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">&gt;</span><span style="font-family: 宋体;">标记里</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">：</span><br>&lt;ci-notifications.company.org&gt;<br>Build&nbsp;Notifications&nbsp;&lt;ci-notifications.company.org&gt;<br>“Build&nbsp;Notifications”&nbsp;&lt;ci-notifications.company.org&gt;<br>关于更详细的<span style="font-family: Verdana;">List-ID</span><span style="font-family: 宋体;">说明请参阅</span><a href="http://www.apps.ietf.org/rfc/rfc2919.html">RFC-2919</a>.</p>
+<p class="p0">4.&nbsp;Add&nbsp;'Precedence:&nbsp;bulk'&nbsp;Email&nbsp;Header：设置优先级,更详细说明请参阅<a href="http://tools.ietf.org/search/rfc3834">RFC-3834</a>.</p>
+<p class="p0">5.&nbsp;Default&nbsp;Recipients：自定义默认电子邮件收件人列表。如果没有被项目配置覆盖<span style="font-family: Verdana;">,</span><span style="font-family: 宋体;">该插件会使用这个列表。您可以在项目配置使用</span><span style="font-family: Verdana;">$&nbsp;DEFAULT_RECIPIENTS</span><span style="font-family: 宋体;">参数包括此默认列表，以及添加新的地址在项目级别。添加抄送：</span><span style="font-family: Verdana;">cc:</span><span style="font-family: 宋体;">电子邮件地址例如</span><span style="font-family: Verdana;">,CC:someone@somewhere.com</span></p>
+<p class="p0">6.&nbsp;Reply&nbsp;To&nbsp;List：回复列表<span style="font-family: Verdana;">,&nbsp;</span>A&nbsp;comma&nbsp;separated&nbsp;list&nbsp;of&nbsp;e-mail&nbsp;addresses&nbsp;to&nbsp;use&nbsp;in&nbsp;the&nbsp;Reply-To&nbsp;header&nbsp;of&nbsp;the&nbsp;email.&nbsp;This&nbsp;value&nbsp;will&nbsp;be&nbsp;available&nbsp;as&nbsp;$DEFAULT_REPLYTO&nbsp;in&nbsp;the&nbsp;project&nbsp;configuration.</p>
+<p class="p0">7.&nbsp;Emergency&nbsp;reroute：如果这个字段不为空，所有的电子邮件将被单独发送到该地址（或地址列表）。</p>
+<p class="p0">8.&nbsp;Excluded&nbsp;Committers：防止邮件被邮件系统认为是垃圾邮件<span style="font-family: Verdana;">,</span><span style="font-family: 宋体;">邮件列表应该没有扩展的账户名</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">如</span><span style="font-family: Verdana;">:</span>@domain.com),<span style="font-family: 宋体;">并且使用逗号分隔</span></p>
+<p class="p0">9.&nbsp;Default&nbsp;Subject：自定义邮件通知的默认主题名称。该选项能在邮件的主题字段中替换一些参数，这样你就可以在构建中包含指定的输出信息。</p>
+<p class="p0">10.&nbsp;Maximum&nbsp;Attachment&nbsp;Size：邮件最大附件大小。</p>
+<p class="p0">11.&nbsp;Default&nbsp;Content：自定义邮件通知的默认内容主体。该选项能在邮件的内容中替换一些参数，这样你就可以在构建中包含指定的输出信息。</p>
+<p class="p0">12.&nbsp;Default&nbsp;Pre-send&nbsp;Script：默认发送前执行的脚本（注：grooy<span style="font-family: 宋体;">脚本，这是我在某篇文章上看到的，不一定准确</span>）。</p>
+<p class="p0">13.&nbsp;Enable&nbsp;Debug&nbsp;Mode：启用插件的调试模式。这将增加额外的日志输出，构建日志以及Jenkins的日志。在调试时是有用的，但不能用于生产。</p>
+<p class="p0">14.&nbsp;Enable&nbsp;Security：启用时，会禁用发送脚本的能力，直接进入Jenkins实例。如果用户试图访问Jenkins管理对象实例，将抛出一个安全异常。</p>
+<p class="p0">15.&nbsp;Content&nbsp;Token&nbsp;Reference：邮件中可以使用的变量，所有的变量都是可选的。具体介绍请查看<a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#_全局邮件变量">全局邮件变量</a>章节。</p>
+<h3>2.1.2&nbsp;全局邮件变量</h3>
+<p class="p0">Ps<span style="font-family: 宋体;">：</span>看着感觉有点晕头，对比着Jenkins<span style="font-family: 宋体;">页面看要好些。</span></p>
+<p class="p0">email-ext<span style="font-family: 宋体;">插件允许使用</span>变量来动态插入数据到邮件的主题和内容主体中。变量是一个以<span style="font-family: Verdana;">$(</span><span style="font-family: 宋体;">美元符号</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">开始，并以空格结束的字符串。当一个邮件触发时，主题和内容主体字段的所有</span>变量都会通过真实的值动态地替换。同样，变量中的<span style="font-family: Verdana;">“</span><span style="font-family: 宋体;">值</span><span style="font-family: Verdana;">”</span><span style="font-family: 宋体;">能包含其它的</span>变量，都将被替换成真实的内容。</p>
+<p class="p0">比如，项目配置页的默认主题和内容分别对应的是全局配置页面的<span style="font-family: Verdana;">DEFAULT_SUBJECT</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">DEFAULT_CONTENT</span><span style="font-family: 宋体;">，因此它会自动地使用全局的配置。同理，</span>触发器中的Subject和Content分别对应的是项目配置页面的<span style="font-family: Verdana;">DEFAULT_SUBJECT</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">DEFAULT_CONTENT</span><span style="font-family: 宋体;">，所以它也会自动地使用项目的配置。由于</span>变量中的<span style="font-family: Verdana;">“</span><span style="font-family: 宋体;">值</span><span style="font-family: Verdana;">”</span><span style="font-family: 宋体;">能包含其它的</span>变量，所以就能为变量快速地创建不同的切入点：全局级别<span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">所有项目</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">，专属级别</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">单一项目</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">，</span>触发器级别<span style="font-family: Verdana;">(</span>构建结果)<span style="font-family: 宋体;">。</span></p>
+<p class="p0">如果你要查看所有可用的变量，你可以点击配置页的<span style="font-family: Verdana;">Content&nbsp;Token&nbsp;Reference</span><span style="font-family: 宋体;">的</span>问号获取详细的信息。</p>
+<p class="p0">所有的变量都是可选的，每个变量可以如下表示，字符串类型使用<span style="font-family: Verdana;">name=“value”</span><span style="font-family: 宋体;">，而布尔型和数字型使用</span><span style="font-family: Verdana;">name=value</span><span style="font-family: 宋体;">。如果</span><span style="font-family: Verdana;">{</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">}</span><span style="font-family: 宋体;">标记里面没有</span>变量，则不会被解析。示例：<span style="font-family: Verdana;">$TOKEN,${TOKEN},${TOKEN,count=100},${ENV,var=”PATH”}</span></p>
+<p class="p0">提示：用英文逗号分隔变量的参数。</p>
+<p class="p0">下面我解释一下常用的属性。</p>
+<ul>
+<li class="p0">&nbsp;${FILE,path="PATH"}&nbsp;包括指定文件（路径）的含量相对于工作空间根目录。
+<ul>
+<li class="p0">path<span style="font-family: 宋体;">文件路径，注意</span>：是工作区目录的相对路径。</li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p0">&nbsp;${BUILD_NUMBER}&nbsp;<span style="font-family: 宋体;">显示当前构建的编号。</span></li>
+<li class="p0">&nbsp;${JOB_DESCRIPTION}&nbsp;显示项目描述。</li>
+<li class="p0">&nbsp;${SVN_REVISION}&nbsp;显示svn<span style="font-family: 宋体;">版本</span>号。还支持<span style="font-family: Verdana;">Subversion</span><span style="font-family: 宋体;">插件出口</span>的SVN_REVISION_n<span style="font-family: 宋体;">版本。</span></li>
+<li class="p0">&nbsp;${CAUSE}&nbsp;显示谁、通过什么渠道触发这次构建。</li>
+<li class="p0">&nbsp;${CHANGES&nbsp;}&nbsp;-<span style="font-family: 宋体;">显示上一次构建之后的变化。</span>
+<ul>
+<li class="p0">showPaths&nbsp;<span style="font-family: 宋体;">如果为&nbsp;</span><span style="font-family: Verdana;">true,</span><span style="font-family: 宋体;">显示提交修改后的地址。默认</span><span style="font-family: Verdana;">false</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">showDependencies&nbsp;如果为<span style="font-family: Verdana;">true</span><span style="font-family: 宋体;">，</span>显示项目构建依赖。默认为<span style="font-family: Verdana;">false</span></li>
+<li class="p0">format&nbsp;遍历提交信息，一个包含<span style="font-family: Verdana;">%X</span><span style="font-family: 宋体;">的字符串，其中</span><span style="font-family: Verdana;">%a</span><span style="font-family: 宋体;">表示作者，</span><span style="font-family: Verdana;">%d</span><span style="font-family: 宋体;">表示日期，</span><span style="font-family: Verdana;">%m</span><span style="font-family: 宋体;">表示消息，</span><span style="font-family: Verdana;">%p</span><span style="font-family: 宋体;">表示路径，</span><span style="font-family: Verdana;">%r</span><span style="font-family: 宋体;">表示版本。注意，并不是所有的版本系统都支持</span><span style="font-family: Verdana;">%d</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">%r</span><span style="font-family: 宋体;">。如果指定</span><span style="font-family: Verdana;">showPaths</span><span style="font-family: 宋体;">将被忽略。默认</span><span style="font-family: Verdana;">“[%a]&nbsp;%m\\n”</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">pathFormat&nbsp;一个包含<span style="font-family: Verdana;">“%p”</span><span style="font-family: 宋体;">的字符串，用来标示怎么打印</span>路径。</li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p0">&nbsp;${BUILD_ID}<span style="font-family: 宋体;">显示当前构建生成的</span><span style="font-family: Verdana;">ID</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">&nbsp;${PROJECT_NAME}&nbsp;显示项目的全名。（见<span style="font-family: Verdana;">AbstractProject.getFullDisplayName</span><span style="font-family: 宋体;">）</span></li>
+<li class="p0">&nbsp;${PROJECT_DISPLAY_NAME}&nbsp;显示项目的显示名称。（见<span style="font-family: Verdana;">AbstractProject.getDisplayName</span><span style="font-family: 宋体;">）</span></li>
+<li class="p21">&nbsp;${SCRIPT}&nbsp;从一个脚本生成自定义消息内容。自定义脚本应该放在<span style="font-family: Verdana;">"$JENKINS_HOME/email-templates"</span><span style="font-family: 宋体;">。当使用自定义脚本</span>时会默认搜索$JENKINS_HOME/email-templatesdirectory目录。其他的目录将不会被搜索。
+<ul>
+<li class="p21">&nbsp;script&nbsp;当其使用的时候，仅仅只有最后一个值会被脚本使用（不能同时使用script和template<span style="font-family: 宋体;">）。</span></li>
+<li class="p21">&nbsp;template<span style="font-family: 宋体;">常规的</span><span style="font-family: Verdana;">simpletemplateengine</span><span style="font-family: 宋体;">格式模板。</span></li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p21">&nbsp;${JENKINS_URL}&nbsp;显示<span style="font-family: Verdana;">Jenkins</span><span style="font-family: 宋体;">服务器的</span><span style="font-family: Verdana;">url</span><span style="font-family: 宋体;">地址（你可以再系统配置页更改）。</span></li>
+<li class="p21">&nbsp;${BUILD_LOG_MULTILINE_REGEX}<span style="font-family: 宋体;">按正则表达式匹配</span>并显示构建日志。
+<ul>
+<li class="p21">&nbsp;regex&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html">java.util.regex.Pattern</a>&nbsp;生成正则表达式匹配的构建日志。无默认值，可为空。</li>
+<li class="p21">&nbsp;maxMatches&nbsp;匹配的最大数量。如果为<span style="font-family: Verdana;">0</span><span style="font-family: 宋体;">，</span>将匹配所有。默认为<span style="font-family: Verdana;">0</span><span style="font-family: 宋体;">。</span></li>
+<li class="p21">&nbsp;showTruncatedLines&nbsp;如果为<span style="font-family: Verdana;">true</span><span style="font-family: 宋体;">，包含</span><span style="font-family: Verdana;">[...truncated&nbsp;###&nbsp;lines...]</span><span style="font-family: 宋体;">行。默认为</span><span style="font-family: Verdana;">true</span><span style="font-family: 宋体;">。</span></li>
+<li class="p21">&nbsp;substText&nbsp;如果非空，就把这部分文字（而不是整行）插入该邮件。默认为空。</li>
+<li class="p21">escapeHtml&nbsp;如果为<span style="font-family: Verdana;">true</span><span style="font-family: 宋体;">，</span>格式化HTML<span style="font-family: 宋体;">。默认为</span><span style="font-family: Verdana;">false</span><span style="font-family: 宋体;">。</span></li>
+<li class="p21">&nbsp;matchedSegmentHtmlStyle&nbsp;如果非空，输出<span style="font-family: Verdana;">HTML</span><span style="font-family: 宋体;">。匹配的行数将变为</span><span style="font-family: Verdana;">&lt;b&nbsp;style=”your-style-value”&gt;&nbsp;html&nbsp;escaped&nbsp;matched&nbsp;line&nbsp;&lt;/b&gt;</span><span style="font-family: 宋体;">格式。默认为空。</span></li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p21">&nbsp;${BUILD_LOG}&nbsp;<span style="font-family: 宋体;">显示最终构建日志。</span>
+<ul>
+<li class="p21">&nbsp;maxLines&nbsp;日志最多显示的行数，默认<span style="font-family: Verdana;">250</span><span style="font-family: 宋体;">行。</span></li>
+<li class="p21">&nbsp;escapeHtml&nbsp;如果为<span style="font-family: Verdana;">true</span><span style="font-family: 宋体;">，格式化</span><span style="font-family: Verdana;">HTML</span><span style="font-family: 宋体;">。默认</span><span style="font-family: Verdana;">false</span><span style="font-family: 宋体;">。</span></li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p21">&nbsp;${PROJECT_URL}&nbsp;显示项目的<span style="font-family: Verdana;">URL</span>地址。</li>
+<li class="p0">&nbsp;${BUILD_STATUS}&nbsp;-<span style="font-family: 宋体;">显示当前构建的状态</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">失败、成功等等</span><span style="font-family: Verdana;">)</span></li>
+<li class="p0">&nbsp;${BUILD_URL}&nbsp;-<span style="font-family: 宋体;">显示当前构建的</span><span style="font-family: Verdana;">URL</span><span style="font-family: 宋体;">地址。</span></li>
+<li class="p0">&nbsp;${CHANGES_SINCE_LAST_SUCCESS}&nbsp;-<span style="font-family: 宋体;">显示上一次成功构建之后的变化。</span>
+<ul>
+<li class="p0">&nbsp;reverse<span style="font-family: 宋体;">在顶部标示新近的构建。默认</span><span style="font-family: Verdana;">false</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">&nbsp;format<span style="font-family: 宋体;">遍历构建信息，一个包含</span><span style="font-family: Verdana;">%X</span><span style="font-family: 宋体;">的字符串，其中</span><span style="font-family: Verdana;">%c</span><span style="font-family: 宋体;">为所有的改变，</span><span style="font-family: Verdana;">%n</span><span style="font-family: 宋体;">为构建编号。默认</span><span style="font-family: Verdana;">”Changes&nbsp;for&nbsp;Build&nbsp;#%n\n%c\n”</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">&nbsp;showPaths,changesFormat,pathFormat<span style="font-family: 宋体;">分别定义如</span><span style="font-family: Verdana;">${CHANGES}</span><span style="font-family: 宋体;">的</span><span style="font-family: Verdana;">showPaths</span><span style="font-family: 宋体;">、</span><span style="font-family: Verdana;">format</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">pathFormat</span><span style="font-family: 宋体;">参数。</span></li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p0">&nbsp;${CHANGES_SINCE_LAST_UNSTABLE}&nbsp;-<span style="font-family: 宋体;">显示显示上一次不稳固或者成功的构建之后的变化。</span>
+<ul>
+<li class="p0">reverse<span style="font-family: 宋体;">在顶部标示新近的构建。默认</span><span style="font-family: Verdana;">false</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">&nbsp;format<span style="font-family: 宋体;">遍历构建信息，一个包含</span><span style="font-family: Verdana;">%X</span><span style="font-family: 宋体;">的字符串，其中</span><span style="font-family: Verdana;">%c</span><span style="font-family: 宋体;">为所有的改变，</span><span style="font-family: Verdana;">%n</span><span style="font-family: 宋体;">为构建编号。默认</span><span style="font-family: Verdana;">”Changes&nbsp;for&nbsp;Build&nbsp;#%n\n%c\n”</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">&nbsp;showPaths,changesFormat,pathFormat<span style="font-family: 宋体;">分别定义如</span><span style="font-family: Verdana;">${CHANGES}</span><span style="font-family: 宋体;">的</span><span style="font-family: Verdana;">showPaths</span><span style="font-family: 宋体;">、</span><span style="font-family: Verdana;">format</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">pathFormat</span><span style="font-family: 宋体;">参数。</span></li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p0">&nbsp;${ENV}&nbsp;–<span style="font-family: 宋体;">显示一个环境变量。</span>
+<ul>
+<li class="p0">&nbsp;var–&nbsp;<span style="font-family: 宋体;">显示该环境变量的名称。如果为空，显示所有，默认为空。</span></li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p0">&nbsp;${FAILED_TESTS}&nbsp;-<span style="font-family: 宋体;">如果有失败的测试，显示这些失败的单元测试信息。</span></li>
+<li class="p0">&nbsp;${JENKINS_URL}&nbsp;-<span style="font-family: 宋体;">显示</span><span style="font-family: Verdana;">Jenkins</span><span style="font-family: 宋体;">服务器的地址。</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">你能在</span><span style="font-family: Verdana;">“</span><span style="font-family: 宋体;">系统配置</span><span style="font-family: Verdana;">”</span><span style="font-family: 宋体;">页改变它</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">&nbsp;${HUDSON_URL}&nbsp;-<span style="font-family: 宋体;">不推荐，请使用</span><span style="font-family: Verdana;">$JENKINS_URL</span></li>
+<li class="p0">&nbsp;${PROJECT_URL}&nbsp;-<span style="font-family: 宋体;">显示项目的</span><span style="font-family: Verdana;">URL</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">&nbsp;${SVN_REVISION}&nbsp;-<span style="font-family: 宋体;">显示</span><span style="font-family: Verdana;">SVN</span><span style="font-family: 宋体;">的版本号。</span></li>
+<li class="p0">&nbsp;${JELLY_SCRIPT}&nbsp;-<span style="font-family: 宋体;">从一个</span><span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本模板中自定义消息内容。有两种模板可供配置：</span><span style="font-family: Verdana;">HTML</span><span style="font-family: 宋体;">和</span><span style="font-family: Verdana;">TEXT</span><span style="font-family: 宋体;">。你可以在</span><span style="font-family: Verdana;">$JENKINS_HOME/email-templates</span><span style="font-family: 宋体;">下自定义替换它。当使用自动义模板时，</span><span style="font-family: Verdana;">”template”</span><span style="font-family: 宋体;">参数的名称不包含</span><span style="font-family: Verdana;">“.jelly”</span><span style="font-family: 宋体;">。</span>
+<ul>
+<li class="p0">&nbsp;template<span style="font-family: 宋体;">模板名称，默认</span><span style="font-family: Verdana;">”html”</span><span style="font-family: 宋体;">。</span></li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p0">&nbsp;${TEST_COUNTS}&nbsp;-<span style="font-family: 宋体;">显示测试的数量。</span>
+<ul>
+<li class="p0">var–&nbsp;<span style="font-family: 宋体;">默认</span><span style="font-family: Verdana;">“total”</span><span style="font-family: 宋体;">。</span>
+<ul>
+<li class="p0">total&nbsp;-<span style="font-family: 宋体;">所有测试的数量。</span></li>
+<li class="p0">&nbsp;fail&nbsp;-<span style="font-family: 宋体;">失败测试的数量。</span></li>
+<li class="p0">&nbsp;skip&nbsp;-<span style="font-family: 宋体;">跳过测试的数量。</span></li>
+
+
+
+</ul>
+
+
+
+</li>
+
+
+
+</ul>
+
+
+
+</li>
+
+
+
+</ul>
+<p class="p0">&nbsp;</p>
+<h2>2.2&nbsp;项目配置</h2>
+<p class="p0">要想在一个项目中使用<span style="font-family: Calibri;">email-ext</span><span style="font-family: 宋体;">插件，你首先必须在项目配置页激活它。在</span>构建后操作——”Add&nbsp;Post-build&nbsp;Actions”<span style="font-family: 宋体;">选项中勾选</span><span style="font-family: Calibri;">”Editable&nbsp;Email&nbsp;Notification”</span><span style="font-family: 宋体;">标签。</span></p>
+<p class="p0">&nbsp;<img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/14104756-862e6f20fe5043cfb053d07f60444ae5.jpg" alt=""></p>
+<h3>2.2.1&nbsp;项目基本配置</h3>
+<p class="p0">当插件激活后你就能编辑如下字段（只列出常用的字段）：</p>
+<ul>
+<li class="p0">&nbsp;Project&nbsp;Recipient&nbsp;List：这是一个以逗号<span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">或者空格</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">分隔的</span>收件人邮件的邮箱地址列表。允许您为每封邮件指定单独的列表。Ps<span style="font-family: 宋体;">：</span>如果你想在默认收件人的基础上添加收件人：$DEFAULT_RECIPIENTS,&lt;<span style="font-family: 宋体;">新的收件人</span><span style="font-family: Verdana;">&gt;</span></li>
+<li class="p0">&nbsp;Default&nbsp;Subject：允许你配置此项目邮件的主题。</li>
+<li class="p0">&nbsp;Default&nbsp;Content：跟<span style="font-family: Verdana;">Default&nbsp;Subject</span><span style="font-family: 宋体;">的作用一样，但是是替换</span>邮件内容。</li>
+<li class="p0">&nbsp;Attach&nbsp;Build&nbsp;Log：附件构建日志。
+<ul>
+<li class="p0">&nbsp;Compress&nbsp;Build&nbsp;Log&nbsp;before&nbsp;sending：发送前压缩生成日志（zip<span style="font-family: 宋体;">格式</span>）。</li>
+
+
+
+</ul>
+
+
+
+</li>
+
+
+
+</ul>
+<h4>2.2.1.1&nbsp;项目高级配置</h4>
+<p class="p0">要查看插件的高级配置，请点击<span style="font-family: Verdana;">”</span>高级”<span style="font-family: 宋体;">按钮。该选项允许您各种类型的邮件触发器指定接收者。默认情况下，</span>是没有配置的触发器，所以默认情况下不会发送邮件。要增加更多的触发器，选择<span style="font-family: Verdana;">“</span>Add&nbsp;a&nbsp;Trigger”<span style="font-family: 宋体;">旁边下拉列表中的类型，它会增加到控件上面的列表中。一旦你增加了一个触发器，你就可以对它做一些选择。如果你点击一个触发器旁边的</span><span style="font-family: Verdana;">”?”</span><span style="font-family: 宋体;">号，它将告诉你在什么条件</span>下会触发邮件发送。如下图。</p>
+<p class="p0">&nbsp;<img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/14104817-163a66fe7af54b0488451d73ff21c3ae.jpg" alt=""></p>
+<ul>
+<li class="p0">&nbsp;Send&nbsp;to&nbsp;Recipient&nbsp;List：如果勾选，邮件将发送到<span style="font-family: Verdana;">”</span>Project&nbsp;Recipient&nbsp;List”<span style="font-family: 宋体;">中的所有邮件地址。</span></li>
+<li class="p0">&nbsp;Send&nbsp;to&nbsp;Committers：该邮件会发给上次构建时检查过代码的人员，该插件会基于提交者的<span style="font-family: Verdana;">ID</span><span style="font-family: 宋体;">和追加</span><span style="font-family: Verdana;">Jenkins</span><span style="font-family: 宋体;">配置页面的</span><span style="font-family: Verdana;">(default&nbsp;email&nbsp;suffix)</span><span style="font-family: 宋体;">默认邮件后缀来生成一个邮件地址。譬如，上次提交代码的人是</span><span style="font-family: Verdana;">”first.last”</span><span style="font-family: 宋体;">，&nbsp;默认的电子邮件后缀为</span><span style="font-family: Verdana;">“@somewhere.com”</span><span style="font-family: 宋体;">，那么电子邮件将被发送到</span><span style="font-family: Verdana;">“first.last@&nbsp;somewhere.com”</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">&nbsp;Send&nbsp;To&nbsp;Requester：如果勾选，邮件将发送给构建触发者。</li>
+<li class="p0">&nbsp;Include&nbsp;Culprits：如果勾选，而且&nbsp;<span style="font-family: Verdana;">“Send&nbsp;To&nbsp;Committers”</span><span style="font-family: 宋体;">勾选，邮件将包含最后成功构建的提交者。</span></li>
+<li class="p0">&nbsp;More&nbsp;Configuration：通过单击<span style="font-family: Verdana;">”</span>+(expand)”<span style="font-family: 宋体;">链接您能为每个邮件触发器作更多单独的设置。</span>
+<ul>
+<li class="p0">Recipient&nbsp;List：这是一个以逗号<span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">或者空格</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">分隔的可接受邮件的邮箱地址列表。如果触发就发送邮件到该列表。该列表会追加在</span><span style="font-family: Verdana;">”Global&nbsp;Recipient&nbsp;List”</span><span style="font-family: 宋体;">里。</span></li>
+<li class="p0">Subject：指定选择邮件的主题。注意：高级选项中的邮件触发器类型可覆盖对它的配置。</li>
+<li class="p0">Content：指定选择邮件的内容主体。注意：高级选项中的邮件触发器类型可覆盖对它的配置。</li>
+
+
+
+</ul>
+
+
+
+</li>
+<li class="p0">&nbsp;Remove通过单击指定触发器当前行的<span style="font-family: Verdana;">”</span>Delete”<span style="font-family: 宋体;">按钮，你可以删除该触发器。</span></li>
+
+
+
+</ul>
+<h4>2.2.1.2&nbsp;触发器类型</h4>
+<p class="p0">注意：所有的触发器都只能配置一次。</p>
+<ul>
+<li class="p0">Failure<span style="font-family: 宋体;">：</span>即时发送构建失败的邮件。如果<span style="font-family: Verdana;">”Still&nbsp;Failing”</span><span style="font-family: 宋体;">触发器已配置，而上一次构建的状态是</span><span style="font-family: Verdana;">”Failure”</span><span style="font-family: 宋体;">，那么</span><span style="font-family: Verdana;">”Still&nbsp;Failing”</span><span style="font-family: 宋体;">触发器将发送一封邮件来替代</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">它</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">Unstable<span style="font-family: 宋体;">：</span>即时发送构建不稳固的邮件。如果<span style="font-family: Verdana;">”Still&nbsp;Unstable”</span><span style="font-family: 宋体;">触发器已配置，而上一次构建的状态是</span><span style="font-family: Verdana;">”Unstable”</span><span style="font-family: 宋体;">，那么</span><span style="font-family: Verdana;">”Still&nbsp;Unstable”</span><span style="font-family: 宋体;">触发器将发送一封邮件来替代</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">它</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">Still&nbsp;Failing<span style="font-family: 宋体;">：</span>如果两次或两次以上连续构建的状态为<span style="font-family: Verdana;">”Failure”</span><span style="font-family: 宋体;">，发送该邮件。</span></li>
+<li class="p0">Success<span style="font-family: 宋体;">：</span>如果构建的状态为<span style="font-family: Verdana;">”Successful”</span><span style="font-family: 宋体;">发送邮件。如果</span><span style="font-family: Verdana;">”Fixed”</span><span style="font-family: 宋体;">已配置，而上次构建的状态为</span><span style="font-family: Verdana;">“Failure”</span><span style="font-family: 宋体;">或</span><span style="font-family: Verdana;">“Unstable”</span><span style="font-family: 宋体;">，那么</span><span style="font-family: Verdana;">”Fixed”</span><span style="font-family: 宋体;">触发器将发送一封邮件来替代</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">它</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">。</span></li>
+<li class="p0">Fixed<span style="font-family: 宋体;">：</span>当构建状态从<span style="font-family: Verdana;">“Failure”</span><span style="font-family: 宋体;">或</span><span style="font-family: Verdana;">“Unstable”</span><span style="font-family: 宋体;">变为</span><span style="font-family: Verdana;">”Successful”</span><span style="font-family: 宋体;">时发送邮件。</span></li>
+<li class="p0">Still&nbsp;Unstable<span style="font-family: 宋体;">：如果两次或两次以上连续构建的状态为</span><span style="font-family: Verdana;">”&nbsp;Unstable&nbsp;“</span><span style="font-family: 宋体;">，发送该邮件。</span></li>
+<li class="p0">Before&nbsp;Build<span style="font-family: 宋体;">：</span>当构建开始时发送邮件。</li>
+
+
+
+</ul>
+<h4>2.2.1.3&nbsp;项目邮件变量</h4>
+<p class="p0">注意：这里只解释全局配置页面中缺少的变量。</p>
+<ul>
+<li class="p0">${DEFAULT_SUBJECT}：这是Jenkins系统配置页面默认配置的邮件主题</li>
+<li class="p0">${DEFAULT_CONTENT}：这是Jenkins系统配置页面默认配置的邮件内容主体</li>
+<li class="p0">${PROJECT_DEFAULT_SUBJECT}：这是项目的默认邮件主题。高级配置中使用该令牌的结果要优先于Default&nbsp;Subject字段。警告：不要在Default&nbsp;Subject&nbsp;或者Default&nbsp;Content中使用该令牌，它会产生一个未知的结果。</li>
+<li class="p0">${PROJECT_DEFAULT_CONTENT}：这是项目的默认邮件内容主体。高级配置中使用该令牌的结果要优先于Default&nbsp;Content字段。警告：不要在Default&nbsp;Subject&nbsp;或者Default&nbsp;Content中使用该令牌，它会产生一个未知的结果。</li>
+
+
+
+</ul>
+<h1>3&nbsp;Jelly<span style="font-family: 宋体;">脚本</span></h1>
+<p class="p0">从<span style="font-family: Verdana;">Jenkins</span>&nbsp;2.9<span style="font-family: 宋体;">版本开始我们可以使用</span><span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本。</span><span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本跟</span><span style="font-family: Verdana;">Hudson</span><span style="font-family: 宋体;">的</span><span style="font-family: Verdana;">API</span><span style="font-family: 宋体;">挂钩，能获得你想要的任何信息，所以它很强大。插件有两个打包后的</span><span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本，当然你也可以自定义</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">脚本</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">。</span></p>
+<p class="p0">关于插件中默认的两个<span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本：一个用来设计</span><span style="font-family: Verdana;">HTML</span><span style="font-family: 宋体;">格式邮件，另一个则是定义</span><span style="font-family: Verdana;">TEXT</span><span style="font-family: 宋体;">格式邮件。你能通过使用模板参数指定插件调用哪一个脚本。它们的使用方法如下：</span></p>
+<p class="p0">&nbsp;文本格式：<span style="font-family: Verdana;">${JELLY_SCRIPT,template=”text”}</span></p>
+<p class="p0">&nbsp;HTML<span style="font-family: 宋体;">格式</span><span style="font-family: Verdana;">:${JELLY_SCRIPT,template=”html”}</span></p>
+<p class="p0">你也能编写属于自己的<span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本。</span><span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本能跟</span><span style="font-family: Verdana;">Jenkins</span>&nbsp;的<span style="font-family: Verdana;">API(</span><span style="font-family: 宋体;">包括</span><a href="http://jenkins-ci.org/javadoc/hudson/model/AbstractBuild.html">hudson.model.AbstractBuild</a>和<a href="http://jenkins-ci.org/javadoc/hudson/model/AbstractProject.html">hudson.model.AbstractProject</a>)<span style="font-family: 宋体;">挂钩，因而特别强大。如果你打算这么做，你可以先参考现有的</span><a href="http://fisheye.jenkins-ci.org/browse/Hudson/trunk/hudson/plugins/email-ext/src/main/resources/hudson/plugins/emailext/templates/html.jelly?r=HEAD">html</a>和<a href="http://fisheye.jenkins-ci.org/browse/Hudson/trunk/hudson/plugins/email-ext/src/main/resources/hudson/plugins/emailext/templates/text.jelly?r=HEAD">text</a>脚本一探究竟。</p>
+<p class="p0">值得注意的是，拥有<span style="font-family: Verdana;">Hudson</span><span style="font-family: 宋体;">管理员权限是使用自定义</span><span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">该脚本没有跟</span><span style="font-family: Verdana;">email-ext</span><span style="font-family: 宋体;">打包</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">的前提。脚本的生成步骤本身其实相对简单：</span></p>
+<p class="p0">1.&nbsp;创建<span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本。脚本的名称应该是</span>&lt;<span style="font-family: 宋体;">名称</span><span style="font-family: Verdana;">&gt;.jelly</span>。名称以<span style="font-family: Verdana;">.jelly</span><span style="font-family: 宋体;">结尾是很重要的。</span></p>
+<p class="p0">2.&nbsp;把脚本存放在JENKINS_HOME\email-templates文件夹里。</p>
+<p class="p0">3.&nbsp;使用<span style="font-family: Verdana;">Jelly</span>变量，让<span style="font-family: Verdana;">template</span><span style="font-family: 宋体;">匹配你的脚本名称</span><span style="font-family: Verdana;">(</span><span style="font-family: 宋体;">不要包含后缀</span><span style="font-family: Verdana;">)</span><span style="font-family: 宋体;">。比如，脚本的名称为</span><span style="font-family: Verdana;">foobar.jelly</span><span style="font-family: 宋体;">，则邮件内容中应该是</span><span style="font-family: Verdana;">${JELLY_SCRIPT,template=”foobar”}</span><span style="font-family: 宋体;">。</span></p>
+<p class="p0">下面两个图就是就是使用<span style="font-family: Verdana;">Jelly</span><span style="font-family: 宋体;">脚本生成的邮件（最新版</span><span style="font-family: Verdana;">Email-ext</span><span style="font-family: 宋体;">新增</span><span style="font-family: Verdana;">html_gamil</span><span style="font-family: 宋体;">模板，它跟</span><span style="font-family: Verdana;">html</span><span style="font-family: 宋体;">模板类似，所以这里不再显示它的截图）：</span></p>
+<p class="p0">&nbsp;<img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/14104830-e6e54366a6eb49a39c1ffdedfa5b7f42.jpg" alt=""></p>
+<p class="p0"><img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/14104838-1c1c363dfc2b46c58f061619c44718d6.jpg" alt=""></p>
+<p class="p0">&nbsp;</p>
+<h1>4&nbsp;总结</h1>
+<p class="p0">以上就是我介绍的<span style="font-family: Verdana;">Email-ext</span><span style="font-family: 宋体;">插件，由于自己的局限，对于它的使用没有更深的了解。参考资料</span><span style="font-family: Verdana;">[2]</span><span style="font-family: 宋体;">中还有关于它的扩展，你也可以自行扩充它的功能。</span>文章部分内容来源于参考资料<span style="font-family: Verdana;">[</span>3]。如果您有关于该插件以及<span style="font-family: Verdana;">Jenkins</span><span style="font-family: 宋体;">使用的更多更好的感受，我期待与您一起分享。</span></p>
+<h1>5&nbsp;参考资料</h1>
+<p class="p0">[1]<a href="http://www.juvenxu.com/mvn-in-action/">《<span style="font-family: Verdana;">Maven</span><span style="font-family: 宋体;">实战》</span></a>第<span style="font-family: Verdana;">11</span><span style="font-family: 宋体;">章</span><span style="font-family: Verdana;">11.9</span><span style="font-family: 宋体;">邮件反馈。</span></p>
+<p class="p0">[2]<a href="https://wiki.jenkins-ci.org/display/JENKINS/Email-ext+plugin">https://wiki.jenkins-ci.org/display/JENKINS/Email-ext+plugin</a></p>
+<p class="p0">[3]<a href="http://www.juvenxu.com/2011/05/18/hudson-email-ext/">http://www.juvenxu.com/2011/05/18/hudson-email-ext/</a></p>
+<p class="p0">&nbsp;</p>
+<h2 class="p0">PDF文档下载：<a href="http://files.cnblogs.com/zz0412/Jenkins%E6%8F%92%E4%BB%B6email-ext.pdf">点我下载</a></h2>
+
+
+
+
+
+</div></div><div id="MySignature" style="display: block;">好记性不如烂笔头！</div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/zz0412/tag/jenkins/">jenkins</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(3256713,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;37048d27-6cbf-e211-8d02-90b11c0b17d6&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/zz0412/" target="_blank"><img src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/20131202111312.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/zz0412/">爱自己</a><br>
+            <a href="http://home.cnblogs.com/u/zz0412/followees">关注 - 5</a><br>
+            <a href="http://home.cnblogs.com/u/zz0412/followers">粉丝 - 116</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;37048d27-6cbf-e211-8d02-90b11c0b17d6&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(3256713,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">5</span>
+    </div>
+    <div class="buryit" onclick="votePost(3256713,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/zz0412/p/3256159.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/zz0412/p/3256159.html" title="发布于2013-08-13 22:22">Ubuntu下eclipse安装svn插件</a><br><a href="http://www.cnblogs.com/zz0412/p/install_Subversion_edge_4-0-1.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/zz0412/p/install_Subversion_edge_4-0-1.html" title="发布于2013-08-26 11:50">Linux 安装配置Subversion edge</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2013-08-14 11:07</span> <a href="http://www.cnblogs.com/zz0412/">爱自己</a> 阅读(<span id="post_view_count">10762</span>) 评论(<span id="post_comment_count">5</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=3256713" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#" onclick="AddToWz(3256713);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=151907,cb_entryId=3256713,cb_blogApp=currentBlogApp,cb_blogUserGuid='37048d27-6cbf-e211-8d02-90b11c0b17d6',cb_entryCreatedDate='2013/8/14 11:07:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<br>
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"></div>	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#3007485" class="layer">#1楼</a><a name="3007485" id="comment_anchor_3007485"></a>  <span class="comment_date">2014-08-14 10:28</span> <a id="a_comment_author_3007485" href="http://www.cnblogs.com/vincentvan/" target="_blank">VincentVan</a> <a href="http://msg.cnblogs.com/send/VincentVan" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3007485" class="blog_comment_body">写得超级好！谢谢分享！学习了！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3007485,&#39;Digg&#39;,this)">支持(1)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3007485,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3007485_avatar" style="display:none;">http://pic.cnblogs.com/face/u480080.jpg?id=16174203</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#3206776" class="layer">#2楼</a><a name="3206776" id="comment_anchor_3206776"></a>  <span class="comment_date">2015-06-12 10:55</span> <a id="a_comment_author_3206776" href="http://home.cnblogs.com/u/764870/" target="_blank">DevinZhang</a> <a href="http://msg.cnblogs.com/send/DevinZhang" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3206776" class="blog_comment_body">谢谢</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3206776,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3206776,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#3578637" class="layer">#3楼</a><a name="3578637" id="comment_anchor_3578637"></a>  <span class="comment_date">2016-12-12 15:45</span> <a id="a_comment_author_3578637" href="http://www.cnblogs.com/EasonJim/" target="_blank">EasonJim</a> <a href="http://msg.cnblogs.com/send/EasonJim" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3578637" class="blog_comment_body">CCNET/Jenkins自动构建部署QQ群： 190402937</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3578637,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3578637,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3578637_avatar" style="display:none;">http://pic.cnblogs.com/face/417876/20170105002353.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#3610175" class="layer">#4楼</a><a name="3610175" id="comment_anchor_3610175"></a>  <span class="comment_date">2017-01-28 01:52</span> <a id="a_comment_author_3610175" href="http://www.cnblogs.com/fit/" target="_blank">广州杰海科技</a> <a href="http://msg.cnblogs.com/send/%E5%B9%BF%E5%B7%9E%E6%9D%B0%E6%B5%B7%E7%A7%91%E6%8A%80" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3610175" class="blog_comment_body">+很希望与楼主沟通，学习</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3610175,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3610175,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#3610450" class="layer">#5楼</a><a name="3610450" id="comment_anchor_3610450"></a><span id="comment-maxId" style="display:none;">3610450</span><span id="comment-maxDate" style="display:none;">2017/1/30 19:16:54</span>  <span class="comment_date">2017-01-30 19:16</span> <a id="a_comment_author_3610450" href="http://www.cnblogs.com/fit/" target="_blank">广州杰海科技</a> <a href="http://msg.cnblogs.com/send/%E5%B9%BF%E5%B7%9E%E6%9D%B0%E6%B5%B7%E7%A7%91%E6%8A%80" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3610450" class="blog_comment_body">可以的。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3610450,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3610450,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://click.aliyun.com/m/11519/" target="_blank">【推荐】开源大咖专业分享，一起感受开源之力！</a><br><a href="http://www.rongcloud.cn/" target="_blank">【推荐】融云即时通讯云－豆果美食、Faceu等亿级APP都在用</a><br><a href="http://cn.udacity.com/fend/?utm_source=cnblogs&amp;utm_medium=referral&amp;utm_campaign=newFEND" target="_blank">【推荐】Google+GitHub联手打造前端工程师课程</a><br><a href="https://group.cnblogs.com/topic/76017.html" target="_blank">【活动】一元专享1500元微软智能云Azure</a><br></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"><a href="https://click.aliyun.com/m/11519/" target="_blank"><img width="300" height="250" src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/24442-20170223222849351-1410349713.jpg" alt=""></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/563769/" target="_blank">滴滴试运营新产品“优享”：价格比专车低 舒适度比快车高</a><br> ·  <a href="http://news.cnblogs.com/n/563768/" target="_blank">华为WATCH 2发布：续航最长可达21天，售价329欧元起</a><br> ·  <a href="http://news.cnblogs.com/n/563767/" target="_blank">冷焰：从孤独黑客到互联网安全创业者</a><br> ·  <a href="http://news.cnblogs.com/n/563766/" target="_blank">特斯拉股价大跌 马斯克身价缩水5亿美金</a><br> ·  <a href="http://news.cnblogs.com/n/563764/" target="_blank">Google披露了另一个未修复的Edge/IE漏洞</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="ad_c2" class="c_ad_block"><a href="http://bbs.h3bpm.com/index.php?m=app&amp;app=product_download&amp;a=reg&amp;utm_source=csdn&amp;utm_medium=pic&amp;utm_campaign=show&amp;utm_content=v10&amp;utm_term=%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD" target="_blank"><img width="468" height="60" src="./Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知 - 爱自己 - 博客园_files/24442-20170118152220281-363324784.jpg" alt=""></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/562433/" target="_blank">垃圾回收原来是这么回事</a><br> ·  <a href="http://kb.cnblogs.com/page/554260/" target="_blank">「代码家」的学习过程和学习经验分享</a><br> ·  <a href="http://kb.cnblogs.com/page/556770/" target="_blank">写给未来的程序媛</a><br> ·  <a href="http://kb.cnblogs.com/page/558087/" target="_blank">高质量的工程代码为什么难写</a><br> ·  <a href="http://kb.cnblogs.com/page/555750/" target="_blank">循序渐进地代码重构</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><p>已发表的文章会不定期维护！&nbsp;</p><p>如果有疑问或建议请留言！</p><p>谢谢！&nbsp;</p><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/zz0412/">爱自己</a><br>园龄：<a href="http://home.cnblogs.com/u/zz0412/" title="入园时间：2013-05-18">3年9个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/zz0412/followers/">116</a><br>关注：<a href="http://home.cnblogs.com/u/zz0412/followees/">5</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;37048d27-6cbf-e211-8d02-90b11c0b17d6&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="日历">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/01/01&#39;);return false;">&lt;</a></td><td align="center">2017年2月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/03/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td class="CalWeekendDay" align="center">4</td></tr><tr><td class="CalWeekendDay" align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td class="CalWeekendDay" align="center">11</td></tr><tr><td class="CalWeekendDay" align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td class="CalWeekendDay" align="center">18</td></tr><tr><td class="CalWeekendDay" align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center"><a href="http://www.cnblogs.com/zz0412/archive/2017/02/24.html"><u>24</u></a></td><td class="CalWeekendDay" align="center">25</td></tr><tr><td class="CalWeekendDay" align="center">26</td><td class="CalTodayDay" align="center">27</td><td align="center">28</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td></tr><tr><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td><td class="CalOtherMonthDay" align="center">9</td><td class="CalOtherMonthDay" align="center">10</td><td class="CalOtherMonthDay" align="center">11</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/zz0412/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/zz0412/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/zz0412/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/zz0412/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/zz0412/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/zz0412/tag/jenkins/">jenkins</a>(22)</li><li><a href="http://www.cnblogs.com/zz0412/tag/Maven/">Maven</a>(17)</li><li><a href="http://www.cnblogs.com/zz0412/tag/linux/">linux</a>(10)</li><li><a href="http://www.cnblogs.com/zz0412/tag/svn/">svn</a>(4)</li><li><a href="http://www.cnblogs.com/zz0412/tag/Ubuntu/">Ubuntu</a>(2)</li><li><a href="http://www.cnblogs.com/zz0412/tag/mysql/">mysql</a>(2)</li><li><a href="http://www.cnblogs.com/zz0412/tag/eclipse/">eclipse</a>(2)</li><li><a href="http://www.cnblogs.com/zz0412/tag/golang/">golang</a>(2)</li><li><a href="http://www.cnblogs.com/zz0412/tag/Groovy/">Groovy</a>(1)</li><li><a href="http://www.cnblogs.com/zz0412/tag/Intellij/">Intellij</a>(1)</li><li><a href="http://www.cnblogs.com/zz0412/tag/">更多</a></li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+<h3 class="catListTitle">随笔档案<span style="font-size:11px;font-weight:normal">(61)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/zz0412/archive/2017/02.html">2017年2月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/zz0412/archive/2015/12.html">2015年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/zz0412/archive/2015/09.html">2015年9月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/zz0412/archive/2014/11.html">2014年11月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/zz0412/archive/2014/10.html">2014年10月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/zz0412/archive/2014/09.html">2014年9月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/zz0412/archive/2014/08.html">2014年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/zz0412/archive/2014/07.html">2014年7月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/zz0412/archive/2014/06.html">2014年6月 (17)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/zz0412/archive/2014/05.html">2014年5月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/zz0412/archive/2014/04.html">2014年4月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_11" href="http://www.cnblogs.com/zz0412/archive/2014/03.html">2014年3月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_12" href="http://www.cnblogs.com/zz0412/archive/2014/01.html">2014年1月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_13" href="http://www.cnblogs.com/zz0412/archive/2013/12.html">2013年12月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_14" href="http://www.cnblogs.com/zz0412/archive/2013/11.html">2013年11月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_15" href="http://www.cnblogs.com/zz0412/archive/2013/10.html">2013年10月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_16" href="http://www.cnblogs.com/zz0412/archive/2013/09.html">2013年9月 (8)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_17" href="http://www.cnblogs.com/zz0412/archive/2013/08.html">2013年8月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_18" href="http://www.cnblogs.com/zz0412/archive/2013/05.html">2013年5月 (4)</a> </li>
+
+</ul>
+
+</div>
+
+<div id="sidebar_imagecategory" class="catListImageCategory sidebar-block">
+<h3 class="catListTitle">相册</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/zz0412/gallery/508265.html" rel="nofollow">Jenkins</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#3610450">1. Re:Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知</a></li>
+        <li class="recent_comment_body">可以的。</li>
+        <li class="recent_comment_author">--广州杰海科技</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html#3610175">2. Re:Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知</a></li>
+        <li class="recent_comment_body">+很希望与楼主沟通，学习</li>
+        <li class="recent_comment_author">--广州杰海科技</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zz0412/p/mulu.html#3609887">3. Re:博客目录</a></li>
+        <li class="recent_comment_body">mark</li>
+        <li class="recent_comment_author">--熊掌炖鱼</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zz0412/p/jenkins02.html#3594531">4. Re:Jenkins入门系列之——02第二章 Jenkins安装与配置</a></li>
+        <li class="recent_comment_body">配置一个JDK、Ant、Maven实例，请在每一节下面单击Add(新增) 按钮，这里将添加实例的名称和绝对地址<br>我怎么没找到在哪里点击，请指导下</li>
+        <li class="recent_comment_author">--Dicky_Zhang</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zz0412/p/jenkins01.html#3591420">5. Re:Jenkins入门系列之——01第一章 Jenkins是什么？</a></li>
+        <li class="recent_comment_body">好文章一定得转，jenkins中文介绍真少</li>
+        <li class="recent_comment_author">--猫宸</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/zz0412/p/jenkins02.html">1. Jenkins入门系列之——02第二章 Jenkins安装与配置(47627)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins03.html">2. Jenkins入门系列之——03PDF文档下载(16805)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html">3. Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知(10762)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins01.html">4. Jenkins入门系列之——01第一章 Jenkins是什么？(10007)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_12.html">5. Jenkins进阶系列之——12详解Jenkins节点配置(7547)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/zz0412/p/jenkins02.html">1. Jenkins入门系列之——02第二章 Jenkins安装与配置(15)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins03.html">2. Jenkins入门系列之——03PDF文档下载(13)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins01.html">3. Jenkins入门系列之——01第一章 Jenkins是什么？(6)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html">4. Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知(5)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_12.html">5. Jenkins进阶系列之——12详解Jenkins节点配置(5)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html">1. Jenkins进阶系列之——01使用email-ext替换Jenkins的默认邮件通知(5)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins03.html">2. Jenkins入门系列之——03PDF文档下载(5)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins02.html">3. Jenkins入门系列之——02第二章 Jenkins安装与配置(4)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins01.html">4. Jenkins入门系列之——01第一章 Jenkins是什么？(3)</a></li><li><a href="http://www.cnblogs.com/zz0412/p/jenkins00.html">5. Jenkins入门系列之——00答疑解惑(3)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2017 爱自己
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body></html>

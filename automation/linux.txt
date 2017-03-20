@@ -1,0 +1,462 @@
+centos sshpass安装
+https://centos.pkgs.org/5/epel-i386/sshpass-1.05-1.el5.i386.rpm.html
+Ubuntu下 sudo apt-get install sshpass
+Centos6.X 下 
+cd /etc/yum.repos.d/ 
+wgethttp://download.opensuse.org/repositories/home:Strahlex/CentOS_CentOS-6/home:Strahlex.repo 
+yum install sshpass
+Centos7软件地址
+Cd /etc/yum.repos.d
+Wget http://download.opensuse.org/repositories/home:/Strahlex/CentOS_7/home:Strahlex.repo
+Yum -y install sshpass
+用法
+sshpass -p 'password'  ssh  user@host 
+
+
+centos ubantu查看系统版本
+cat /etc/issue
+
+
+
+lldpd下载地址:
+http://software.opensuse.org/download.html?project=home:vbernat&package=lldpd
+rpm -ivh lldpd.rpm
+lldpcli                  ; 打开客户端
+打开客户端后会进入客户端提示符，在该提示符下输入
+show neighbors ports eth0
+如果对端支持并且也打开了lldpd，那么就会看到对端返回的信息，否则返回错误提示或者为空
+
+生成一个大小为5G的文件，内容不做要求
+命令如下
+$ dd if=/dev/zero of=tmp.5G bs=1G count=5
+
+
+snmpwalk -v2c -c test 10.11.123.142 IF-MIB::ifName
+snmpwalk -v1  -c test 10.11.123.142 IF-MIB::ifName
+snmptrapd --disableAuthorization=yes -f -Lf snmptrapd.log
+
+修改ipv6:
+ifconfig eth1 inet6 add 2000::2/64
+ping6 2000::2
+
+修改IP：
+vi /etc/sysconfig/network-scripts/ifcfg-eth0 
+service network restart
+
+awk -F 字符串  '{print $n}' 待处理字符串
+以字符串分割的第n部分
+
+renew ip:
+dhclient -r eth0
+
+cat /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE=eth0
+ONBOOT=yes
+BOOTPROTO=dhcp
+
+修改主机名:(重启生效)
+vi /etc/sysconfig/network
+HOSTNAME=localhost.localdomain  #修改localhost.localdomain为orcl1
+
+route add -net 192.168.1.0/24 gw 192.168.2.1
+
+ifconfig不可用添加path
+PATH下加上/sbin的路径。使用root账户，可以vi /etc/profile,在文件末尾加上以下语句：
+PATH=$PATH:/sbin          ＃在PATH变量后追加/sbin目录
+export PATH=$PATH:/sbin   ＃设置变量为全局的
+然后保存并退出，就可以直接使用ifconfig了。
+
+
+抓包：
+tcpdump --help
+tcpdump  -i eth0 -w pac.pcap 
+
+curl命令:
+curl -u ftpuser:ftppass  ftp://ftp_server_ip/filename --limit-rate 10k  --retry 100 --retry-delay 1 -o /tmp/1Gfile
+-o：将文件保存为命令行中指定的文件名的文件中
+-O：使用URL中默认的文件名保存文件到本地
+http访问:
+curl url
+
+
+*.tar 用 tar -xvf 解压
+*.gz 用 gzip -d或者gunzip 解压
+*.tar.gz和*.tgz 用 tar -xzf 解压
+*.bz2 用 bzip2 -d或者用bunzip2 解压
+*.tar.bz2用tar -xjf 解压
+*.Z 用 uncompress 解压
+*.tar.Z 用tar -xZf 解压
+*.rar 用 unrar e解压
+*.zip 用 unzip 解压
+
+
+关闭防火墙：　　/etc/init.d/iptables stop
+查看防火墙信息　/etc/init.d/iptables status
+找不到iptables，随便写一条iptables命令配置个防火墙规则
+如：iptables -P OUTPUT ACCEPT。
+[root@iZ23gx7o02aZ /]# cd /etc/sysconfig/
+[root@iZ23gx7o02aZ sysconfig]# iptables -P OUTPUT ACCEPT
+vi /etc/sysconfig/iptables
+-A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 8080 -j ACCEPT
+/etc/init.d/iptables restart #重启防火墙以便改动生效
+
+
+
+FTP:
+在/etc/vsftpd/vsftpd.conf  主配置文件 的末尾加入以下内容
+
+local_max_rate=200k        //设置本地用户最大的传输速率为200kbps
+
+anon_max_rate=10k        //设置匿名用户最大的传输速率为10kbps 
+
+
+
+TFTP服务器配置:
+#yum install tftp
+#yum install tftp-server
+1.修改启动配置文件
+不管使用的是哪一种super-server，inetd或者xinetd，默认情况下TFTP服务是禁用的，所以要修改文件来开启服务。
+修改文件/etc/xinetd.d/tftp，主要是设置TFTP服务器的根目录，开启服务。
+修改后的配置文件如下：
+service tftp
+{
+　　socket_type = dgram
+　　protocol = udp
+　　wait = yes
+　　user = root
+　　server = /usr/sbin/in.tftpd
+　　server_args = -s /public/samba/tftpboot -c  //-c 上传文件
+　　disable = no
+　　per_source = 11
+　　cps = 100 2
+　　flags = IPv4
+}
+2.创建tftp根目录,关闭防火墙，启动tftp-server
+#mkdir -m 777 /public/samba/tftpboot
+配置防火墙 
+#service xinetd restart          //重启 xinetd 服务重启xinetd服务，因为TFTP服务受控与xinetd, xinetd是管服务的服务，它是不开端口的。
+验证一下TFTP是否起来了：
+[root@kashu /]# netstat -tunap | grep :69
+
+
+
+DNS服务器配置:
+yum install -y bind bind-chroot bind-utils
+1.DNS域名服务的主配置文件位于  /var/named/chroot/etc/ 下，默认只提供了模版
+cd /var/named/chroot/etc/
+cp -p named.caching-nameserver.conf  named.conf
+vi named.conf
+options {
+    listen-on port 53 { any; };
+    listen-on-v6 port 53 { ::1; };
+    directory   "/var/named";
+    dump-file   "/var/named/data/cache_dump.db";
+        statistics-file "/var/named/data/named_stats.txt";
+        memstatistics-file "/var/named/data/named_mem_stats.txt";
+
+    // Those options should be used carefully because they disable port
+    // randomization
+    // query-source    port 53;
+    // query-source-v6 port 53;
+
+    allow-query     { any; };
+    allow-query-cache { any; };
+};
+logging {
+        channel default_debug {
+                file "data/named.run";
+                severity dynamic;
+        };
+};
+view localhost_resolver {
+    match-clients      { any; };
+    match-destinations { any; };
+    recursion yes;
+    include "/etc/named.rfc1912.zones";
+};
+
+
+2.修改/etc/named.rfc1912.zones文件，最后添加realhostip.com的正向和反向区域
+# vi /etc/ named.rfc1912.zones
+//realhostip.com的正向区域  
+zone "realhostip.com" IN {  
+        type master;  
+        file "named.realhostip.com";  
+        allow-update { none; };  
+};  
+//realhostip.com的反向区域  
+zone "123.11.10.in-addr.arpa" IN {  
+        type master;  
+        file "10.11.123.arpa";  
+        allow-update { none; };  
+};  
+
+3、创建正、反向DNS区域文件  
+[root@localhost chroot]# cd /var/named/chroot/var/named/  
+[root@localhost named]# cp -p localhost.zone named.realhostip.com 
+[root@localhost named]# cp -p named.local 10.11.123.arpa
+修改权限777
+4.修改正反向文件
+       @当前域
+       root.localhost=root@localhost邮箱
+       SOA       权威域名记录
+       NS   域名主机
+       A     正向解析记录
+       MX  邮件转发记录
+       CNAME  别名
+       PTR 反向解析
+反向：#域名后加.
+$TTL    86400
+@       IN      SOA     dns.zpq.cn. root.localhost.  (
+                                      1997022700 ; Serial
+                                      28800      ; Refresh
+                                      14400      ; Retry
+                                      3600000    ; Expire
+                                      86400 )    ; Minimum
+        IN      NS      dns.zpq.cn.
+100     IN      PTR     www.realhostip.com.
+        IN      PTR     ns.realhostip.com.
+正向：
+$TTL    86400
+@       IN SOA  @       root (
+                    42      ; serial (d. adams)
+                    3H      ; refresh
+                    15M     ; retry
+                    1W      ; expiry
+                    1D )        ; minimum
+
+            IN NS       @
+        IN A        127.0.0.1
+        IN AAAA     ::1
+www     IN A        10.11.123.100
+ns      IN A        10.11.123.100
+/etc/init.d/named restart重启服务
+nslookup 测试服务器配置是否成功
+修改dns服务器地址
+
+
+vi /etc/resolv.conf
+nameserver 10.11.123.160
+
+
+
+radius服务器配置:
+yum install -y freeradius freeradius-mysql freeradius-utils
+配置
+    1）修改 clients.conf
+    # vi /etc/raddb/clients.conf     |   vi /usr/local/etc/raddb/clients.conf
+    在最后增加如下几行：
+    client 172.18.5.88 {               增加认证体，填写OMA的ip地址
+    secret = testing123                密钥
+    shortname = 172.18.5.88
+    nastype = other
+    }
+一般保持默认配置也是可以的
+    2）编辑users
+    # vi /etc/raddb/users            |   vi /usr/local/etc/raddb/users 
+    在文本开始加入用户testing
+    testing ClearText-Password:=123
+    3）启动radiusd，测试radiusd服务：
+    # radiusd –X & (加上&在后台运行，便于下面测试命令执行)
+    # radtest testing 123 localhost 0 testing123
+    如果有类似 Access-Accept的字样出现，则表示radius开始工作了。
+在/etc/raddb/eap.conf中default_eap_type = md5改为default_eap_type = peap
+因为要涉及到Vendor-Specific Attribute, 所以需要将厂家加到Dictionary里, 各厂家的Dictionary默认放在
+/usr/share/freeradius/下面. 格式一般是dictionary.<厂家名>, e.g. dictionary.cisco
+vi /usr/share/freeradius/dictionary
+include dictionary.xxx
+编辑dictionary.<厂家名>, 添加相应的Attribute.
+vi /usr/share/freeradius/dictionary.xxx
+添加登陆设备的用户名密码以及其操作权限
+vim /etc/raddb/users
+
+
+syslog服务器配置：
+	#vim /etc/sysconfig/syslog  ## 只修改SYSLOGD_OPTINOS这项,如下
+	SYSLOGD_OPTIONS="-m 0 -r"
+       	重新启动syslog
+	#service syslog restart
+查看日志：/var/log/secure文件或者/var/log/messages文件   
+
+
+
+DHCP服务器:
+1.安装DHCP服务组件： 
+#rpm -ivh dhcp-4.1.1-38.P1.el6.centos.x86_64.rpm 或者yum install dhcp
+ 
+选项与参数：
+-i ：install 的意思
+-v ：察看更细部的安装资讯画面
+-h ：以安装资讯列显示安装进度
+
+2.列出该软体所有的档案与目录所在完整档名 (list):
+
+#rpm -ql dhcp
+选项与参数：
+-q：query  
+-l：list
+3.cp /usr/share/doc/dhcp-4.1.1/dhcpd.conf.sample /etc/dhcpd.conf
+复制示例文档
+4.vi /etc/dhcpd.conf
+编辑配置文档
+（必须分配和网卡一个网段？）
+动态分配
+subnet 192.168.1.0 netmask 255.255.255.224 {
+ range 192.168.1.200 192.168.1.220;
+ option domain-name-servers ns1.internal.example.org;
+ option domain-name "internal.example.org";
+ option routers 192.168.1.1;
+ option broadcast-address 192.168.1.255;
+ default-lease-time 600;
+ max-lease-time 7200;
+ }
+静态分配 
+host ice {
+ hardware ethernet 00:E0:40:02:EA:2A;
+ fixed-address 192.168.1.88;
+ }
+(dhcp relay)
+subnet 192.168.30.0 netmask 255.255.255.0 {
+             option routers                  192.168.30.1;
+             option subnet-mask              255.255.255.0;
+             option time-offset              -18000; # Eastern Standard Time
+             range dynamic-bootp 192.168.30.2 192.168.30.20;
+             }
+多网络接口是需要使用配置的文件 作为dhcp服务器使用的主机通常拥有多个网络接口，而dhcpp服务可能只需要在其中一
+个网络接口上提供服务，此时可以在“/etc/sysconfig/dhcpd”文件中指定需要提供dhcp服务的网络接口。
+#cat /etc/sysconfig/dhcpd 
+#Command line options here 
+DHCPDARGS=
+dhcpd文件中默认DHCPDARGS设置项为空，可修改为指定的网络接口名称，例如etch0，这样dhcpd将只在eth0网络接口上提供dhcp
+DHCPDARGD=eth0
+ 
+5.启动dhcp
+/etc/init.d/dhcpd restart
+service dhcpd restart 
+启动失败说明配置文档有问题
+ 
+6.检验是否成功
+netstat -tlunp
+ tail -n 30 /var/log/messages 7.注意点： 配置文件
+有问题：少写分号，子网掩码和子网不是同一网段 主机ip和声明的子网不在同一网段
+
+
+
+配置两张网卡包互相转发:
+1.打开包转发功能:
+  echo "1" > /proc/sys/net/ipv4/ip_forward
+2.修改/etc/sysctl.conf文件，让包转发功能在系统启动时自动生效:
+   # Controls IP packet forwarding
+   net.ipv4.ip_forward = 1
+3.打开iptables的NAT功能:
+  /sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+  说明：上面的语句中eth0是连接外网或者连接Internet的网卡. 执行下面的命令，保存iptables的规则:   
+service iptables save  /sbin/service iptables restart
+
+
+
+
+httpd 服务器配置
+yum install httpd
+#vi /etc/httpd/conf/httpd.conf
+
+#我们将ServerName导向固定ip，即将*改成我们的ip
+
+ServerName *:80
+
+#我们修改了DocumentRoot目录  不要放在root下修改权限777
+
+DocumentRoot /***
+
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Order deny,allow
+    Deny from all
+    Satisfy all
+</Directory>
+修改成
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Order deny,allow
+#    Deny from all
+    Allow from all
+#允许所有访问
+    Satisfy all
+</Directory>
+
+
+
+GRE(VPN)配置:
+modprobe -l |grep ip_gre  #ipip
+lsmod |grep gre
+加载内核:
+insmod /lib/modules/2.6.18-8.el5/kernel/net/ipv4/ip_gre.ko
+
+#ifconfig  eth1 192.168.10.2/24
+#ip tunnel add tun0 mode gre remote 192.168.10.3 local 192.168.10.2
+#ip link set tun0 up
+#ip addr add 192.168.20.2 peer 192.168.20.3 dev tun0
+#ip route add 192.168.20.0/24 dev tun0
+
+ip tunnel add tun0 mode gre remote 远程接口ip  local 本地接口ip
+ip link set tun0 up
+ip addr add 本地vpn_ip peer 远程vpn_ip dev tun0
+ip route add 10.0.0.0/24 dev tun0                   #添加路由表
+
+
+
+NFS服务器
+yum install nfs-utils rpcbind
+启动
+service rpcidmap start
+service nfs start
+
+创建共享目录
+mkdir -p /export/primary
+
+编辑/etc/exports文件添加如下内容
+vi /etc/exports
+/export*(rw,async,no_root_squash,no_subtree_check)
+
+刷新配置立即生效
+exportfs -a
+
+client挂载：
+mount -t nfs server_ip:/export/primary /mnt/primary
+查看挂载的目录
+df -h
+
+
+samba服务器
+yum install samba samba-client samba-swat
+
+配置共享文件
+cp -p /etc/samba/smb.conf    /etc/samba/smb.conf.orig
+
+
+vi /etc/samba/smb.conf
+
+# Scurity can be set to user, share(deprecated) or server(deprecated)
+
+        security = share                                  //共享级别，用户不需要账号和密码即可访问
+
+[public]                                                  //设置针对的是共享目录个别的设置，只对当前的共享资源起作用
+        comment = Public Stuff                            //对共享目录的说明文件，自己可以定义说明信息
+        path = /share                                     //用来指定共享的目录，必选项
+        public = yes                                      //所有人可查看,等效于guest ok = yes
+
+
+建立共享目录
+
+上面设置了共享目录为/share，下面就需要建立/share目录
+mkdir /share
+
+由于要设置匿名用户可以下载或上传共享文件，所以要给/share目录授权为nobody权限
+chown -R nobody:nobody share/
+
+重启服务
+service smb restart
+
+smbclient //192.168.0.1/public -U username%password

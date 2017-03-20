@@ -1,0 +1,22 @@
+1./root/hping3-20051105/main.c:186: undefined reference to `hping_script'
+make clean 
+./configure
+make
+make install
+2.
+[root@PC160 hping3-20051105]# make install
+cp -f hping3 /usr/sbin/
+chmod 755 /usr/sbin/hping3
+ln -s /usr/sbin/hping3 /usr/sbin/hping
+ln -s /usr/sbin/hping3 /usr/sbin/hping2
+ln: creating symbolic link `/usr/sbin/hping2' to `/usr/sbin/hping3': File exists
+make: *** [install] Error 1
+[root@PC160 hping3-20051105]# rm -f /usr/sbin/hping2
+[root@PC160 hping3-20051105]# make install
+cp -f hping3 /usr/sbin/
+chmod 755 /usr/sbin/hping3
+ln -s /usr/sbin/hping3 /usr/sbin/hping
+ln: creating symbolic link `/usr/sbin/hping' to `/usr/sbin/hping3': File exists
+make: *** [install] Error 1
+[root@PC160 hping3-20051105]# rm -f /usr/sbin/hping  É¾³ýµô
+[root@PC160 hping3-20051105]# make install

@@ -1,0 +1,272 @@
+***************************************************************************
+pytest运行文件中以test开头的类和方法
+1.pytest运行
+查找当前目录以test开始和介绍的py文件
+
+2.pytest+文件名运行，运行这个文件
+
+3.python -m pytest [...]
+only run tests matching given mark expression.
+	  example: -m 'mark1 and not mark2'.
+
+***************************************************************************
+pytest参数
+
+1.stop after first or more failure
+
+pytest -x # stop after first failure
+pytest --maxfail=2 # stop after two failures
+
+2.选择test
+
+pytest test_file.py    				run这个文件的test
+pytest path            				run这个路径下的test开头的文件
+pytest -k stringexpr   				run这个路径下的符合stringexpr的方法
+pytest test_file.py::test_func  		run这个test_file.py文件的test_func
+pytest test_mod.py::TestClass::test_method	run这个test_file.py文件的TestClass类的test_func
+pytest --pyargs pkg  				run all tests found below directory of pkg
+
+
+3.python的debugger PDB
+
+pytest -x --pdb # drop to PDB on first failure, then end test session
+pytest --pdb --maxfail=3 # drop to PDB for first three failures
+
+4.生成jenkins可读xml
+
+To create result files which can be read by Jenkins or other Continuous integration servers, use this invocation:
+pytest --junitxml=path
+
+
+5.pytest.main（）第一个list表示参数和文件或者路径，第二个参数是钩子函数运行时先调用
+args – list of command line arguments.
+plugins – list of plugin objects to be auto-registered during initialization
+
+class MyPlugin:
+    def pytest_sessionfinish(self):
+        print("*** test run reporting finishing")
+pytest.main(["-q",'test_demo.py']), plugins=[MyPlugin()])
+
+***************************************************************************
+接收异常
+import pytest
+def test_zero_division():
+	with pytest.raises(ZeroDivisionError):
+		1 / 0
+
+接收到相同异常标记为x，预期失败，用于处理bug
+@pytest.mark.xfail(raises=IndexError)
+def test_f():
+	f()
+***************************************************************************
+自定义断言失败信息
+1.创建conftest.py
+# content of conftest.py
+from test_foocompare import Foo
+def pytest_assertrepr_compare(op, left, right):
+	if isinstance(left, Foo) and isinstance(right, Foo) and op == "==":
+		return ['Comparing Foo instances:',' vals: %s != %s' % (left.val, right.val)]2.修改类的魔法方法
+class Foo:
+	def __init__(self, val):
+		self.val = val
+	def __eq__(self, other):
+		return self.val == other.val
+def test_compare():
+	f1 = Foo(1)
+	f2 = Foo(2)
+	assert f1 == f2
+
+***************************************************************************
+比较浮点型时：0.1+0.2等于0.3
+1.abs（0.1+0.2-0.3）<1e-6
+2.from pytest import approx
+0.1+0.2==approx(0.3)
+
+pytest.fixture()定义参数
+@pytest.mark.parametrize可以基于函数或者类提供多个参数。
+pytest_generate_tests允许实现自定义的动态参数模式和扩展。
+
+******fixture*********
+fixture是pytest特有的功能，它用pytest.fixture标识，定义在函数前面。在你编写
+测试函数的时候，你可以将此函数名称做为传入参数，pytest将会以依赖注入方式，
+将该函数的返回值作为测试函数的传入参数.
+@pytest.fixture,把smtp作为fixture function,参数scope="module"，整个moudle都能用
+）将一个函数的返回对象作为参数传入case中）参数scope="session"，所有都能用，当
+放在conftest.py,所有都能用。
+# content of ./test_smtpsimple.py
+import pytest
+@pytest.fixture
+def smtp():
+	import smtplib
+	return smtplib.SMTP("smtp.gmail.com")
+def test_ehlo(smtp):
+	response, msg = smtp.ehlo()
+	assert response == 250
+	assert 0 # for demo purposes
+模块级
+setup_module(moudle)
+teardown_module(moudle)
+类级
+setup_class(cls)
+teardown_class(cls)
+方法级
+setup_function(function)
+teardown_function(function)
+
+在fixture object对象使用完以后会有一个destroy 过程，如果想要在destroy过程中
+进行一些特殊的操作，可以给fixture 函数增加一个request对象，然后定义一个包含
+你想要执行的操作的函数，调用request的addfinalizer（funct_name）方法来把该函
+数注册到这个fixture object中。添加后teardown时主动调用fin函数。
+
+fixture 还可以进行参数化，可以给fixture函数一个“param = []” 的关键字参数
+，之后对于param中的每个值都会构造一个fixture object传递给测试函数使用。 
+# content of conftest.py
+import pytest
+import smtplib
+@pytest.fixture(scope="module",
+                params=["merlinux.eu", "mail.python.org"])
+def smtp(request):
+    smtp = smtplib.SMTP(request.param)
+    def fin():
+        print ("finalizing %s" % smtp)
+        smtp.close()
+    request.addfinalizer(fin)
+    return smtp
+
+对于每个需要使用到smtp这个fixture的测试函数，都会接收两个fixture object对象
+，一个使用的是“merlinux.edu” 参数，另一个使用的是”mail.python.org”参数。
+
+*********demo**********
+import pytest
+
+@pytest.fixture(scope="module")
+def host():
+    print "set up"
+    import snmp
+    host = snmp.Snmp()
+    host.snmp_connect(hostname='127.0.0.1', version=2, community='private')
+    def close():
+        print ("tear down" )
+        del host
+
+    return host
+
+@pytest.mark.webtest
+@pytest.mark.high
+def test_ntp(host):
+    host.snmp_connect(hostname='127.0.0.1', version=2, community='private')
+    for ip in ('33.33.1.2', '172.22.1.8'):
+        host.snmp_set_check('ntpPrimaryServer.0=' + ip)
+    for ntpClientEnabled in ('true', 'false'):
+        host.snmp_set_check('ntpClientEnabled.0=' + ntpClientEnabled)
+
+
+@pytest.mark.high
+def test_something_quick(host):
+
+    assert 1 == 1
+    print "\n test_something_quick"
+
+def test_another():
+    pass
+******fixture*********
+
+
+@pytest.mark.parametrize构造迭代参数case
+import pytest
+from datetime import datetime, timedelta
+
+testdata = [
+(datetime(2001, 12, 12), datetime(2001, 12, 11), timedelta(1)),
+(datetime(2001, 12, 11), datetime(2001, 12, 12), timedelta(-1)),
+]
+
+@pytest.mark.parametrize("a,b,expected", testdata)
+def test_timedistance_v0(a, b, expected):
+    diff = a - b
+    assert diff == expected
+
+
+***************************************************************************
+读取自定义cmd参数
+1.conftest.py
+#coding:utf-8
+import pytest
+#注册一个参数
+def pytest_addoption(parser):
+    parser.addoption("--cmd_get", action="store", default="i",
+        help="my option: i or ii")
+#定义一个fixture获取指定参数值
+@pytest.fixture
+def cmd_get(request):
+    return request.config.getoption('--cmd_get')
+
+2.test_case.py
+import pytest
+def test_get(cmd_get):
+    if cmd_get=='i':
+        print 1
+    elif cmd_get=='ii':
+        print 2
+    assert 0
+
+命令行忽略测试
+1.conftest.py
+#coding:utf-8
+import pytest
+#注册一个参数
+def pytest_addoption(parser):
+    parser.addoption("--runslow", action="store",
+        help="run slow test")
+
+2.test_case.py，运行时没有添加参数--runslow忽略掉test_slow
+import pytest
+def test_fast():
+    print 'fast'
+    assert 0
+@pytest.mark.skipif(not pytest.config.getoption('--runslow')
+,reason='need --runslow option to run')
+def test_slow():
+    print 'slow'
+    assert 0
+
+***************************************************************************
+@pytest.mark.incremental    case包含很多步骤，一步失败就没有意义了。
+conftest.py
+import pytest
+def pytest_runtest_makereport(item, call):
+	if "incremental" in item.keywords:
+	if call.excinfo is not None:
+		parent = item.parent
+		parent._previousfailed = item
+def pytest_runtest_setup(item):
+	if "incremental" in item.keywords:
+	previousfailed = getattr(item.parent, "_previousfailed", None)
+	if previousfailed is not None:
+		pytest.xfail("previous test failed (%s)" %previousfailed.name)
+test_step.py
+import pytest
+@pytest.mark.incremental
+class TestUserHandling:
+	def test_login(self):
+		pass
+	def test_modification(self):
+		assert 0
+	def test_deletion(self):#前一步失败。这个case不会执行标记为x（预计失败）
+		pass
+def test_normal():
+	pass
+
+py.test -v -m webtest 只运行标记了webtest的函数， py.test -v -m "not webtest"  来运行未标记webtest的
+还可以通过-v 指定的函数ID， py.test -v test_server.py::TestClass::test_method 来运行指定的函数
+test_tt.py
+import pytest
+@pytest.mark.webtest
+def test_send_http():
+	pass # perform some webtest test for your app
+def test_something_quick():
+	pass
+def test_another():
+	pass
+class TestClass:
+	def test_met

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://www.cnblogs.com/sparkling-ly/p/5650413.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pytest学习笔记（一） - 晶莹的营 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/bundle-LessIsMore.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/bundle-LessIsMore-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/sparkling-ly/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/sparkling-ly/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/sparkling-ly/wlwmanifest.xml">
+<script type="text/javascript" src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/encoder.js.下载"></script><script src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/jquery.js.下载" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'sparkling-ly', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+		
+<!--done-->
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/sparkling-ly/">晶莹的营</a></div>
+<div class="subtitle"></div>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li id="nav_myhome"><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/sparkling-ly/">首页</a></li>
+<li id="nav_newpost"><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li id="nav_contact"><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E6%99%B6%E8%8E%B9%E7%9A%84%E8%90%A5">联系</a></li>
+<li id="nav_rss"><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/sparkling-ly/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/sparkling-ly/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li id="nav_admin"><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<!--done-->
+随笔-23&nbsp;
+文章-6&nbsp;
+评论-9&nbsp;
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/sparkling-ly/p/5650413.html">pytest学习笔记（一）</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p>这两天在学习pytest，之前有小用到pytest，觉得这个测试框架很灵巧，用在实现接口自动化（pytest+requests）非常的轻便，然后很有兴致的决定学习下，然后又发现了pytest-selenium这么个神奇的东东，加上pytest-rerunfailures失败case自动执行，pytest-html完美测试报告生成，完全就解决了我的selenium测试中的难点，仔细研读了下pytest的英文文档，发现这个框架和丰富的plugins真的很好用，所以决心仔细研究下pytest，下面就开始pytest的学习吧。</p>
+<p>（一）介绍</p>
+<p>&nbsp; pytest是一个非常成熟的全功能的Python测试框架，主要特点有以下几点：1、简单灵活，容易上手；2、支持参数化；3、能够支持简单的单元测试和复杂的功能测试，还可以用来做selenium/appnium等自动化测试、接口自动化测试（pytest+requests）;4、pytest具有很多第三方插件，并且可以自定义扩展，比较好用的如pytest-selenium（集成selenium）、pytest-html（完美html测试报告生成）、pytest-rerunfailures（失败case重复执行）、pytest-xdist（多CPU分发）等；5、测试用例的skip和xfail处理；6、可以很好的和jenkins集成；（二）安装</p>
+<p>　　pip&nbsp;install&nbsp;-U&nbsp;pytest&nbsp;</p>
+<p>　　pip&nbsp;install&nbsp;-U&nbsp;pytest-html</p>
+<p>　　pip&nbsp;install&nbsp;-U&nbsp;pytest-rerunfailures</p>
+<p>此外还有很多很好的第三方插件，请到http://plugincompat.herokuapp.com/ 和&nbsp;https://pypi.python.org/pypi?%3Aaction=search&amp;term=pytest-&amp;submit=search 查找</p>
+<p>（三）例子</p>
+<p>这里列几个pytest-document中的例子</p>
+<p>1、默认执行当前目录下的所有以test_为前缀(test_*.py)或以_test为后缀(*_test.py)的文件中以test_为前缀的函数</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> pytest
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> content of test_sample.py</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> func(x):
+    </span><span style="color: #0000ff;">return</span> x + 1
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> test_answer():
+    </span><span style="color: #0000ff;">assert</span> func(3) == 5</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>运行 py.test &nbsp;或 指定特定文件 py.test -q test_sample.py</p>
+<p><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/937114-20160707150538421-1959138879.png" alt=""></p>
+<p>2、使用类来组成多个用例的</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> pytest
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> content of test_class.py</span>
+<span style="color: #0000ff;">class</span><span style="color: #000000;"> TestClass:
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_one(self):
+
+        x </span>= <span style="color: #800000;">"</span><span style="color: #800000;">this</span><span style="color: #800000;">"</span>
+    <span style="color: #0000ff;">assert</span> <span style="color: #800000;">'</span><span style="color: #800000;">h</span><span style="color: #800000;">'</span> <span style="color: #0000ff;">in</span><span style="color: #000000;"> x
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_two(self):
+        x </span>= <span style="color: #800000;">"</span><span style="color: #800000;">hello</span><span style="color: #800000;">"</span>
+        <span style="color: #0000ff;">assert</span> hasattr(x, <span style="color: #800000;">'</span><span style="color: #800000;">check</span><span style="color: #800000;">'</span>)</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/937114-20160707151817467-228763056.png" alt=""></p>
+<p>3、在python中调用pytest: python test_class.py</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> pytest
+
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> content of test_class.py</span>
+<span style="color: #0000ff;">class</span><span style="color: #000000;"> TestClass:
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_one(self):
+        </span><span style="color: #0000ff;">print</span> <span style="color: #800000;">'</span><span style="color: #800000;">one</span><span style="color: #800000;">'</span><span style="color: #000000;">
+        x </span>= <span style="color: #800000;">"</span><span style="color: #800000;">this</span><span style="color: #800000;">"</span>
+        <span style="color: #0000ff;">assert</span> <span style="color: #800000;">'</span><span style="color: #800000;">h</span><span style="color: #800000;">'</span> <span style="color: #0000ff;">in</span><span style="color: #000000;"> x
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_two(self):
+        </span><span style="color: #0000ff;">print</span> <span style="color: #800000;">'</span><span style="color: #800000;">two</span><span style="color: #800000;">'</span><span style="color: #000000;">
+        x </span>= <span style="color: #800000;">"</span><span style="color: #800000;">hello</span><span style="color: #800000;">"</span>
+        <span style="color: #0000ff;">assert</span> hasattr(x, <span style="color: #800000;">'</span><span style="color: #800000;">check</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+</span><span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    pytest.main(</span><span style="color: #800000;">"</span><span style="color: #800000;">-q --html=a.html</span><span style="color: #800000;">"</span>)</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/937114-20160707154217717-243962682.png" alt=""></p>
+<p>4、来个支持参数化的例子，参数化使用pytest.mark.parametrize的参数，第一个为变量的元组，第二个是变量赋值的元组列表，具体下面的章节会仔细介绍</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000;">#</span><span style="color: #008000;"> content of test_time.py</span>
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> pytest
+</span><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> datetime, timedelta
+
+testdata </span>=<span style="color: #000000;"> [
+(datetime(</span>2001, 12, 12), datetime(2001, 12, 11), timedelta(1<span style="color: #000000;">)),
+(datetime(</span>2001, 12, 11), datetime(2001, 12, 12), timedelta(-1<span style="color: #000000;">)),
+]
+
+@pytest.mark.parametrize(</span><span style="color: #800000;">"</span><span style="color: #800000;">a,b,expected</span><span style="color: #800000;">"</span><span style="color: #000000;">, testdata)
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_timedistance_v0(a, b, expected):
+    diff </span>= a -<span style="color: #000000;"> b
+    </span><span style="color: #0000ff;">assert</span> diff ==<span style="color: #000000;"> expected
+    
+@pytest.mark.parametrize(</span><span style="color: #800000;">"</span><span style="color: #800000;">a,b,expected</span><span style="color: #800000;">"</span>, testdata, ids=[<span style="color: #800000;">"</span><span style="color: #800000;">forward</span><span style="color: #800000;">"</span>, <span style="color: #800000;">"</span><span style="color: #800000;">backward</span><span style="color: #800000;">"</span><span style="color: #000000;">])
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_timedistance_v1(a, b, expected):
+
+    diff </span>= a -<span style="color: #000000;"> b
+    </span><span style="color: #0000ff;">assert</span> diff ==<span style="color: #000000;"> expected
+    
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> idfn(val):
+    </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> isinstance(val, (datetime,)):
+    </span><span style="color: #008000;">#</span><span style="color: #008000;"> note this wouldn't show any hours/minutes/seconds</span>
+        <span style="color: #0000ff;">return</span> val.strftime(<span style="color: #800000;">'</span><span style="color: #800000;">%Y%m%d</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+@pytest.mark.parametrize(</span><span style="color: #800000;">"</span><span style="color: #800000;">a,b,expected</span><span style="color: #800000;">"</span>, testdata, ids=<span style="color: #000000;">idfn)
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test_timedistance_v2(a, b, expected):
+    diff </span>= a -<span style="color: #000000;"> b
+    </span><span style="color: #0000ff;">assert</span> diff == expected</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/937114-20160707154937046-493405114.png" alt=""></p>
+<p>&nbsp;</p>
+<p>&nbsp; 以上对pytest做了入门的介绍，下一节再对pytest中的重点内容做介绍</p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/sparkling-ly/category/851617.html" target="_blank">Pytest学习笔记</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(5650413,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;de01cb11-b802-e611-9fc1-ac853d9f53cc&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/sparkling-ly/" target="_blank"><img src="./pytest学习笔记（一） - 晶莹的营 - 博客园_files/20160415115134.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/sparkling-ly/">晶莹的营</a><br>
+            <a href="http://home.cnblogs.com/u/sparkling-ly/followees">关注 - 1</a><br>
+            <a href="http://home.cnblogs.com/u/sparkling-ly/followers">粉丝 - 3</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;de01cb11-b802-e611-9fc1-ac853d9f53cc&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(5650413,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(5650413,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/sparkling-ly/p/5591703.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/sparkling-ly/p/5591703.html" title="发布于2016-06-16 17:32">SSM框架搭建，以及mybatis学习</a><br><a href="http://www.cnblogs.com/sparkling-ly/p/5653402.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/sparkling-ly/p/5653402.html" title="发布于2016-07-08 15:01">试用saucelabs进行浏览器兼容性测试</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-07-07 15:53</span> <a href="http://www.cnblogs.com/sparkling-ly/">晶莹的营</a> 阅读(<span id="post_view_count">182</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=5650413" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/sparkling-ly/p/5650413.html#" onclick="AddToWz(5650413);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=279949,cb_entryId=5650413,cb_blogApp=currentBlogApp,cb_blogUserGuid='de01cb11-b802-e611-9fc1-ac853d9f53cc',cb_entryCreatedDate='2016/7/7 15:53:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/sparkling-ly/p/5650413.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/sparkling-ly/p/5650413.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/557758/" target="_blank">微软开始修正Outlook同步异常问题 未透露故障原因</a><br> ·  <a href="http://news.cnblogs.com/n/557757/" target="_blank">NASA将借助SpaceX火箭开展为期三年的全球地表水资源调查</a><br> ·  <a href="http://news.cnblogs.com/n/557756/" target="_blank">微软劝用户换新电脑：旧电脑1年浪费1整天启动时间</a><br> ·  <a href="http://news.cnblogs.com/n/557755/" target="_blank">支付宝与联通推流量优惠 10次线下支付换100M流量</a><br> ·  <a href="http://news.cnblogs.com/n/557754/" target="_blank">在行&amp;分答获腾讯投资 将进行产品迭代和扶持知识网红</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="ad_c2" class="c_ad_block"></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/555750/" target="_blank">循序渐进地代码重构</a><br> ·  <a href="http://kb.cnblogs.com/page/554496/" target="_blank">技术的正宗与野路子</a><br> ·  <a href="http://kb.cnblogs.com/page/553682/" target="_blank">陈皓：什么是工程师文化？</a><br> ·  <a href="http://kb.cnblogs.com/page/551422/" target="_blank">没那么难，谈CSS的设计模式</a><br> ·  <a href="http://kb.cnblogs.com/page/550625/" target="_blank">程序猿媳妇儿注意事项</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/sparkling-ly/">晶莹的营</a><br>园龄：<a href="http://home.cnblogs.com/u/sparkling-ly/" title="入园时间：2016-04-15">7个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/sparkling-ly/followers/">3</a><br>关注：<a href="http://home.cnblogs.com/u/sparkling-ly/followees/">1</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;de01cb11-b802-e611-9fc1-ac853d9f53cc&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="日历">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2016/10/01&#39;);return false;">&lt;</a></td><td align="center">2016年11月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2016/12/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td class="CalWeekendDay" align="center">5</td></tr><tr><td class="CalWeekendDay" align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td><td class="CalWeekendDay" align="center">12</td></tr><tr><td class="CalWeekendDay" align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center">18</td><td class="CalWeekendDay" align="center">19</td></tr><tr><td class="CalWeekendDay" align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td class="CalTodayDay" align="center">24</td><td align="center">25</td><td class="CalWeekendDay" align="center">26</td></tr><tr><td class="CalWeekendDay" align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td></tr><tr><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td><td class="CalOtherMonthDay" align="center">9</td><td class="CalOtherMonthDay" align="center">10</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/sparkling-ly/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block"></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/sparkling-ly/category/831294.html">django(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/sparkling-ly/category/839165.html">jenkins(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/sparkling-ly/category/851617.html">Pytest学习笔记(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/sparkling-ly/category/842122.html">python(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/sparkling-ly/category/855182.html">Robot Framework教程(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/sparkling-ly/category/825537.html">selenium(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/sparkling-ly/category/815996.html">开播啦(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/sparkling-ly/category/855183.html">软件测试(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/sparkling-ly/category/839000.html">算法(2)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/sparkling-ly/archive/2016/09.html">2016年9月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/sparkling-ly/archive/2016/08.html">2016年8月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/sparkling-ly/archive/2016/07.html">2016年7月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/sparkling-ly/archive/2016/06.html">2016年6月 (5)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/sparkling-ly/archive/2016/05.html">2016年5月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/sparkling-ly/archive/2016/04.html">2016年4月 (3)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListArticleCategory">
+<h3 class="catListTitle">文章分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_2_Link_0" href="http://www.cnblogs.com/sparkling-ly/category/855181.html">Robot Framework</a> </li>
+
+<li><a id="CatList_LinkList_2_Link_1" href="http://www.cnblogs.com/sparkling-ly/category/816233.html">WEB(1)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/sparkling-ly/p/5653402.html#3470324">1. Re:试用saucelabs进行浏览器兼容性测试</a></li>
+        <li class="recent_comment_body">不是太了解这种兼容性比对的实现方式是怎样的，是不是不同浏览器加载同一个页面后先截图，然后进行比对呢？还是说不同浏览器加载统一页面后不用截图，就直接在浏览器中进行比对？</li>
+        <li class="recent_comment_author">--SJJMonkeyFUN</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/sparkling-ly/p/5653402.html#3470321">2. Re:试用saucelabs进行浏览器兼容性测试</a></li>
+        <li class="recent_comment_body">@晶莹的营由于浏览器的这种渲染机制不同，那么不同浏览器加载同一个页面后进行浏览器兼容性比对时是不是会有一定的差异性呢？也就是不能做到截出的图完全一致？...</li>
+        <li class="recent_comment_author">--SJJMonkeyFUN</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/sparkling-ly/p/5653402.html#3470290">3. Re:试用saucelabs进行浏览器兼容性测试</a></li>
+        <li class="recent_comment_body">@SJJMonkeyFUN是的，主要IE、FF和chrome的内核是不一样的，所以页面渲染时会出现页面不一致的情况，主要是css样式以及js代码不兼容，特别是如果有些代码没有兼容这几种内核，可能会在某......</li>
+        <li class="recent_comment_author">--晶莹的营</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/sparkling-ly/p/5653402.html#3470204">4. Re:试用saucelabs进行浏览器兼容性测试</a></li>
+        <li class="recent_comment_body">博主你好，我又来了，这次是想问一下这个浏览器兼容性测试工具测的是，比如chrome和火狐加载同一个页面，然后对这两个页面进行兼容性比对么？</li>
+        <li class="recent_comment_author">--SJJMonkeyFUN</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/sparkling-ly/p/5466644.html#3470185">5. Re:selenium实现chrome分屏截图的合并</a></li>
+        <li class="recent_comment_body">@晶莹的营好的，感谢博主。...</li>
+        <li class="recent_comment_author">--SJJMonkeyFUN</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/sparkling-ly/p/5807238.html">1. 使用postman玩转接口测试(1295)</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/p/5660603.html">2. pytest学习笔记（二）(263)</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/p/5569937.html">3. jenkins集成python的单元测试(234)</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/p/5650413.html">4. pytest学习笔记（一）(181)</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/p/5653402.html">5. 试用saucelabs进行浏览器兼容性测试(166)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/sparkling-ly/p/5653402.html">1. 试用saucelabs进行浏览器兼容性测试(4)</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/p/5466644.html">2. selenium实现chrome分屏截图的合并(3)</a></li><li><a href="http://www.cnblogs.com/sparkling-ly/p/5466573.html">3. selenium，控制滚动条(2)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap" style="display: none;">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2016 晶莹的营
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body></html>

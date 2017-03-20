@@ -1,0 +1,55 @@
+进击兜兜：http://blog.sina.com.cn/xiaopeng163
+
+ls() 列出scapy中已实现的网络协议。
+ls(IP) 列出IP协议头部字段格式。
+IP().show() 显示包的IP信息。
+lsc() 列出scapy中可以使用的命令或函数。
+写到pcap文件
+wrpcap(demo.pcap,pkts)
+读取pcap文件
+read_pkts = rdpcap(demo.pcap)
+
+sniff:
+iface  接口名
+prn    解析函数 prn=lambda x:x.summary()
+count  数目
+filter 过滤     filter="icmp and host 61.135.169.125"
+
+
+读取某一层数据（控制输出信息）：
+lambda x:x.sprintf('%IP.src%')
+
+修改多层节点
+
+指定层
+pkt.getlayer（层）.节点=值
+下一层
+pkt.payload.节点=值
+
+记录scapy的路由
+conf.route
+conf.route.delt(net='',gw=''）
+conf.route.add（net='',gw=''）
+conf.route.resync()恢复默认路由
+
+
+发包方法大体分为两类，第一类是只发不收，第二类是发而且接受回复。
+1 Sending packets:
+send() and sendp()
+send()是在第三层发送数据包，sendp（）是在第二层
+send(IP(dst=’10.104.4.22’,ttl=(1,4))/ICMP())
+这就是ping命令，不过没有接收回复的功能，只是发出去了4个ping包。
+Sendp(Ether()/IP(dst=’10.104.4.22’,ttl=(1,4)))
+当然有很多参数可以设置，inter,timeout等等。
+
+2.Send and receive packets
+sr() is for sending and receiving packets,it returns a couple of 
+packet and answers,and the unanswered packets.but sr1() only receive 
+the first answer.srloop() is for sending a packet in loop and print 
+the answer each time
+sr（）得到的结果p可以看到一个tuple元组，个元组的成员p[0]和p[1]也分别
+是元组，p[0]是一对对收发包，p[1]是一些没有得到回复的包。如果要想看看
+每个收发包的具体情况，可以用p[0][1]等来查看。
+
+
+srp.sr1p,srloopp发二层报文.

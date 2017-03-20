@@ -1,0 +1,21 @@
+import requests
+ 
+url = 'https://accounts.douban.com/login'
+headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36',
+'Referer':'https://accounts.douban.com/login?uid=&alias=123456&redir=https%3A%2F%2Fwww.douban.com%2F&source=None&error=1008'}
+s = requests.Session()
+ 
+# 构建表单
+payload = {'source':'None',
+'redir':'https://www.douban.com/',
+'form_email':'这里是你注册的邮箱',
+'form_password':'这里是你的密码',
+'login':'登录'}
+ 
+data1 = s.post(url, data=payload, verify=False)  # 绕过了SSL验证
+print(data1.status_code)
+# print(data1.text)
+ 
+data2 = s.get('https://www.douban.com/people/146448257/') # 这里是我的主页。。。当然你可以访问任何人的主页
+print(data2.status_code)
+print(data2.text)
