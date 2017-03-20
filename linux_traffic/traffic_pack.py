@@ -22,8 +22,8 @@ class get_ssh():
                     if i.isdigit():
                         pid_l.append(int(i))
                         break
-		if pid_l:
-			pid_l.pop()
+	if pid_l:
+            pid_l.pop()
         return pid_l
     def ex_cmd(self,cmd):
         self.s.send(cmd+'\n')
