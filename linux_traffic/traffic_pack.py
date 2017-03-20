@@ -22,7 +22,8 @@ class get_ssh():
                     if i.isdigit():
                         pid_l.append(int(i))
                         break
-        pid_l.pop()
+		if pid_l:
+			pid_l.pop()
         return pid_l
     def ex_cmd(self,cmd):
         self.s.send(cmd+'\n')
@@ -53,7 +54,7 @@ class get_ssh():
     def close(self):
         self.ssh.close()
 class ICMP():
-    def __init__(self,server,dest,intf='eth0',count=0,length=64):
+    def __init__(self,server,source,dest,intf='eth0',count=0,length=64):
         self._src=source
         self._dest=dest
         self._count=count
