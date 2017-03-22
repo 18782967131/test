@@ -1,11 +1,17 @@
 import requests
 from requests.auth import HTTPBasicAuth
-import json
 class get_64base_error(Exception):
     def __init__(self,value):
         self.value=value
         super().__init__()
-    def __repr(self):
+    def __str__(self):
+        return repr(self.value)
+class cheack_login_error(Exception):
+    def __init__(self,value):
+        self.value=value
+        super().__init__()
+    def __str__(self):
+        print('str')
         return repr(self.value)
 class rest_api():
     def __init__(self):
@@ -30,20 +36,23 @@ class rest_api():
             self.auth=HTTPBasicAuth(self.username,re.json()['auth'])
         else:
             raise get_64base_error('get 64 base passwd fail')
-        if self.cheack_64base()：
+        if self.cheack_64base():
             pass
         else:
-            raise
+            raise cheack_login_error(self.s)
     def cheack_64base(self):
         check_url='https://{ip}/api/v1.0/config/hierarchy'.format(ip=self.ip)
-        re=self.session.get(check_url,slef.auth,verify=False)
+        re=self.session.get(check_url,auth=self.auth,verify=False)
+        self.s=''
         if re.status_code==200:
+            print(re.text)
             return True
         else:
+            self.s=re.text
             return False
     def get(self,url):
         self.url=url
         re=self.session.get(self.url,verify=False)
         return re.json(),re.status_code
 rest=rest_api()
-print(rest.login('10.11.123.140','varmour','vArmour123'))
+rest.get_64base('10.11.123.250','varmour','vArmour123')
