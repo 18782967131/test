@@ -4,6 +4,7 @@ import json
 class get_64base_error(Exception):
     def __init__(self,value):
         self.value=value
+        super().__init__()
     def __repr(self):
         return repr(self.value)
 class rest_api():
