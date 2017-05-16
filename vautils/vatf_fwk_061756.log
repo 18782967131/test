@@ -1,0 +1,1336 @@
+[2017-03-13 14:17:57,033] [vautils] [INFO] False
+[2017-03-13 14:17:57,452] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,452] [access] [INFO] [dir_1] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:17:57,453] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,453] [access] [INFO] [dir_1] Welcome to vArmour!
+[2017-03-13 14:17:57,453] [access] [INFO] [dir_1] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-13 14:17:57,454] [access] [INFO] [dir_1] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:17:57,454] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,454] [access] [INFO] [dir_1]  Checking management server status..... 
+[2017-03-13 14:17:57,455] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:17:57,455] [access] [INFO] [dir_1] The configuration has been installed.
+[2017-03-13 14:17:57,455] [access] [INFO] [dir_1] Connecting to the management console
+[2017-03-13 14:17:57,455] [access] [INFO] [dir_1] Warning: The device is configured with the default password.  Please change
+[2017-03-13 14:17:57,455] [access] [INFO] [dir_1]          the default password to prevent unauthorized logins.
+[2017-03-13 14:17:57,456] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,456] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,456] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,457] [access] [INFO] [dir_1] HA sync stage. Do show high-availability to see HA status.
+[2017-03-13 14:17:57,457] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,457] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:17:57,460] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,460] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:17:57,461] [feature] [INFO] cli initiated
+[2017-03-13 14:17:57,461] [feature] [INFO] request cli terminal-length 0
+[2017-03-13 14:17:57,471] [access] [INFO] [dir_1] request cli terminal-length 0
+[2017-03-13 14:17:57,471] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:17:57,473] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,473] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:17:57,476] [access] [INFO] [dir_1] configure
+[2017-03-13 14:17:57,477] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:17:57,477] [feature] [INFO] set system inactivity-timeout 250
+[2017-03-13 14:17:57,480] [access] [INFO] [dir_1] set system inactivity-timeout 250
+[2017-03-13 14:17:57,481] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:17:57,482] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,482] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:17:57,592] [access] [INFO] [dir_1] commit
+[2017-03-13 14:17:57,592] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:17:57,592] [feature] [INFO] config commit succeeded
+[2017-03-13 14:17:57,594] [access] [INFO] [dir_1] 
+[2017-03-13 14:17:57,594] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:17:57,597] [access] [INFO] [dir_1] exit
+[2017-03-13 14:17:57,597] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:17:57,944] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,944] [access] [INFO] [dir_2] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:17:57,944] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,945] [access] [INFO] [dir_2] Welcome to vArmour!
+[2017-03-13 14:17:57,945] [access] [INFO] [dir_2] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-13 14:17:57,945] [access] [INFO] [dir_2] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:17:57,945] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,946] [access] [INFO] [dir_2]  Checking management server status..... 
+[2017-03-13 14:17:57,946] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:17:57,946] [access] [INFO] [dir_2] The configuration has been installed.
+[2017-03-13 14:17:57,946] [access] [INFO] [dir_2] Connecting to the management console
+[2017-03-13 14:17:57,947] [access] [INFO] [dir_2] Warning: The device is configured with the default password.  Please change
+[2017-03-13 14:17:57,947] [access] [INFO] [dir_2]          the default password to prevent unauthorized logins.
+[2017-03-13 14:17:57,947] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,947] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,948] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,948] [access] [INFO] [dir_2] HA sync stage. Do show high-availability to see HA status.
+[2017-03-13 14:17:57,948] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,948] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:17:57,950] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,950] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:17:57,951] [feature] [INFO] cli initiated
+[2017-03-13 14:17:57,951] [feature] [INFO] request cli terminal-length 0
+[2017-03-13 14:17:57,961] [access] [INFO] [dir_2] request cli terminal-length 0
+[2017-03-13 14:17:57,962] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:17:57,963] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,963] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:17:57,965] [access] [INFO] [dir_2] configure
+[2017-03-13 14:17:57,966] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:17:57,966] [feature] [INFO] set system inactivity-timeout 250
+[2017-03-13 14:17:57,971] [access] [INFO] [dir_2] set system inactivity-timeout 250
+[2017-03-13 14:17:57,971] [access] [INFO] [dir_2] Command is not supported on high-availability backup/ineligible device
+[2017-03-13 14:17:57,971] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:17:57,973] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,973] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:17:57,976] [access] [INFO] [dir_2] commit
+[2017-03-13 14:17:57,976] [access] [INFO] [dir_2] Nothing to commit!
+[2017-03-13 14:17:57,976] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:17:57,977] [feature] [INFO] config commit succeeded
+[2017-03-13 14:17:57,978] [access] [INFO] [dir_2] 
+[2017-03-13 14:17:57,978] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:17:57,981] [access] [INFO] [dir_2] exit
+[2017-03-13 14:17:57,982] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:17:58,325] [access] [INFO] [cp_1] 
+[2017-03-13 14:17:58,325] [access] [INFO] [cp_1] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:17:58,326] [access] [INFO] [cp_1] 
+[2017-03-13 14:17:58,326] [access] [INFO] [cp_1] Welcome to vArmour!
+[2017-03-13 14:17:58,327] [access] [INFO] [cp_1] Last login: Sun Mar 12 22:27:06 2017 from 10.11.123.169
+[2017-03-13 14:17:58,327] [access] [INFO] [cp_1] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-13 14:17:58,327] [access] [INFO] [cp_1] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:17:58,328] [access] [INFO] [cp_1] 
+[2017-03-13 14:17:58,328] [access] [INFO] [cp_1]  Running inside CP cli console
+[2017-03-13 14:17:58,328] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:17:58,329] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:17:58,331] [access] [INFO] [cp_1] 
+[2017-03-13 14:17:58,331] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:17:58,331] [feature] [INFO] cli initiated
+[2017-03-13 14:17:58,605] [access] [INFO] [epi_1] 
+[2017-03-13 14:17:58,606] [access] [INFO] [epi_1] Build: 3.1.0-2017-02-09-15-53-38-eng-epi-builtbot
+[2017-03-13 14:17:58,606] [access] [INFO] [epi_1] 
+[2017-03-13 14:17:58,606] [access] [INFO] [epi_1] Welcome to vArmour!
+[2017-03-13 14:17:58,606] [access] [INFO] [epi_1] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-13 14:17:58,607] [access] [INFO] [epi_1] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:17:58,607] [access] [INFO] [epi_1] 
+[2017-03-13 14:17:58,607] [access] [INFO] [epi_1]  Running inside EPI cli console
+[2017-03-13 14:17:58,607] [access] [INFO] [epi_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:17:58,608] [access] [INFO] [epi_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:17:58,609] [access] [INFO] [epi_1] 
+[2017-03-13 14:17:58,610] [access] [INFO] [epi_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:17:58,610] [feature] [INFO] cli initiated
+[2017-03-13 14:17:58,656] [vautils] [INFO] {'hvisor_1': {'vSwitch2': <vautils.resource.network.esxvswitch.EsxVswitch object at 0x7ff72e75a2e8>, 'hvobj': <vautils.resource.Esxi object at 0x7ff72b3fc6a0>, 'vSwitch1': <vautils.resource.network.esxvswitch.EsxVswitch object at 0x7ff72ae6ef98>}}
+[2017-03-13 14:17:58,961] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:17:58,961] [access] [INFO] [dir_1_nocli] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:17:58,961] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:17:58,961] [access] [INFO] [dir_1_nocli] Welcome to vArmour!
+[2017-03-13 14:17:58,961] [access] [INFO] [dir_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:58,963] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:17:58,963] [access] [INFO] [dir_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:58,964] [feature] [INFO] cli initiated
+[2017-03-13 14:17:58,966] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:17:58,967] [access] [INFO] [dir_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:58,972] [access] [INFO] [dir_1_nocli] sudo -s
+[2017-03-13 14:17:58,973] [access] [INFO] [dir_1_nocli] [sudo] password for varmour_no_cli: 
+[2017-03-13 14:17:59,069] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:17:59,069] [access] [INFO] [dir_1_nocli] root@vArmour:/usr-varmour/home/varmour_no_cli# 
+[2017-03-13 14:17:59,348] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:17:59,349] [access] [INFO] [cp_1_nocli] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:17:59,349] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:17:59,349] [access] [INFO] [cp_1_nocli] Welcome to vArmour!
+[2017-03-13 14:17:59,349] [access] [INFO] [cp_1_nocli] Last login: Sun Mar 12 22:27:05 2017 from 10.11.123.169
+[2017-03-13 14:17:59,349] [access] [INFO] [cp_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:59,352] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:17:59,352] [access] [INFO] [cp_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:59,353] [feature] [INFO] cli initiated
+[2017-03-13 14:17:59,355] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:17:59,355] [access] [INFO] [cp_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:59,363] [access] [INFO] [cp_1_nocli] sudo -s
+[2017-03-13 14:17:59,364] [access] [INFO] [cp_1_nocli] [sudo] password for varmour_no_cli: 
+[2017-03-13 14:17:59,445] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:17:59,446] [access] [INFO] [cp_1_nocli] root@vArmour:/usr-varmour/home/varmour_no_cli# 
+[2017-03-13 14:17:59,715] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:17:59,715] [access] [INFO] [dir_2_nocli] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:17:59,716] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:17:59,716] [access] [INFO] [dir_2_nocli] Welcome to vArmour!
+[2017-03-13 14:17:59,716] [access] [INFO] [dir_2_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:59,719] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:17:59,719] [access] [INFO] [dir_2_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:59,720] [feature] [INFO] cli initiated
+[2017-03-13 14:17:59,722] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:17:59,722] [access] [INFO] [dir_2_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:17:59,730] [access] [INFO] [dir_2_nocli] sudo -s
+[2017-03-13 14:17:59,731] [access] [INFO] [dir_2_nocli] [sudo] password for varmour_no_cli: 
+[2017-03-13 14:17:59,818] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:17:59,818] [access] [INFO] [dir_2_nocli] root@vArmour:/usr-varmour/home/varmour_no_cli# 
+[2017-03-13 14:18:00,103] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:00,103] [access] [INFO] [epi_1_nocli] Build: 3.1.0-2017-02-09-15-53-38-eng-epi-builtbot
+[2017-03-13 14:18:00,104] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:00,104] [access] [INFO] [epi_1_nocli] Welcome to vArmour!
+[2017-03-13 14:18:00,104] [access] [INFO] [epi_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:00,106] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:00,106] [access] [INFO] [epi_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:00,106] [feature] [INFO] cli initiated
+[2017-03-13 14:18:00,108] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:00,109] [access] [INFO] [epi_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:00,117] [access] [INFO] [epi_1_nocli] sudo -s
+[2017-03-13 14:18:00,117] [access] [INFO] [epi_1_nocli] [sudo] password for varmour_no_cli: 
+[2017-03-13 14:18:00,145] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:00,146] [access] [INFO] [epi_1_nocli] root@vArmour:/usr-varmour/home/varmour_no_cli# 
+[2017-03-13 14:18:00,153] [vautils] [DEBUG] ##############################################################
+[2017-03-13 14:18:00,154] [vautils] [DEBUG] #                                                            #
+[2017-03-13 14:18:00,154] [vautils] [DEBUG] # Setup module to setup topology and init test configuration #
+[2017-03-13 14:18:00,154] [vautils] [DEBUG] #                                                            #
+[2017-03-13 14:18:00,154] [vautils] [DEBUG] ##############################################################
+[2017-03-13 14:18:00,155] [vautils] [DEBUG] #################################################
+[2017-03-13 14:18:00,155] [vautils] [DEBUG] #                                               #
+[2017-03-13 14:18:00,155] [vautils] [DEBUG] # Setup function to init before every test case #
+[2017-03-13 14:18:00,155] [vautils] [DEBUG] #                                               #
+[2017-03-13 14:18:00,156] [vautils] [DEBUG] #################################################
+[2017-03-13 14:18:00,156] [access] [INFO] ==============Test Case config start==============
+[2017-03-13 14:18:00,157] [vautils] [DEBUG] ########################################
+[2017-03-13 14:18:00,157] [vautils] [DEBUG] #                                      #
+[2017-03-13 14:18:00,157] [vautils] [DEBUG] # Setup topology and config ip address #
+[2017-03-13 14:18:00,157] [vautils] [DEBUG] #                                      #
+[2017-03-13 14:18:00,158] [vautils] [DEBUG] ########################################
+[2017-03-13 14:18:00,158] [vautils] [INFO] *********************************
+[2017-03-13 14:18:00,158] [vautils] [INFO] *                                
+[2017-03-13 14:18:00,158] [vautils] [INFO] * Start to setup topology        
+[2017-03-13 14:18:00,159] [vautils] [INFO] *                                
+[2017-03-13 14:18:00,159] [vautils] [INFO] *********************************
+[2017-03-13 14:18:00,159] [vautils] [DEBUG] Start to get reserved vlan
+[2017-03-13 14:18:00,159] [vautils] [INFO] Start to config link
+[2017-03-13 14:18:00,160] [vautils] [INFO] Connection:HA_FABRIC_DIR1 Access vlan (1000),dir_1:xe-1/0/0.1, switch : vSwitch1
+[2017-03-13 14:18:01,576] [vautils] [DEBUG] [vSwitch1]: esxcfg-vswitch -p fabric-1000 -v 1000 vSwitch1
+[2017-03-13 14:18:02,709] [vautils] [INFO] Succeed to get vlan. vlan id is 1000
+[2017-03-13 14:18:02,709] [vautils] [INFO] Succeed to update portgroup fabric-1000 to vlan 1000
+[2017-03-13 14:18:02,710] [vautils] [INFO] Connection:pc1_to_pc1 Access vlan (1001),pc1:eth1, switch : vSwitch2
+[2017-03-13 14:18:03,816] [vautils] [DEBUG] [vSwitch2]: esxcfg-vswitch -p vlan-1001 -v 1001 vSwitch2
+[2017-03-13 14:18:04,946] [vautils] [INFO] Succeed to get vlan. vlan id is 1001
+[2017-03-13 14:18:04,946] [vautils] [INFO] Succeed to update portgroup vlan-1001 to vlan 1001
+[2017-03-13 14:18:04,946] [vautils] [INFO] Connection:epi_link2 Access vlan (4095),epi_1:eth3, switch : vSwitch2
+[2017-03-13 14:18:06,059] [vautils] [DEBUG] [vSwitch2]: esxcfg-vswitch -p Loc-4095 -v 4095 vSwitch2
+[2017-03-13 14:18:07,172] [vautils] [INFO] Succeed to get vlan. vlan id is 4095
+[2017-03-13 14:18:07,172] [vautils] [INFO] Succeed to update portgroup Loc-4095 to vlan 4095
+[2017-03-13 14:18:07,172] [vautils] [INFO] Connection:pc2_to_pc2 Access vlan (1002),pc2:eth1, switch : vSwitch2
+[2017-03-13 14:18:08,287] [vautils] [DEBUG] [vSwitch2]: esxcfg-vswitch -p vlan-1002 -v 1002 vSwitch2
+[2017-03-13 14:18:09,393] [vautils] [INFO] Succeed to get vlan. vlan id is 1002
+[2017-03-13 14:18:09,394] [vautils] [INFO] Succeed to update portgroup vlan-1002 to vlan 1002
+[2017-03-13 14:18:09,394] [vautils] [INFO] Connection:HA_DIR1_TO_DIR2 Access vlan (2014),from dir_2:xe-1/0/2.1, to dir_1:xe-1/0/2.1, switch : vSwitch1
+[2017-03-13 14:18:10,502] [vautils] [DEBUG] [vSwitch1]: esxcfg-vswitch -p ha-1990 -v 2014 vSwitch1
+[2017-03-13 14:18:11,605] [vautils] [INFO] Succeed to get vlan. vlan id is 2014
+[2017-03-13 14:18:11,605] [vautils] [INFO] Succeed to update portgroup ha-1990 to vlan 2014
+[2017-03-13 14:18:12,715] [vautils] [DEBUG] [vSwitch1]: esxcfg-vswitch -p ha-1990 -v 2014 vSwitch1
+[2017-03-13 14:18:13,843] [vautils] [INFO] Succeed to get vlan. vlan id is 2014
+[2017-03-13 14:18:13,843] [vautils] [INFO] Succeed to update portgroup ha-1990 to vlan 2014
+[2017-03-13 14:18:13,843] [vautils] [INFO] Connection:HA_FABRIC_DIR2 Access vlan (1000),dir_2:xe-1/0/0.1, switch : vSwitch1
+[2017-03-13 14:18:14,954] [vautils] [DEBUG] [vSwitch1]: esxcfg-vswitch -p fabric-1000 -v 1000 vSwitch1
+[2017-03-13 14:18:16,079] [vautils] [INFO] Succeed to get vlan. vlan id is 1000
+[2017-03-13 14:18:16,080] [vautils] [INFO] Succeed to update portgroup fabric-1000 to vlan 1000
+[2017-03-13 14:18:16,080] [vautils] [INFO] Connection:epi_link1 Access vlan (4095),epi_1:eth2, switch : vSwitch1
+[2017-03-13 14:18:17,192] [vautils] [DEBUG] [vSwitch1]: esxcfg-vswitch -p Pub-4095 -v 4095 vSwitch1
+[2017-03-13 14:18:18,294] [vautils] [INFO] Succeed to get vlan. vlan id is 4095
+[2017-03-13 14:18:18,294] [vautils] [INFO] Succeed to update portgroup Pub-4095 to vlan 4095
+[2017-03-13 14:18:18,294] [vautils] [DEBUG] [vSwitch1]: esxcfg-vswitch -l
+[2017-03-13 14:18:18,856] [vautils] [INFO] 
+Switch Name      Num Ports   Used Ports  Configured Ports  MTU     Uplinks   
+vSwitch0         2352        11          128               1500    vmnic2    
+
+  PortGroup Name        VLAN ID  Used Ports  Uplinks   
+  VM Network            0        0           vmnic2    
+  vlan-125              125      7           vmnic2    
+  Management Network    0        1           vmnic2    
+
+Switch Name      Num Ports   Used Ports  Configured Ports  MTU     Uplinks   
+vSwitch1         2352        9           128               1500              
+
+  PortGroup Name        VLAN ID  Used Ports  Uplinks   
+  vlan-3000             3000     0                     
+  vlan-4015             4015     0                     
+  vlan-4010             4010     0                     
+  Pub-4095              4095     1                     
+  not-use-1024-sw1      1024     1                     
+  ha-1990               2014     2                     
+  fabric-1000           1000     4                     
+
+Switch Name      Num Ports   Used Ports  Configured Ports  MTU     Uplinks   
+vSwitch2         2352        5           128               1500              
+
+  PortGroup Name        VLAN ID  Used Ports  Uplinks   
+  vlan-1003             1003     0                     
+  vlan-1011             1011     0                     
+  vlan-1010             1010     0                     
+  Loc-4095              4095     1                     
+  not-use-1025-sw2      1025     1                     
+  vlan-1002             1002     1                     
+  vlan-1001             1001     1                     
+
+
+[2017-03-13 14:18:18,856] [vautils] [INFO] Completed to config link
+[2017-03-13 14:18:18,857] [vautils] [INFO] Start to config ip address
+[2017-03-13 14:18:19,961] [vautils] [INFO] [varmour-virtual-machine] sudo ifconfig eth1 15.15.15.1 netmask 255.255.255.0 up
+[2017-03-13 14:18:20,471] [vautils] [INFO] [varmour-virtual-machine] ifconfig eth1
+[2017-03-13 14:18:20,473] [vautils] [DEBUG] Interface info: [['Link', 'encap:Ethernet', 'HWaddr', '00:0c:29:ed:d7:3c'], ['inet', 'addr:15.15.15.1', 'Bcast:15.15.15.255', 'Mask:255.255.255.0'], ['inet6', 'addr:fe80::20c:29ff:feed:d73c/64', 'Scope:Link'], ['UP', 'BROADCAST', 'RUNNING', 'MULTICAST', 'MTU:1500', 'Metric:1'], ['RX', 'packets:911', 'errors:0', 'dropped:19', 'overruns:0', 'frame:0'], ['TX', 'packets:4508', 'errors:0', 'dropped:0', 'overruns:0', 'carrier:0'], ['collisions:0', 'txqueuelen:1000'], ['RX', 'bytes:85347', '85.3-KB', 'TX', 'bytes:267819', '267.8-KB'], []]
+[2017-03-13 14:18:20,473] [vautils] [INFO] ifconfig ip works
+[2017-03-13 14:18:21,557] [vautils] [INFO] [varmour-virtual-machine] sudo ifconfig eth1 15.15.15.2 netmask 255.255.255.0 up
+[2017-03-13 14:18:22,072] [vautils] [INFO] [varmour-virtual-machine] ifconfig eth1
+[2017-03-13 14:18:22,073] [vautils] [DEBUG] Interface info: [['Link', 'encap:Ethernet', 'HWaddr', '00:0c:29:71:af:dc'], ['inet', 'addr:15.15.15.2', 'Bcast:15.15.15.255', 'Mask:255.255.255.0'], ['inet6', 'addr:fe80::20c:29ff:fe71:afdc/64', 'Scope:Link'], ['UP', 'BROADCAST', 'RUNNING', 'MULTICAST', 'MTU:1500', 'Metric:1'], ['RX', 'packets:3721', 'errors:0', 'dropped:14', 'overruns:0', 'frame:0'], ['TX', 'packets:4219', 'errors:0', 'dropped:0', 'overruns:0', 'carrier:0'], ['collisions:0', 'txqueuelen:1000'], ['RX', 'bytes:254008', '254.0-KB', 'TX', 'bytes:265163', '265.1-KB'], []]
+[2017-03-13 14:18:22,073] [vautils] [INFO] ifconfig ip works
+[2017-03-13 14:18:22,073] [vautils] [INFO] Finished to set interface
+[2017-03-13 14:18:22,074] [vautils] [DEBUG] Start to config route
+[2017-03-13 14:18:22,074] [vautils] [INFO] Completed to config route
+[2017-03-13 14:18:22,074] [vautils] [INFO] ++++++++++++++++++++++++ rest ++++++++++++++++++++++++++
+[2017-03-13 14:18:22,120] [vautils] [INFO] 
+In subroutine: va_get_version
+[2017-03-13 14:18:22,121] [feature] [INFO] show system
+[2017-03-13 14:18:22,160] [access] [INFO] [dir_2] show system
+[2017-03-13 14:18:22,160] [access] [INFO] [dir_2]    
+[2017-03-13 14:18:22,160] [access] [INFO] [dir_2]   hostname:                      vArmour
+[2017-03-13 14:18:22,160] [access] [INFO] [dir_2]   fabric interface:              eth0
+[2017-03-13 14:18:22,160] [access] [INFO] [dir_2]   fabric address:                192.168.1.2/24
+[2017-03-13 14:18:22,161] [access] [INFO] [dir_2]   management interface:          eth1
+[2017-03-13 14:18:22,161] [access] [INFO] [dir_2]   management address:            10.11.125.91/24
+[2017-03-13 14:18:22,161] [access] [INFO] [dir_2]   management gateway:            10.11.125.1
+[2017-03-13 14:18:22,162] [access] [INFO] [dir_2]   time:                          Sun Mar 12 22:55:29 UTC 2017
+[2017-03-13 14:18:22,162] [access] [INFO] [dir_2]   uptime:                        50 min,  2 users,  load average: 0.25, 0.31, 0.29
+[2017-03-13 14:18:22,162] [access] [INFO] [dir_2]   model:                         VA3020V
+[2017-03-13 14:18:22,162] [access] [INFO] [dir_2]   serial:                        564D49FF-912A-D423-8D8B-FD0D07DBB01D
+[2017-03-13 14:18:22,163] [access] [INFO] [dir_2]   software version:              3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,163] [access] [INFO] [dir_2]   UI package version:            3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,163] [access] [INFO] [dir_2]   Orchestration package version: 3.1.0.00293
+[2017-03-13 14:18:22,163] [access] [INFO] [dir_2]   boot directory:                primary
+[2017-03-13 14:18:22,164] [access] [INFO] [dir_2]   varmour security package:      116
+[2017-03-13 14:18:22,166] [access] [INFO] [dir_2]   director connection secret:    4e9a4338eaa6b3d15ad601edc49b1e7f1bd4e5b4
+[2017-03-13 14:18:22,166] [access] [INFO] [dir_2]   DNS server:                    
+[2017-03-13 14:18:22,167] [access] [INFO] [dir_2]   inactivity timeout:            250 min 
+[2017-03-13 14:18:22,167] [access] [INFO] [dir_2]   web inactivity timeout:        20 min 
+[2017-03-13 14:18:22,167] [access] [INFO] [dir_2]   global commit timestamp:       2017-03-12_22:27:13_UTC 
+[2017-03-13 14:18:22,167] [access] [INFO] [dir_2]   license:                       expiration:  2017-03-15 08:00:00
+[2017-03-13 14:18:22,168] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:18:22,168] [vautils] [INFO] Current version: 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,169] [feature] [INFO] Not need to update firmware. device version is 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,169] [feature] [INFO] show system
+[2017-03-13 14:18:22,224] [access] [INFO] [dir_2] show system
+[2017-03-13 14:18:22,224] [access] [INFO] [dir_2]    
+[2017-03-13 14:18:22,224] [access] [INFO] [dir_2]   hostname:                      vArmour
+[2017-03-13 14:18:22,224] [access] [INFO] [dir_2]   fabric interface:              eth0
+[2017-03-13 14:18:22,224] [access] [INFO] [dir_2]   fabric address:                192.168.1.2/24
+[2017-03-13 14:18:22,224] [access] [INFO] [dir_2]   management interface:          eth1
+[2017-03-13 14:18:22,225] [access] [INFO] [dir_2]   management address:            10.11.125.91/24
+[2017-03-13 14:18:22,225] [access] [INFO] [dir_2]   management gateway:            10.11.125.1
+[2017-03-13 14:18:22,225] [access] [INFO] [dir_2]   time:                          Sun Mar 12 22:55:29 UTC 2017
+[2017-03-13 14:18:22,225] [access] [INFO] [dir_2]   uptime:                        50 min,  2 users,  load average: 0.25, 0.31, 0.29
+[2017-03-13 14:18:22,225] [access] [INFO] [dir_2]   model:                         VA3020V
+[2017-03-13 14:18:22,225] [access] [INFO] [dir_2]   serial:                        564D49FF-912A-D423-8D8B-FD0D07DBB01D
+[2017-03-13 14:18:22,225] [access] [INFO] [dir_2]   software version:              3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,225] [access] [INFO] [dir_2]   UI package version:            3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,226] [access] [INFO] [dir_2]   Orchestration package version: 3.1.0.00293
+[2017-03-13 14:18:22,226] [access] [INFO] [dir_2]   boot directory:                primary
+[2017-03-13 14:18:22,226] [access] [INFO] [dir_2]   varmour security package:      116
+[2017-03-13 14:18:22,226] [access] [INFO] [dir_2]   director connection secret:    4e9a4338eaa6b3d15ad601edc49b1e7f1bd4e5b4
+[2017-03-13 14:18:22,226] [access] [INFO] [dir_2]   DNS server:                    
+[2017-03-13 14:18:22,226] [access] [INFO] [dir_2]   inactivity timeout:            250 min 
+[2017-03-13 14:18:22,227] [access] [INFO] [dir_2]   web inactivity timeout:        20 min 
+[2017-03-13 14:18:22,227] [access] [INFO] [dir_2]   global commit timestamp:       2017-03-12_22:27:13_UTC 
+[2017-03-13 14:18:22,227] [access] [INFO] [dir_2]   license:                       expiration:  2017-03-15 08:00:00
+[2017-03-13 14:18:22,227] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:18:22,274] [vautils] [INFO] 
+In subroutine: va_get_version
+[2017-03-13 14:18:22,274] [feature] [INFO] show system
+[2017-03-13 14:18:22,325] [access] [INFO] [dir_1] show system
+[2017-03-13 14:18:22,325] [access] [INFO] [dir_1]    
+[2017-03-13 14:18:22,326] [access] [INFO] [dir_1]   hostname:                      vArmour
+[2017-03-13 14:18:22,326] [access] [INFO] [dir_1]   fabric interface:              eth0
+[2017-03-13 14:18:22,326] [access] [INFO] [dir_1]   fabric address:                192.168.1.1/24
+[2017-03-13 14:18:22,326] [access] [INFO] [dir_1]   management interface:          eth1
+[2017-03-13 14:18:22,327] [access] [INFO] [dir_1]   management address:            10.11.125.90/24
+[2017-03-13 14:18:22,327] [access] [INFO] [dir_1]   management gateway:            10.11.125.1
+[2017-03-13 14:18:22,327] [access] [INFO] [dir_1]   time:                          Sun Mar 12 22:55:29 UTC 2017
+[2017-03-13 14:18:22,327] [access] [INFO] [dir_1]   uptime:                        51 min,  3 users,  load average: 0.36, 0.22, 0.26
+[2017-03-13 14:18:22,328] [access] [INFO] [dir_1]   model:                         VA3020V
+[2017-03-13 14:18:22,328] [access] [INFO] [dir_1]   serial:                        564DC3A1-35E0-FDBC-B160-F579D21DD81B
+[2017-03-13 14:18:22,328] [access] [INFO] [dir_1]   software version:              3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,328] [access] [INFO] [dir_1]   UI package version:            3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,329] [access] [INFO] [dir_1]   Orchestration package version: 3.1.0.00293
+[2017-03-13 14:18:22,329] [access] [INFO] [dir_1]   boot directory:                primary
+[2017-03-13 14:18:22,329] [access] [INFO] [dir_1]   varmour security package:      116
+[2017-03-13 14:18:22,329] [access] [INFO] [dir_1]   director connection secret:    4e9a4338eaa6b3d15ad601edc49b1e7f1bd4e5b4
+[2017-03-13 14:18:22,330] [access] [INFO] [dir_1]   DNS server:                    
+[2017-03-13 14:18:22,330] [access] [INFO] [dir_1]   inactivity timeout:            250 min 
+[2017-03-13 14:18:22,330] [access] [INFO] [dir_1]   web inactivity timeout:        20 min 
+[2017-03-13 14:18:22,330] [access] [INFO] [dir_1]   global commit timestamp:       2017-03-12_22:27:13_UTC 
+[2017-03-13 14:18:22,331] [access] [INFO] [dir_1]   license:                       expiration:  2017-03-15 08:00:00
+[2017-03-13 14:18:22,331] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:22,331] [vautils] [INFO] Current version: 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,331] [feature] [INFO] Not need to update firmware. device version is 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,332] [feature] [INFO] show system
+[2017-03-13 14:18:22,376] [access] [INFO] [dir_1] show system
+[2017-03-13 14:18:22,377] [access] [INFO] [dir_1]    
+[2017-03-13 14:18:22,377] [access] [INFO] [dir_1]   hostname:                      vArmour
+[2017-03-13 14:18:22,377] [access] [INFO] [dir_1]   fabric interface:              eth0
+[2017-03-13 14:18:22,377] [access] [INFO] [dir_1]   fabric address:                192.168.1.1/24
+[2017-03-13 14:18:22,378] [access] [INFO] [dir_1]   management interface:          eth1
+[2017-03-13 14:18:22,378] [access] [INFO] [dir_1]   management address:            10.11.125.90/24
+[2017-03-13 14:18:22,378] [access] [INFO] [dir_1]   management gateway:            10.11.125.1
+[2017-03-13 14:18:22,379] [access] [INFO] [dir_1]   time:                          Sun Mar 12 22:55:29 UTC 2017
+[2017-03-13 14:18:22,379] [access] [INFO] [dir_1]   uptime:                        51 min,  3 users,  load average: 0.36, 0.22, 0.26
+[2017-03-13 14:18:22,379] [access] [INFO] [dir_1]   model:                         VA3020V
+[2017-03-13 14:18:22,379] [access] [INFO] [dir_1]   serial:                        564DC3A1-35E0-FDBC-B160-F579D21DD81B
+[2017-03-13 14:18:22,380] [access] [INFO] [dir_1]   software version:              3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,380] [access] [INFO] [dir_1]   UI package version:            3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,380] [access] [INFO] [dir_1]   Orchestration package version: 3.1.0.00293
+[2017-03-13 14:18:22,380] [access] [INFO] [dir_1]   boot directory:                primary
+[2017-03-13 14:18:22,380] [access] [INFO] [dir_1]   varmour security package:      116
+[2017-03-13 14:18:22,381] [access] [INFO] [dir_1]   director connection secret:    4e9a4338eaa6b3d15ad601edc49b1e7f1bd4e5b4
+[2017-03-13 14:18:22,381] [access] [INFO] [dir_1]   DNS server:                    
+[2017-03-13 14:18:22,381] [access] [INFO] [dir_1]   inactivity timeout:            250 min 
+[2017-03-13 14:18:22,381] [access] [INFO] [dir_1]   web inactivity timeout:        20 min 
+[2017-03-13 14:18:22,382] [access] [INFO] [dir_1]   global commit timestamp:       2017-03-12_22:27:13_UTC 
+[2017-03-13 14:18:22,382] [access] [INFO] [dir_1]   license:                       expiration:  2017-03-15 08:00:00
+[2017-03-13 14:18:22,382] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:22,719] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,719] [access] [INFO] [dir_2] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:18:22,719] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,720] [access] [INFO] [dir_2] Welcome to vArmour!
+[2017-03-13 14:18:22,720] [access] [INFO] [dir_2] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-13 14:18:22,720] [access] [INFO] [dir_2] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:22,721] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,721] [access] [INFO] [dir_2]  Checking management server status..... 
+[2017-03-13 14:18:22,721] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:18:22,721] [access] [INFO] [dir_2] The configuration has been installed.
+[2017-03-13 14:18:22,721] [access] [INFO] [dir_2] Connecting to the management console
+[2017-03-13 14:18:22,722] [access] [INFO] [dir_2] Warning: The device is configured with the default password.  Please change
+[2017-03-13 14:18:22,722] [access] [INFO] [dir_2]          the default password to prevent unauthorized logins.
+[2017-03-13 14:18:22,722] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,722] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,723] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,723] [access] [INFO] [dir_2] HA sync stage. Do show high-availability to see HA status.
+[2017-03-13 14:18:22,723] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,723] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:18:22,725] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,725] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:18:22,726] [feature] [INFO] cli initiated
+[2017-03-13 14:18:22,726] [feature] [INFO] request cli terminal-length 0
+[2017-03-13 14:18:22,735] [access] [INFO] [dir_2] request cli terminal-length 0
+[2017-03-13 14:18:22,735] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:18:22,736] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,737] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:18:22,739] [access] [INFO] [dir_2] configure
+[2017-03-13 14:18:22,740] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:18:22,740] [feature] [INFO] set system inactivity-timeout 250
+[2017-03-13 14:18:22,743] [access] [INFO] [dir_2] set system inactivity-timeout 250
+[2017-03-13 14:18:22,743] [access] [INFO] [dir_2] Command is not supported on high-availability backup/ineligible device
+[2017-03-13 14:18:22,743] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:18:22,745] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,745] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:18:22,748] [access] [INFO] [dir_2] commit
+[2017-03-13 14:18:22,749] [access] [INFO] [dir_2] Nothing to commit!
+[2017-03-13 14:18:22,749] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:18:22,749] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:22,750] [access] [INFO] [dir_2] 
+[2017-03-13 14:18:22,751] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-13 14:18:22,753] [access] [INFO] [dir_2] exit
+[2017-03-13 14:18:22,754] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-13 14:18:23,042] [access] [INFO] [epi_1] 
+[2017-03-13 14:18:23,042] [access] [INFO] [epi_1] Build: 3.1.0-2017-02-09-15-53-38-eng-epi-builtbot
+[2017-03-13 14:18:23,042] [access] [INFO] [epi_1] 
+[2017-03-13 14:18:23,043] [access] [INFO] [epi_1] Welcome to vArmour!
+[2017-03-13 14:18:23,043] [access] [INFO] [epi_1] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-13 14:18:23,043] [access] [INFO] [epi_1] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:23,043] [access] [INFO] [epi_1] 
+[2017-03-13 14:18:23,044] [access] [INFO] [epi_1]  Running inside EPI cli console
+[2017-03-13 14:18:23,044] [access] [INFO] [epi_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:18:23,044] [access] [INFO] [epi_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:18:23,046] [access] [INFO] [epi_1] 
+[2017-03-13 14:18:23,046] [access] [INFO] [epi_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:18:23,046] [feature] [INFO] cli initiated
+[2017-03-13 14:18:23,352] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:18:23,352] [access] [INFO] [dir_1_nocli] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:18:23,352] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:18:23,352] [access] [INFO] [dir_1_nocli] Welcome to vArmour!
+[2017-03-13 14:18:23,353] [access] [INFO] [dir_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:23,354] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:18:23,355] [access] [INFO] [dir_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:23,355] [feature] [INFO] cli initiated
+[2017-03-13 14:18:23,357] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:18:23,357] [access] [INFO] [dir_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:23,364] [access] [INFO] [dir_1_nocli] sudo -s
+[2017-03-13 14:18:23,365] [access] [INFO] [dir_1_nocli] [sudo] password for varmour_no_cli: 
+[2017-03-13 14:18:23,453] [access] [INFO] [dir_1_nocli] 
+[2017-03-13 14:18:23,453] [access] [INFO] [dir_1_nocli] root@vArmour:/usr-varmour/home/varmour_no_cli# 
+[2017-03-13 14:18:23,732] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:23,732] [access] [INFO] [cp_1] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:18:23,733] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:23,733] [access] [INFO] [cp_1] Welcome to vArmour!
+[2017-03-13 14:18:23,733] [access] [INFO] [cp_1] Last login: Sun Mar 12 22:55:05 2017 from 10.11.123.169
+[2017-03-13 14:18:23,733] [access] [INFO] [cp_1] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-13 14:18:23,734] [access] [INFO] [cp_1] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:23,734] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:23,734] [access] [INFO] [cp_1]  Running inside CP cli console
+[2017-03-13 14:18:23,734] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:18:23,734] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:18:23,736] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:23,736] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:18:23,737] [feature] [INFO] cli initiated
+[2017-03-13 14:18:23,983] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:18:23,983] [access] [INFO] [cp_1_nocli] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:18:23,984] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:18:23,984] [access] [INFO] [cp_1_nocli] Welcome to vArmour!
+[2017-03-13 14:18:23,984] [access] [INFO] [cp_1_nocli] Last login: Sun Mar 12 22:55:06 2017 from 10.11.123.169
+[2017-03-13 14:18:23,985] [access] [INFO] [cp_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:23,986] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:18:23,987] [access] [INFO] [cp_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:23,987] [feature] [INFO] cli initiated
+[2017-03-13 14:18:23,989] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:18:23,989] [access] [INFO] [cp_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:23,996] [access] [INFO] [cp_1_nocli] sudo -s
+[2017-03-13 14:18:23,997] [access] [INFO] [cp_1_nocli] [sudo] password for varmour_no_cli: 
+[2017-03-13 14:18:24,081] [access] [INFO] [cp_1_nocli] 
+[2017-03-13 14:18:24,082] [access] [INFO] [cp_1_nocli] root@vArmour:/usr-varmour/home/varmour_no_cli# 
+[2017-03-13 14:18:24,380] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:18:24,380] [access] [INFO] [dir_2_nocli] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:18:24,380] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:18:24,381] [access] [INFO] [dir_2_nocli] Welcome to vArmour!
+[2017-03-13 14:18:24,381] [access] [INFO] [dir_2_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:24,383] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:18:24,383] [access] [INFO] [dir_2_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:24,384] [feature] [INFO] cli initiated
+[2017-03-13 14:18:24,386] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:18:24,386] [access] [INFO] [dir_2_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:24,392] [access] [INFO] [dir_2_nocli] sudo -s
+[2017-03-13 14:18:24,392] [access] [INFO] [dir_2_nocli] [sudo] password for varmour_no_cli: 
+[2017-03-13 14:18:24,473] [access] [INFO] [dir_2_nocli] 
+[2017-03-13 14:18:24,474] [access] [INFO] [dir_2_nocli] root@vArmour:/usr-varmour/home/varmour_no_cli# 
+[2017-03-13 14:18:24,819] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,819] [access] [INFO] [dir_1] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-13 14:18:24,820] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,820] [access] [INFO] [dir_1] Welcome to vArmour!
+[2017-03-13 14:18:24,820] [access] [INFO] [dir_1] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-13 14:18:24,820] [access] [INFO] [dir_1] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:24,821] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,821] [access] [INFO] [dir_1]  Checking management server status..... 
+[2017-03-13 14:18:24,821] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:24,821] [access] [INFO] [dir_1] The configuration has been installed.
+[2017-03-13 14:18:24,821] [access] [INFO] [dir_1] Connecting to the management console
+[2017-03-13 14:18:24,822] [access] [INFO] [dir_1] Warning: The device is configured with the default password.  Please change
+[2017-03-13 14:18:24,822] [access] [INFO] [dir_1]          the default password to prevent unauthorized logins.
+[2017-03-13 14:18:24,822] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,822] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,823] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,823] [access] [INFO] [dir_1] HA sync stage. Do show high-availability to see HA status.
+[2017-03-13 14:18:24,823] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,823] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:24,825] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,825] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:24,826] [feature] [INFO] cli initiated
+[2017-03-13 14:18:24,826] [feature] [INFO] request cli terminal-length 0
+[2017-03-13 14:18:24,837] [access] [INFO] [dir_1] request cli terminal-length 0
+[2017-03-13 14:18:24,837] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:24,839] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,839] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:24,842] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:24,843] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:24,843] [feature] [INFO] set system inactivity-timeout 250
+[2017-03-13 14:18:24,851] [access] [INFO] [dir_1] set system inactivity-timeout 250
+[2017-03-13 14:18:24,851] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:24,853] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,853] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:24,964] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:24,965] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:24,965] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:24,967] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:24,967] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:24,970] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:24,970] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:25,158] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:25,158] [access] [INFO] [epi_1_nocli] Build: 3.1.0-2017-02-09-15-53-38-eng-epi-builtbot
+[2017-03-13 14:18:25,159] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:25,159] [access] [INFO] [epi_1_nocli] Welcome to vArmour!
+[2017-03-13 14:18:25,159] [access] [INFO] [epi_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:25,161] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:25,161] [access] [INFO] [epi_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:25,162] [feature] [INFO] cli initiated
+[2017-03-13 14:18:25,163] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:25,164] [access] [INFO] [epi_1_nocli] varmour_no_cli@vArmour:/usr-varmour/home/varmour_no_cli$ 
+[2017-03-13 14:18:25,169] [access] [INFO] [epi_1_nocli] sudo -s
+[2017-03-13 14:18:25,170] [access] [INFO] [epi_1_nocli] [sudo] password for varmour_no_cli: 
+[2017-03-13 14:18:25,198] [access] [INFO] [epi_1_nocli] 
+[2017-03-13 14:18:25,198] [access] [INFO] [epi_1_nocli] root@vArmour:/usr-varmour/home/varmour_no_cli# 
+[2017-03-13 14:18:25,199] [vautils] [DEBUG] *********************************
+[2017-03-13 14:18:25,199] [vautils] [DEBUG] *                                
+[2017-03-13 14:18:25,199] [vautils] [DEBUG] * Finished to setup topology     
+[2017-03-13 14:18:25,199] [vautils] [DEBUG] *                                
+[2017-03-13 14:18:25,200] [vautils] [DEBUG] *********************************
+[2017-03-13 14:18:25,757] [vautils] [INFO] [varmour-virtual-machine] rm -f /tmp/tcp*.txt
+[2017-03-13 14:18:25,758] [vautils] [INFO] CMD: rm -f /tmp/tcp*.txt
+[2017-03-13 14:18:25,758] [vautils] [INFO] CMD OUTPUT: 
+[2017-03-13 14:18:26,310] [access] [WARNING] command could not be executed as expected: tcpdump: no process found
+
+[2017-03-13 14:18:26,311] [vautils] [INFO] CMD: killall tcpdump
+[2017-03-13 14:18:26,311] [vautils] [INFO] CMD OUTPUT: False
+[2017-03-13 14:18:26,899] [vautils] [INFO] [varmour-virtual-machine] rm -f /tmp/tcp*.txt
+[2017-03-13 14:18:26,900] [vautils] [INFO] CMD: rm -f /tmp/tcp*.txt
+[2017-03-13 14:18:26,900] [vautils] [INFO] CMD OUTPUT: 
+[2017-03-13 14:18:27,453] [access] [WARNING] command could not be executed as expected: tcpdump: no process found
+
+[2017-03-13 14:18:27,454] [vautils] [INFO] CMD: killall tcpdump
+[2017-03-13 14:18:27,454] [vautils] [INFO] CMD OUTPUT: False
+[2017-03-13 14:18:27,455] [vautils] [DEBUG] #################################################
+[2017-03-13 14:18:27,455] [vautils] [DEBUG] #                                               #
+[2017-03-13 14:18:27,455] [vautils] [DEBUG] # Configure and verify epi, address and policy  #
+[2017-03-13 14:18:27,456] [vautils] [DEBUG] #                                               #
+[2017-03-13 14:18:27,456] [vautils] [DEBUG] #################################################
+[2017-03-13 14:18:27,456] [vautils] [DEBUG] #################################################################
+[2017-03-13 14:18:27,457] [vautils] [DEBUG] #                                                               #
+[2017-03-13 14:18:27,457] [vautils] [DEBUG] # Init basic data included address, policy, traffic and session #
+[2017-03-13 14:18:27,457] [vautils] [DEBUG] #                                                               #
+[2017-03-13 14:18:27,458] [vautils] [DEBUG] #################################################################
+[2017-03-13 14:18:27,471] [vautils] [INFO] [varmour-virtual-machine] ifconfig eth1
+[2017-03-13 14:18:27,471] [vautils] [INFO] [varmour-virtual-machine] ip address is 15.15.15.1/32
+[2017-03-13 14:18:27,481] [vautils] [INFO] [varmour-virtual-machine] ifconfig eth1
+[2017-03-13 14:18:27,481] [vautils] [INFO] [varmour-virtual-machine] ip address is 15.15.15.2/32
+[2017-03-13 14:18:27,482] [vautils] [DEBUG] ########################
+[2017-03-13 14:18:27,482] [vautils] [DEBUG] #                      #
+[2017-03-13 14:18:27,482] [vautils] [DEBUG] # Check chassis status #
+[2017-03-13 14:18:27,482] [vautils] [DEBUG] #                      #
+[2017-03-13 14:18:27,483] [vautils] [DEBUG] ########################
+[2017-03-13 14:18:27,483] [vautils] [INFO] 
+In subroutine: va_check_chassis_status
+[2017-03-13 14:18:27,483] [feature] [INFO] show chassis
+[2017-03-13 14:18:27,502] [access] [INFO] [dir_1] show chassis
+[2017-03-13 14:18:27,502] [access] [INFO] [dir_1] devices status
+[2017-03-13 14:18:27,502] [access] [INFO] [dir_1] --------------
+[2017-03-13 14:18:27,503] [access] [INFO] [dir_1] total devices connected:	2 (0 ASG devices, 2 vm instances)
+[2017-03-13 14:18:27,503] [access] [INFO] [dir_1] inactive devices:		0 (device id: NA)
+[2017-03-13 14:18:27,503] [access] [INFO] [dir_1] last device joined:		device 2 @ Sun Mar 12 22:06:32 2017 
+[2017-03-13 14:18:27,504] [access] [INFO] [dir_1] total EPIs connected:		1
+[2017-03-13 14:18:27,504] [access] [INFO] [dir_1] total inactive EPIs :		0
+[2017-03-13 14:18:27,505] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:27,505] [access] [INFO] [dir_1]   
+[2017-03-13 14:18:27,505] [access] [INFO] [dir_1] interfaces registered
+[2017-03-13 14:18:27,505] [access] [INFO] [dir_1] ---------------------
+[2017-03-13 14:18:27,505] [access] [INFO] [dir_1] physical:	6
+[2017-03-13 14:18:27,506] [access] [INFO] [dir_1] logical:	9
+[2017-03-13 14:18:27,506] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:27,506] [access] [INFO] [dir_1]   
+[2017-03-13 14:18:27,506] [access] [INFO] [dir_1] virtual chassis setup
+[2017-03-13 14:18:27,507] [access] [INFO] [dir_1] ---------------------
+[2017-03-13 14:18:27,507] [access] [INFO] [dir_1] chassis identifier:		vArmour
+[2017-03-13 14:18:27,507] [access] [INFO] [dir_1] control fabric interface:	xe-1/0/0
+[2017-03-13 14:18:27,508] [access] [INFO] [dir_1] control protocol/port:		tcp/6634
+[2017-03-13 14:18:27,508] [access] [INFO] [dir_1] control fabric ip:		192.168.1.1/24
+[2017-03-13 14:18:27,508] [access] [INFO] [dir_1] fabric default gateway:		0.0.0.0
+[2017-03-13 14:18:27,509] [access] [INFO] [dir_1] management ip:			10.11.125.90
+[2017-03-13 14:18:27,509] [access] [INFO] [dir_1] management default gateway:	10.11.125.1
+[2017-03-13 14:18:27,509] [access] [INFO] [dir_1] datapath id:			00:00:00:50:56:b0:24:2f
+[2017-03-13 14:18:27,510] [access] [INFO] [dir_1] session distribution method:	ingress-first
+[2017-03-13 14:18:27,510] [access] [INFO] [dir_1] virtual-mac:			disabled
+[2017-03-13 14:18:27,510] [access] [INFO] [dir_1] virtual-mac identifier:		127
+[2017-03-13 14:18:27,511] [access] [INFO] [dir_1] image-operation delay:		60 seconds
+[2017-03-13 14:18:27,511] [access] [INFO] [dir_1] configuration version:		0x1f
+[2017-03-13 14:18:27,511] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:27,512] [access] [INFO] [dir_1]   
+[2017-03-13 14:18:27,512] [access] [INFO] [dir_1] EPI controller recovery
+[2017-03-13 14:18:27,512] [access] [INFO] [dir_1] -----------------------
+[2017-03-13 14:18:27,512] [access] [INFO] [dir_1] status:                         enabled
+[2017-03-13 14:18:27,512] [access] [INFO] [dir_1] commit time:                    10 minutes
+[2017-03-13 14:18:27,513] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:27,513] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:27,513] [access] [INFO] [dir_1] openflow controller
+[2017-03-13 14:18:27,513] [access] [INFO] [dir_1] -------------------
+[2017-03-13 14:18:27,514] [access] [INFO] [dir_1] controller ip:			0.0.0.0
+[2017-03-13 14:18:27,514] [access] [INFO] [dir_1] controller protocol/port:	NA/0
+[2017-03-13 14:18:27,514] [access] [INFO] [dir_1] connected since:		not connected 
+[2017-03-13 14:18:27,515] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:27,515] [feature] [INFO] 
+In subroutine: va_check_chassis_epi_status
+[2017-03-13 14:18:27,516] [feature] [INFO] show chassis epi
+[2017-03-13 14:18:27,525] [access] [INFO] [dir_1] show chassis epi
+[2017-03-13 14:18:27,526] [access] [INFO] [dir_1] Active EPI:
+[2017-03-13 14:18:27,526] [access] [INFO] [dir_1]   UUID                                  hostname         EP-ID      mode          fabric-ip      management-ip      connected-since connection-type licensed
+[2017-03-13 14:18:27,526] [access] [INFO] [dir_1]   --------------------------------------------------------------------------------------------------------------------
+[2017-03-13 14:18:27,527] [access] [INFO] [dir_1]   564D243B-9060-73C3-9043-5191FEAA2A28  -                 2-6     inline     192.168.1.10/24     10.11.125.93/24 @Sun Mar 12 21:53:22 2017  TLS     yes
+[2017-03-13 14:18:27,527] [access] [INFO] [dir_1] Inactive EPI:
+[2017-03-13 14:18:27,527] [access] [INFO] [dir_1]   UUID                                  hostname             last connected ep         mode
+[2017-03-13 14:18:27,528] [access] [INFO] [dir_1]   ----------------------------------------------------------------------
+[2017-03-13 14:18:27,528] [access] [INFO] [dir_1] Total active EPIs: 1
+[2017-03-13 14:18:27,528] [access] [INFO] [dir_1] Total inactive EPIs: 0
+[2017-03-13 14:18:27,528] [access] [INFO] [dir_1] *: the EPI is not connecting to its primary EP
+[2017-03-13 14:18:27,529] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:27,531] [feature] [INFO] All EPis are connected
+[2017-03-13 14:18:27,532] [feature] [INFO] 
+In subroutine: va_check_interfaces_order
+[2017-03-13 14:18:27,532] [feature] [INFO] show interface
+[2017-03-13 14:18:27,536] [access] [INFO] [dir_1] show interface
+[2017-03-13 14:18:27,537] [access] [INFO] [dir_1] name           index      vrouter/zone                   address            mode     adm/link   Secondary Address
+[2017-03-13 14:18:27,537] [access] [INFO] [dir_1] -------------- ---------- ------------------------------ ------------------ ------- ----------- -----------------
+[2017-03-13 14:18:27,537] [access] [INFO] [dir_1] irb0           0x001a8                                   84:49:15:ff:00:02            Up/Up  
+[2017-03-13 14:18:27,537] [access] [INFO] [dir_1] irb0.1         0x001a8001 vr-default(1)/Self             0.0.0.0/00                   Up/Up   	no                      
+[2017-03-13 14:18:27,538] [access] [INFO] [dir_1] reth0          0x001a9                                   84:49:15:ff:00:03            Up/Dn  
+[2017-03-13 14:18:27,538] [access] [INFO] [dir_1] reth0.1        0x001a9001 vr-default(1)/Null             0.0.0.0/00                   Up/Dn   	no                      
+[2017-03-13 14:18:27,539] [access] [INFO] [dir_1] local          0x001ad                                   84:49:15:ff:00:01            Up/Up  
+[2017-03-13 14:18:27,539] [access] [INFO] [dir_1] local.1        0x001ad001 vr-default(1)/Self             0.0.0.0/00                   Up/Up   	no                      
+[2017-03-13 14:18:27,539] [access] [INFO] [dir_1] xe-1/0/0       0x00400                                   00:50:56:b0:24:2f  Fbc       Up/Up  
+[2017-03-13 14:18:27,540] [access] [INFO] [dir_1] xe-1/0/0.1     0x00400001 vr-default(1)/Null             192.168.1.1/24               Up/Up   	no                      
+[2017-03-13 14:18:27,540] [access] [INFO] [dir_1] xe-1/0/1       0x00401                                   00:50:56:b0:e1:5a  Mgt       Up/Up  
+[2017-03-13 14:18:27,540] [access] [INFO] [dir_1] xe-1/0/1.1     0x00401001 vr-default(1)/Null             10.11.125.90/24              Up/Up   	no                      
+[2017-03-13 14:18:27,541] [access] [INFO] [dir_1] xe-1/0/2       0x00402                                   00:50:56:b0:d0:2b  HA        Up/Up  
+[2017-03-13 14:18:27,541] [access] [INFO] [dir_1] xe-1/0/2.1     0x00402001 vr-default(1)/Null             192.168.100.1/24             Up/Up   	no                      
+[2017-03-13 14:18:27,542] [access] [INFO] [dir_1] xe-1/0/3       0x00403                                   00:50:56:b0:9d:c4            Up/Up  
+[2017-03-13 14:18:27,542] [access] [INFO] [dir_1] xe-1/0/3.1     0x00403001 vr-default(1)/Null             0.0.0.0/00                   Up/Up   	no                      
+[2017-03-13 14:18:27,542] [access] [INFO] [dir_1] xe-2/0/0       0x00600                                   00:50:56:b0:54:28  Fbc       Up/Up  
+[2017-03-13 14:18:27,543] [access] [INFO] [dir_1] xe-2/0/0.1     0x00600001 vr-default(1)/Null             192.168.1.3/24               Up/Up   	no                      
+[2017-03-13 14:18:27,543] [access] [INFO] [dir_1] xe-2/0/1       0x00601                                   00:50:56:b0:8d:e7  Mgt       Up/Up  
+[2017-03-13 14:18:27,543] [access] [INFO] [dir_1] xe-2/0/1.1     0x00601001 vr-default(1)/Null             10.11.125.92/24              Up/Up   	no                      
+[2017-03-13 14:18:27,544] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:27,546] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:27,546] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-13 14:18:27,548] [access] [INFO] [cp_1] debug shell
+[2017-03-13 14:18:27,548] [access] [INFO] [cp_1] Input password:
+[2017-03-13 14:18:27,558] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:27,558] [access] [INFO] [cp_1] clish_shell exit
+[2017-03-13 14:18:27,558] [access] [INFO] [cp_1] exit from cli!!
+[2017-03-13 14:18:27,558] [access] [INFO] [cp_1] reset: unknown terminal type console
+[2017-03-13 14:18:27,559] [access] [INFO] [cp_1] Terminal type? 
+[2017-03-13 14:18:28,568] [access] [INFO] [cp_1] linux
+[2017-03-13 14:18:28,568] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:28,569] [access] [INFO] [cp_1] [3g        H        H        H        H        H        H        H        H        H
+[2017-03-13 14:18:28,569] [access] [INFO] [cp_1] c]R
+[2017-03-13 14:18:28,569] [access] [INFO] [cp_1] 'console': unknown terminal type.
+[2017-03-13 14:18:28,569] [access] [INFO] [cp_1] Enter debug shell, use "exit" command to return to cli
+[2017-03-13 14:18:28,570] [access] [INFO] [cp_1] varmour@vArmour:/usr-varmour/home/varmour$ 
+[2017-03-13 14:18:28,572] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:28,572] [access] [INFO] [cp_1] varmour@vArmour:/usr-varmour/home/varmour$ 
+[2017-03-13 14:18:28,577] [access] [INFO] [cp_1] sudo -s
+[2017-03-13 14:18:28,578] [access] [INFO] [cp_1] [sudo] password for varmour: 
+[2017-03-13 14:18:28,626] [access] [INFO] [cp_1] 
+[2017-03-13 14:18:28,626] [access] [INFO] [cp_1] root@vArmour:/usr-varmour/home/varmour# 
+[2017-03-13 14:18:28,627] [feature] [INFO] grep "management_interface=" /config-varmour/configuration/varmour_conf/setup.ini
+[2017-03-13 14:18:28,645] [access] [INFO] [cp_1] grep "management_interface=" /config-
+[2017-03-13 14:18:28,646] [access] [INFO] [cp_1] <ome/varmour# grep "management_interface=" /config-v                         armour/configuration/varm
+[2017-03-13 14:18:28,646] [access] [INFO] [cp_1] <ent_interface=" /config-varmour/configuration/varmo                         ur_conf/setup.ini
+[2017-03-13 14:18:28,646] [access] [INFO] [cp_1] management_interface=eth1
+[2017-03-13 14:18:28,647] [access] [INFO] [cp_1] root@vArmour:/usr-varmour/home/varmour# 
+[2017-03-13 14:18:28,647] [feature] [INFO] 
+In subroutine: va_show_interface_mapping
+[2017-03-13 14:18:28,648] [feature] [INFO] show interface device 2 mapping
+[2017-03-13 14:18:28,665] [access] [INFO] [dir_1] show interface device 2 mapping
+[2017-03-13 14:18:28,665] [access] [INFO] [dir_1] vArmour intf		VM intf		MAC address		VM index
+[2017-03-13 14:18:28,666] [access] [INFO] [dir_1] ----------------------------------------------------------------
+[2017-03-13 14:18:28,667] [access] [INFO] [dir_1] xe-2/0/0	--->	    eth0	00:50:56:b0:54:28	2
+[2017-03-13 14:18:28,667] [access] [INFO] [dir_1] xe-2/0/1	--->	    eth1	00:50:56:b0:8d:e7	3
+[2017-03-13 14:18:28,668] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:28,668] [feature] [INFO] 
+In subroutine: _va_parse_interface_mapping
+[2017-03-13 14:18:28,670] [feature] [INFO] All interfaces order are correct
+[2017-03-13 14:18:28,671] [vautils] [INFO] All devices are connected
+[2017-03-13 14:18:28,671] [feature] [INFO] 
+In subroutine: va_get_epi_uuid
+[2017-03-13 14:18:28,672] [feature] [INFO] show chassis epi
+[2017-03-13 14:18:28,684] [access] [INFO] [dir_1] show chassis epi
+[2017-03-13 14:18:28,684] [access] [INFO] [dir_1] Active EPI:
+[2017-03-13 14:18:28,685] [access] [INFO] [dir_1]   UUID                                  hostname         EP-ID      mode          fabric-ip      management-ip      connected-since connection-type licensed
+[2017-03-13 14:18:28,685] [access] [INFO] [dir_1]   --------------------------------------------------------------------------------------------------------------------
+[2017-03-13 14:18:28,685] [access] [INFO] [dir_1]   564D243B-9060-73C3-9043-5191FEAA2A28  -                 2-6     inline     192.168.1.10/24     10.11.125.93/24 @Sun Mar 12 21:53:22 2017  TLS     yes
+[2017-03-13 14:18:28,686] [access] [INFO] [dir_1] Inactive EPI:
+[2017-03-13 14:18:28,686] [access] [INFO] [dir_1]   UUID                                  hostname             last connected ep         mode
+[2017-03-13 14:18:28,686] [access] [INFO] [dir_1]   ----------------------------------------------------------------------
+[2017-03-13 14:18:28,686] [access] [INFO] [dir_1] Total active EPIs: 1
+[2017-03-13 14:18:28,687] [access] [INFO] [dir_1] Total inactive EPIs: 0
+[2017-03-13 14:18:28,687] [access] [INFO] [dir_1] *: the EPI is not connecting to its primary EP
+[2017-03-13 14:18:28,687] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:28,689] [feature] [INFO] UUID: 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:28,690] [vautils] [INFO] 
+In subroutine: va_get_micro_vlan
+[2017-03-13 14:18:29,242] [vautils] [INFO] Succeed to get vlan. vlan id is 1001
+[2017-03-13 14:18:29,243] [vautils] [INFO] Micro vlan: 1001
+[2017-03-13 14:18:29,243] [vautils] [INFO] 
+In subroutine: va_get_micro_vlan
+[2017-03-13 14:18:29,801] [vautils] [INFO] Succeed to get vlan. vlan id is 1002
+[2017-03-13 14:18:29,801] [vautils] [INFO] Micro vlan: 1002
+[2017-03-13 14:18:29,802] [vautils] [DEBUG] ###################################################################
+[2017-03-13 14:18:29,802] [vautils] [DEBUG] #                                                                 #
+[2017-03-13 14:18:29,802] [vautils] [DEBUG] # +++++++++++++++++++++++++sleep+++++++++++++++++++++++++++++++++ #
+[2017-03-13 14:18:29,803] [vautils] [DEBUG] #                                                                 #
+[2017-03-13 14:18:29,803] [vautils] [DEBUG] ###################################################################
+[2017-03-13 14:18:29,803] [vautils] [DEBUG] ########################
+[2017-03-13 14:18:29,803] [vautils] [DEBUG] #                      #
+[2017-03-13 14:18:29,804] [vautils] [DEBUG] # Check chassis status #
+[2017-03-13 14:18:29,804] [vautils] [DEBUG] #                      #
+[2017-03-13 14:18:29,804] [vautils] [DEBUG] ########################
+[2017-03-13 14:18:29,805] [vautils] [INFO] 
+In subroutine: va_check_chassis_status
+[2017-03-13 14:18:29,805] [feature] [INFO] show chassis
+[2017-03-13 14:18:29,839] [access] [INFO] [dir_1] show chassis
+[2017-03-13 14:18:29,839] [access] [INFO] [dir_1] devices status
+[2017-03-13 14:18:29,840] [access] [INFO] [dir_1] --------------
+[2017-03-13 14:18:29,840] [access] [INFO] [dir_1] total devices connected:	2 (0 ASG devices, 2 vm instances)
+[2017-03-13 14:18:29,840] [access] [INFO] [dir_1] inactive devices:		0 (device id: NA)
+[2017-03-13 14:18:29,841] [access] [INFO] [dir_1] last device joined:		device 2 @ Sun Mar 12 22:06:32 2017 
+[2017-03-13 14:18:29,841] [access] [INFO] [dir_1] total EPIs connected:		1
+[2017-03-13 14:18:29,841] [access] [INFO] [dir_1] total inactive EPIs :		0
+[2017-03-13 14:18:29,842] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:29,842] [access] [INFO] [dir_1]   
+[2017-03-13 14:18:29,842] [access] [INFO] [dir_1] interfaces registered
+[2017-03-13 14:18:29,842] [access] [INFO] [dir_1] ---------------------
+[2017-03-13 14:18:29,843] [access] [INFO] [dir_1] physical:	6
+[2017-03-13 14:18:29,843] [access] [INFO] [dir_1] logical:	9
+[2017-03-13 14:18:29,843] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:29,844] [access] [INFO] [dir_1]   
+[2017-03-13 14:18:29,844] [access] [INFO] [dir_1] virtual chassis setup
+[2017-03-13 14:18:29,844] [access] [INFO] [dir_1] ---------------------
+[2017-03-13 14:18:29,844] [access] [INFO] [dir_1] chassis identifier:		vArmour
+[2017-03-13 14:18:29,845] [access] [INFO] [dir_1] control fabric interface:	xe-1/0/0
+[2017-03-13 14:18:29,845] [access] [INFO] [dir_1] control protocol/port:		tcp/6634
+[2017-03-13 14:18:29,845] [access] [INFO] [dir_1] control fabric ip:		192.168.1.1/24
+[2017-03-13 14:18:29,846] [access] [INFO] [dir_1] fabric default gateway:		0.0.0.0
+[2017-03-13 14:18:29,846] [access] [INFO] [dir_1] management ip:			10.11.125.90
+[2017-03-13 14:18:29,846] [access] [INFO] [dir_1] management default gateway:	10.11.125.1
+[2017-03-13 14:18:29,847] [access] [INFO] [dir_1] datapath id:			00:00:00:50:56:b0:24:2f
+[2017-03-13 14:18:29,847] [access] [INFO] [dir_1] session distribution method:	ingress-first
+[2017-03-13 14:18:29,847] [access] [INFO] [dir_1] virtual-mac:			disabled
+[2017-03-13 14:18:29,848] [access] [INFO] [dir_1] virtual-mac identifier:		127
+[2017-03-13 14:18:29,848] [access] [INFO] [dir_1] image-operation delay:		60 seconds
+[2017-03-13 14:18:29,849] [access] [INFO] [dir_1] configuration version:		0x1f
+[2017-03-13 14:18:29,849] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:29,849] [access] [INFO] [dir_1]   
+[2017-03-13 14:18:29,849] [access] [INFO] [dir_1] EPI controller recovery
+[2017-03-13 14:18:29,850] [access] [INFO] [dir_1] -----------------------
+[2017-03-13 14:18:29,850] [access] [INFO] [dir_1] status:                         enabled
+[2017-03-13 14:18:29,850] [access] [INFO] [dir_1] commit time:                    10 minutes
+[2017-03-13 14:18:29,850] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:29,851] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:29,851] [access] [INFO] [dir_1] openflow controller
+[2017-03-13 14:18:29,851] [access] [INFO] [dir_1] -------------------
+[2017-03-13 14:18:29,851] [access] [INFO] [dir_1] controller ip:			0.0.0.0
+[2017-03-13 14:18:29,852] [access] [INFO] [dir_1] controller protocol/port:	NA/0
+[2017-03-13 14:18:29,852] [access] [INFO] [dir_1] connected since:		not connected 
+[2017-03-13 14:18:29,852] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:29,853] [feature] [INFO] 
+In subroutine: va_check_chassis_epi_status
+[2017-03-13 14:18:29,853] [feature] [INFO] show chassis epi
+[2017-03-13 14:18:29,865] [access] [INFO] [dir_1] show chassis epi
+[2017-03-13 14:18:29,865] [access] [INFO] [dir_1] Active EPI:
+[2017-03-13 14:18:29,865] [access] [INFO] [dir_1]   UUID                                  hostname         EP-ID      mode          fabric-ip      management-ip      connected-since connection-type licensed
+[2017-03-13 14:18:29,866] [access] [INFO] [dir_1]   --------------------------------------------------------------------------------------------------------------------
+[2017-03-13 14:18:29,866] [access] [INFO] [dir_1]   564D243B-9060-73C3-9043-5191FEAA2A28  -                 2-6     inline     192.168.1.10/24     10.11.125.93/24 @Sun Mar 12 21:53:22 2017  TLS     yes
+[2017-03-13 14:18:29,866] [access] [INFO] [dir_1] Inactive EPI:
+[2017-03-13 14:18:29,867] [access] [INFO] [dir_1]   UUID                                  hostname             last connected ep         mode
+[2017-03-13 14:18:29,867] [access] [INFO] [dir_1]   ----------------------------------------------------------------------
+[2017-03-13 14:18:29,867] [access] [INFO] [dir_1] Total active EPIs: 1
+[2017-03-13 14:18:29,867] [access] [INFO] [dir_1] Total inactive EPIs: 0
+[2017-03-13 14:18:29,868] [access] [INFO] [dir_1] *: the EPI is not connecting to its primary EP
+[2017-03-13 14:18:29,868] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:29,869] [feature] [INFO] All EPis are connected
+[2017-03-13 14:18:29,870] [feature] [INFO] 
+In subroutine: va_check_interfaces_order
+[2017-03-13 14:18:29,870] [feature] [INFO] show interface
+[2017-03-13 14:18:29,874] [access] [INFO] [dir_1] show interface
+[2017-03-13 14:18:29,874] [access] [INFO] [dir_1] name           index      vrouter/zone                   address            mode     adm/link   Secondary Address
+[2017-03-13 14:18:29,875] [access] [INFO] [dir_1] -------------- ---------- ------------------------------ ------------------ ------- ----------- -----------------
+[2017-03-13 14:18:29,875] [access] [INFO] [dir_1] irb0           0x001a8                                   84:49:15:ff:00:02            Up/Up  
+[2017-03-13 14:18:29,875] [access] [INFO] [dir_1] irb0.1         0x001a8001 vr-default(1)/Self             0.0.0.0/00                   Up/Up   	no                      
+[2017-03-13 14:18:29,876] [access] [INFO] [dir_1] reth0          0x001a9                                   84:49:15:ff:00:03            Up/Dn  
+[2017-03-13 14:18:29,876] [access] [INFO] [dir_1] reth0.1        0x001a9001 vr-default(1)/Null             0.0.0.0/00                   Up/Dn   	no                      
+[2017-03-13 14:18:29,877] [access] [INFO] [dir_1] local          0x001ad                                   84:49:15:ff:00:01            Up/Up  
+[2017-03-13 14:18:29,877] [access] [INFO] [dir_1] local.1        0x001ad001 vr-default(1)/Self             0.0.0.0/00                   Up/Up   	no                      
+[2017-03-13 14:18:29,877] [access] [INFO] [dir_1] xe-1/0/0       0x00400                                   00:50:56:b0:24:2f  Fbc       Up/Up  
+[2017-03-13 14:18:29,878] [access] [INFO] [dir_1] xe-1/0/0.1     0x00400001 vr-default(1)/Null             192.168.1.1/24               Up/Up   	no                      
+[2017-03-13 14:18:29,878] [access] [INFO] [dir_1] xe-1/0/1       0x00401                                   00:50:56:b0:e1:5a  Mgt       Up/Up  
+[2017-03-13 14:18:29,878] [access] [INFO] [dir_1] xe-1/0/1.1     0x00401001 vr-default(1)/Null             10.11.125.90/24              Up/Up   	no                      
+[2017-03-13 14:18:29,879] [access] [INFO] [dir_1] xe-1/0/2       0x00402                                   00:50:56:b0:d0:2b  HA        Up/Up  
+[2017-03-13 14:18:29,879] [access] [INFO] [dir_1] xe-1/0/2.1     0x00402001 vr-default(1)/Null             192.168.100.1/24             Up/Up   	no                      
+[2017-03-13 14:18:29,879] [access] [INFO] [dir_1] xe-1/0/3       0x00403                                   00:50:56:b0:9d:c4            Up/Up  
+[2017-03-13 14:18:29,879] [access] [INFO] [dir_1] xe-1/0/3.1     0x00403001 vr-default(1)/Null             0.0.0.0/00                   Up/Up   	no                      
+[2017-03-13 14:18:29,880] [access] [INFO] [dir_1] xe-2/0/0       0x00600                                   00:50:56:b0:54:28  Fbc       Up/Up  
+[2017-03-13 14:18:29,880] [access] [INFO] [dir_1] xe-2/0/0.1     0x00600001 vr-default(1)/Null             192.168.1.3/24               Up/Up   	no                      
+[2017-03-13 14:18:29,881] [access] [INFO] [dir_1] xe-2/0/1       0x00601                                   00:50:56:b0:8d:e7  Mgt       Up/Up  
+[2017-03-13 14:18:29,881] [access] [INFO] [dir_1] xe-2/0/1.1     0x00601001 vr-default(1)/Null             10.11.125.92/24              Up/Up   	no                      
+[2017-03-13 14:18:29,881] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:29,881] [feature] [INFO] grep "management_interface=" /config-varmour/configuration/varmour_conf/setup.ini
+[2017-03-13 14:18:29,886] [access] [INFO] [cp_1] grep "management_interface=" /config-
+[2017-03-13 14:18:29,886] [access] [INFO] [cp_1] <ome/varmour# grep "management_interface=" /config-v                         armour/configuration/varm
+[2017-03-13 14:18:29,887] [access] [INFO] [cp_1] <ent_interface=" /config-varmour/configuration/varmo                         ur_conf/setup.ini
+[2017-03-13 14:18:29,887] [access] [INFO] [cp_1] management_interface=eth1
+[2017-03-13 14:18:29,887] [access] [INFO] [cp_1] root@vArmour:/usr-varmour/home/varmour# 
+[2017-03-13 14:18:29,887] [feature] [INFO] 
+In subroutine: va_show_interface_mapping
+[2017-03-13 14:18:29,888] [feature] [INFO] show interface device 2 mapping
+[2017-03-13 14:18:29,902] [access] [INFO] [dir_1] show interface device 2 mapping
+[2017-03-13 14:18:29,903] [access] [INFO] [dir_1] vArmour intf		VM intf		MAC address		VM index
+[2017-03-13 14:18:29,903] [access] [INFO] [dir_1] ----------------------------------------------------------------
+[2017-03-13 14:18:29,904] [access] [INFO] [dir_1] xe-2/0/0	--->	    eth0	00:50:56:b0:54:28	2
+[2017-03-13 14:18:29,904] [access] [INFO] [dir_1] xe-2/0/1	--->	    eth1	00:50:56:b0:8d:e7	3
+[2017-03-13 14:18:29,905] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:29,905] [feature] [INFO] 
+In subroutine: _va_parse_interface_mapping
+[2017-03-13 14:18:29,906] [feature] [INFO] All interfaces order are correct
+[2017-03-13 14:18:29,907] [vautils] [INFO] All devices are connected
+[2017-03-13 14:18:29,907] [vautils] [INFO] Reset configuration and reboot
+[2017-03-13 14:18:29,908] [feature] [INFO] 
+In subroutine: va_show_ha
+[2017-03-13 14:18:29,908] [feature] [INFO] show high-availability
+[2017-03-13 14:18:29,911] [access] [INFO] [dir_1] show high-availability
+[2017-03-13 14:18:29,911] [access] [INFO] [dir_1]   HA Mode   : ON
+[2017-03-13 14:18:29,911] [access] [INFO] [dir_1]   IF IDX    : eth2
+[2017-03-13 14:18:29,912] [access] [INFO] [dir_1]   HA Overlay(AWS)  : Not Enabled
+[2017-03-13 14:18:29,912] [access] [INFO] [dir_1]  
+[2017-03-13 14:18:29,912] [access] [INFO] [dir_1]   HA Failover State: Failover Ready
+[2017-03-13 14:18:29,912] [access] [INFO] [dir_1]   Preempt: Disable
+[2017-03-13 14:18:29,913] [access] [INFO] [dir_1]     Members           Unit ID      Pri    Address                Failover-count
+[2017-03-13 14:18:29,913] [access] [INFO] [dir_1]     PRIMARY BACKUP   1454427539    50    192.168.100.2                   0
+[2017-03-13 14:18:29,913] [access] [INFO] [dir_1]     MASTER           1454428203    50    192.168.100.1 (self)            0
+[2017-03-13 14:18:29,913] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:29,914] [vautils] [INFO] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2017-03-13 14:18:29,914] [vautils] [INFO] {'Preempt': 'Disable', 'HA STATUS': [('PRIMARY BACKUP', '1454427539', '50', '192.168.100.2', '0'), ('MASTER', '1454428203', '50', '192.168.100.1', '(self)', '0')], 'HA Failover State': 'Failover Ready', 'HA Overlay(AWS)': 'Not Enabled', 'HA Mode': 'ON', 'IF IDX': 'eth2'}
+[2017-03-13 14:18:29,914] [vautils] [INFO] ON
+[2017-03-13 14:18:29,914] [vautils] [INFO] ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2017-03-13 14:18:29,915] [vautils] [INFO] Configure EPI, address and policy
+[2017-03-13 14:18:29,915] [feature] [INFO] 
+In subroutine: va_config_epi_operation_mode
+[2017-03-13 14:18:29,917] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:29,917] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:29,919] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:29,919] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:29,919] [feature] [INFO] set chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28 operation-mode inline
+[2017-03-13 14:18:29,923] [access] [INFO] [dir_1] set chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28 operation-mode inline
+[2017-03-13 14:18:29,923] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:29,925] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:29,925] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,018] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:30,019] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,019] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:30,021] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,021] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,023] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,024] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,024] [feature] [INFO] Succeed to configure operation mode of EPI
+[2017-03-13 14:18:30,024] [feature] [INFO] 
+In subroutine: va_config_micro_segmentation
+[2017-03-13 14:18:30,026] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,026] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,028] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:30,028] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,028] [feature] [INFO] set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1001
+[2017-03-13 14:18:30,036] [access] [INFO] [dir_1] set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1001
+[2017-03-13 14:18:30,036] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,037] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,038] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,038] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,142] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:30,143] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,143] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:30,145] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,145] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,148] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,148] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,148] [feature] [INFO] Succeed to configure micro segmentation of EPI
+[2017-03-13 14:18:30,149] [feature] [INFO] 
+In subroutine: va_config_micro_segmentation
+[2017-03-13 14:18:30,150] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,151] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,152] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:30,153] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,153] [feature] [INFO] set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1002
+[2017-03-13 14:18:30,160] [access] [INFO] [dir_1] set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1002
+[2017-03-13 14:18:30,160] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,161] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,162] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,162] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,300] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:30,300] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,300] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:30,302] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,302] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,305] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,305] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,305] [feature] [INFO] Succeed to configure micro segmentation of EPI
+[2017-03-13 14:18:30,306] [feature] [INFO] 
+In subroutine: va_config_address
+[2017-03-13 14:18:30,308] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,308] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,310] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:30,311] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,311] [feature] [INFO] set address src_addr ipv4 15.15.15.1/32
+[2017-03-13 14:18:30,318] [access] [INFO] [dir_1] set address src_addr ipv4 15.15.15.1/32
+[2017-03-13 14:18:30,319] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,319] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,321] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,321] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,426] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:30,426] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,427] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:30,429] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,429] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,432] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,433] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,434] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,435] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,436] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,437] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,439] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:30,439] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,442] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:30,443] [access] [INFO] [dir_1] Nothing to commit!
+[2017-03-13 14:18:30,443] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,445] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,445] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,448] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,449] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,449] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:30,450] [feature] [INFO] 
+In subroutine: va_config_address
+[2017-03-13 14:18:30,452] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,452] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,454] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:30,454] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,455] [feature] [INFO] set address dst_addr ipv4 15.15.15.2/32
+[2017-03-13 14:18:30,463] [access] [INFO] [dir_1] set address dst_addr ipv4 15.15.15.2/32
+[2017-03-13 14:18:30,463] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,463] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,465] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,465] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,568] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:30,568] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,569] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:30,570] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,570] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,573] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,573] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,574] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,574] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,575] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,576] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,577] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:30,577] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,580] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:30,580] [access] [INFO] [dir_1] Nothing to commit!
+[2017-03-13 14:18:30,580] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,582] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,582] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,584] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,584] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,585] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:30,585] [feature] [INFO] We are in ::va_config_policy
+[2017-03-13 14:18:30,586] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,587] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,588] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:30,589] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,589] [feature] [INFO] set policy name pol_test from Intc to Intc
+[2017-03-13 14:18:30,596] [access] [INFO] [dir_1] set policy name pol_test from Intc to Intc
+[2017-03-13 14:18:30,596] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,596] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,596] [feature] [INFO] set policy name pol_test match source-address src_addr
+[2017-03-13 14:18:30,608] [access] [INFO] [dir_1] set policy name pol_test match source-address src_addr
+[2017-03-13 14:18:30,608] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,609] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,609] [feature] [INFO] set policy name pol_test match destination-address dst_addr
+[2017-03-13 14:18:30,616] [access] [INFO] [dir_1] set policy name pol_test match destination-address dst_addr
+[2017-03-13 14:18:30,617] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,617] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,617] [feature] [INFO] set policy name pol_test match service ICMP-ANY
+[2017-03-13 14:18:30,624] [access] [INFO] [dir_1] set policy name pol_test match service ICMP-ANY
+[2017-03-13 14:18:30,625] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,625] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,625] [feature] [INFO] set policy name pol_test match service FTP
+[2017-03-13 14:18:30,631] [access] [INFO] [dir_1] set policy name pol_test match service FTP
+[2017-03-13 14:18:30,631] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,631] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,632] [feature] [INFO] set policy name pol_test match service TFTP
+[2017-03-13 14:18:30,637] [access] [INFO] [dir_1] set policy name pol_test match service TFTP
+[2017-03-13 14:18:30,638] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,638] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,638] [feature] [INFO] set policy name pol_test action permit
+[2017-03-13 14:18:30,644] [access] [INFO] [dir_1] set policy name pol_test action permit
+[2017-03-13 14:18:30,644] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,644] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,646] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,646] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,758] [access] [INFO] [dir_1] commit
+[2017-03-13 14:18:30,759] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,759] [feature] [INFO] config commit succeeded
+[2017-03-13 14:18:30,761] [access] [INFO] [dir_1] 
+[2017-03-13 14:18:30,761] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-13 14:18:30,763] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,764] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,764] [vautils] [INFO] 
+In subroutine: va_check_configured_cmds
+[2017-03-13 14:18:30,764] [vautils] [INFO] Check CMD: ['set chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28 operation-mode inline', 'set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1001', 'set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1002']
+[2017-03-13 14:18:30,765] [feature] [INFO] show running-config
+[2017-03-13 14:18:30,768] [access] [INFO] [dir_1] show running-config
+[2017-03-13 14:18:30,769] [access] [INFO] [dir_1] !## last commit: 2017-03-12 22:55:38 UTC by Current User
+[2017-03-13 14:18:30,769] [access] [INFO] [dir_1] !## cli version: v3.1
+[2017-03-13 14:18:30,769] [access] [INFO] [dir_1] configure
+[2017-03-13 14:18:30,769] [access] [INFO] [dir_1] set system inactivity-timeout 250
+[2017-03-13 14:18:30,769] [access] [INFO] [dir_1] set system user varmour role admin
+[2017-03-13 14:18:30,770] [access] [INFO] [dir_1] set system user varmour password encrypted-password "$6$/AGVK.6F$sSQBmOkrnS3Y.Vyw7EQU9jBrynoYW83vRpUOZ1iC9Xuhz6hhMraE8djuiNm3PguYMfEhnVOI8rqNnMsW2xswJ/"
+[2017-03-13 14:18:30,770] [access] [INFO] [dir_1] set system user varmour_no_cli role admin
+[2017-03-13 14:18:30,770] [access] [INFO] [dir_1] set system user varmour_no_cli password encrypted-password "$6$ZKQlMmiE$TgTNkE679I5RIE7Zoc3n1F0Rf3TB7qvdqfNUoqdIJebINsTHIhnIqvBVWu.J6HGyepZ5dL8PCZOxLmnLwrJo./"
+[2017-03-13 14:18:30,770] [access] [INFO] [dir_1] set address src_addr ipv4 15.15.15.1/32
+[2017-03-13 14:18:30,771] [access] [INFO] [dir_1] set address dst_addr ipv4 15.15.15.2/32
+[2017-03-13 14:18:30,771] [access] [INFO] [dir_1] set policy name pol_test from Intc to Intc
+[2017-03-13 14:18:30,771] [access] [INFO] [dir_1] set policy name pol_test match source-address src_addr
+[2017-03-13 14:18:30,771] [access] [INFO] [dir_1] set policy name pol_test match destination-address dst_addr
+[2017-03-13 14:18:30,772] [access] [INFO] [dir_1] set policy name pol_test match service ICMP-ANY
+[2017-03-13 14:18:30,772] [access] [INFO] [dir_1] set policy name pol_test match service FTP
+[2017-03-13 14:18:30,772] [access] [INFO] [dir_1] set policy name pol_test match service TFTP
+[2017-03-13 14:18:30,772] [access] [INFO] [dir_1] set policy name pol_test action permit
+[2017-03-13 14:18:30,773] [access] [INFO] [dir_1] set chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28 operation-mode inline
+[2017-03-13 14:18:30,773] [access] [INFO] [dir_1] set high-availability local-address 192.168.100.1/24 remote-address 192.168.100.2
+[2017-03-13 14:18:30,773] [access] [INFO] [dir_1] set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1001
+[2017-03-13 14:18:30,773] [access] [INFO] [dir_1] set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1002
+[2017-03-13 14:18:30,773] [access] [INFO] [dir_1] exit
+[2017-03-13 14:18:30,774] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,775] [vautils] [INFO] Matched: set chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28 operation-mode inline
+[2017-03-13 14:18:30,775] [vautils] [INFO] Matched: set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1001
+[2017-03-13 14:18:30,776] [vautils] [INFO] Matched: set micro-segmentation epi 564D243B-9060-73C3-9043-5191FEAA2A28 segment 3000 micro-vlan 1002
+[2017-03-13 14:18:30,777] [vautils] [INFO] Succeed to check all configured commands
+[2017-03-13 14:18:30,777] [vautils] [DEBUG] ############################################
+[2017-03-13 14:18:30,777] [vautils] [DEBUG] #                                          #
+[2017-03-13 14:18:30,777] [vautils] [DEBUG] # Check timestamp and configuration status #
+[2017-03-13 14:18:30,778] [vautils] [DEBUG] #                                          #
+[2017-03-13 14:18:30,778] [vautils] [DEBUG] ############################################
+[2017-03-13 14:18:30,778] [vautils] [INFO] 
+In subroutine: va_check_system_timestamp
+[2017-03-13 14:18:30,779] [feature] [INFO] 
+In subroutine: va_get_epi_uuid
+[2017-03-13 14:18:30,779] [feature] [INFO] show chassis epi
+[2017-03-13 14:18:30,805] [access] [INFO] [dir_1] show chassis epi
+[2017-03-13 14:18:30,805] [access] [INFO] [dir_1] Active EPI:
+[2017-03-13 14:18:30,805] [access] [INFO] [dir_1]   UUID                                  hostname         EP-ID      mode          fabric-ip      management-ip      connected-since connection-type licensed
+[2017-03-13 14:18:30,806] [access] [INFO] [dir_1]   --------------------------------------------------------------------------------------------------------------------
+[2017-03-13 14:18:30,806] [access] [INFO] [dir_1]   564D243B-9060-73C3-9043-5191FEAA2A28  -                 2-6     inline     192.168.1.10/24     10.11.125.93/24 @Sun Mar 12 21:53:22 2017  TLS     yes
+[2017-03-13 14:18:30,806] [access] [INFO] [dir_1] Inactive EPI:
+[2017-03-13 14:18:30,806] [access] [INFO] [dir_1]   UUID                                  hostname             last connected ep         mode
+[2017-03-13 14:18:30,807] [access] [INFO] [dir_1]   ----------------------------------------------------------------------
+[2017-03-13 14:18:30,807] [access] [INFO] [dir_1] Total active EPIs: 1
+[2017-03-13 14:18:30,807] [access] [INFO] [dir_1] Total inactive EPIs: 0
+[2017-03-13 14:18:30,807] [access] [INFO] [dir_1] *: the EPI is not connecting to its primary EP
+[2017-03-13 14:18:30,808] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,809] [feature] [INFO] UUID: ['564D243B-9060-73C3-9043-5191FEAA2A28']
+[2017-03-13 14:18:30,810] [feature] [INFO] show system
+[2017-03-13 14:18:30,850] [access] [INFO] [dir_1] show system
+[2017-03-13 14:18:30,851] [access] [INFO] [dir_1]    
+[2017-03-13 14:18:30,852] [access] [INFO] [dir_1]   hostname:                      vArmour
+[2017-03-13 14:18:30,852] [access] [INFO] [dir_1]   fabric interface:              eth0
+[2017-03-13 14:18:30,852] [access] [INFO] [dir_1]   fabric address:                192.168.1.1/24
+[2017-03-13 14:18:30,853] [access] [INFO] [dir_1]   management interface:          eth1
+[2017-03-13 14:18:30,853] [access] [INFO] [dir_1]   management address:            10.11.125.90/24
+[2017-03-13 14:18:30,854] [access] [INFO] [dir_1]   management gateway:            10.11.125.1
+[2017-03-13 14:18:30,854] [access] [INFO] [dir_1]   time:                          Sun Mar 12 22:55:38 UTC 2017
+[2017-03-13 14:18:30,854] [access] [INFO] [dir_1]   uptime:                        51 min,  3 users,  load average: 0.33, 0.21, 0.26
+[2017-03-13 14:18:30,855] [access] [INFO] [dir_1]   model:                         VA3020V
+[2017-03-13 14:18:30,855] [access] [INFO] [dir_1]   serial:                        564DC3A1-35E0-FDBC-B160-F579D21DD81B
+[2017-03-13 14:18:30,856] [access] [INFO] [dir_1]   software version:              3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:30,856] [access] [INFO] [dir_1]   UI package version:            3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:30,857] [access] [INFO] [dir_1]   Orchestration package version: 3.1.0.00293
+[2017-03-13 14:18:30,857] [access] [INFO] [dir_1]   boot directory:                primary
+[2017-03-13 14:18:30,857] [access] [INFO] [dir_1]   varmour security package:      116
+[2017-03-13 14:18:30,858] [access] [INFO] [dir_1]   director connection secret:    4e9a4338eaa6b3d15ad601edc49b1e7f1bd4e5b4
+[2017-03-13 14:18:30,858] [access] [INFO] [dir_1]   DNS server:                    
+[2017-03-13 14:18:30,858] [access] [INFO] [dir_1]   inactivity timeout:            250 min 
+[2017-03-13 14:18:30,859] [access] [INFO] [dir_1]   web inactivity timeout:        20 min 
+[2017-03-13 14:18:30,859] [access] [INFO] [dir_1]   global commit timestamp:       2017-03-12_22:55:38_UTC 
+[2017-03-13 14:18:30,859] [access] [INFO] [dir_1]   license:                       expiration:  2017-03-15 08:00:00
+[2017-03-13 14:18:30,860] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,860] [feature] [INFO] show chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:30,886] [access] [INFO] [dir_1] show chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:30,886] [access] [INFO] [dir_1]   Host Name                      : Not configured                                                  
+[2017-03-13 14:18:30,886] [access] [INFO] [dir_1]   State                          : Enabled                                                         
+[2017-03-13 14:18:30,887] [access] [INFO] [dir_1]   Operation mode                 : Inline                                                          
+[2017-03-13 14:18:30,887] [access] [INFO] [dir_1]   Packet poll CPU optimization   : Enabled                                                         
+[2017-03-13 14:18:30,887] [access] [INFO] [dir_1]   UUID                           : 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:30,887] [access] [INFO] [dir_1]   Fabric IP                      : 192.168.1.10/24
+[2017-03-13 14:18:30,888] [access] [INFO] [dir_1]   Primary EP                     : 192.168.1.3
+[2017-03-13 14:18:30,888] [access] [INFO] [dir_1]   Management IP                  : 10.11.125.93/24
+[2017-03-13 14:18:30,888] [access] [INFO] [dir_1]   Management gateway             : 10.11.125.1
+[2017-03-13 14:18:30,888] [access] [INFO] [dir_1]   Connected EP                   : 192.168.1.3                                                     
+[2017-03-13 14:18:30,889] [access] [INFO] [dir_1]   Running version                : 3.1.0-2017-02-09-15-53-38-eng-builtbot                          
+[2017-03-13 14:18:30,889] [access] [INFO] [dir_1]   Installed primary              : 3.1.0-2017-02-09-15-53-38-eng-builtbot                          
+[2017-03-13 14:18:30,889] [access] [INFO] [dir_1]   Installed secondary            : 3.0.B1-7e495f4-release                                          
+[2017-03-13 14:18:30,889] [access] [INFO] [dir_1]   Next boot                      : Primary                                                         
+[2017-03-13 14:18:30,890] [access] [INFO] [dir_1]   Configuration version          : 0x1f                                                            
+[2017-03-13 14:18:30,890] [access] [INFO] [dir_1]   Commit timestamp               : 2017-03-12_22:27:13_UTC                                         
+[2017-03-13 14:18:30,890] [access] [INFO] [dir_1]   Last connect time              : Sun Mar 12 21:53:22 2017
+[2017-03-13 14:18:30,890] [access] [INFO] [dir_1]                                        
+[2017-03-13 14:18:30,891] [access] [INFO] [dir_1]   connection type                : tls                                                             
+[2017-03-13 14:18:30,891] [access] [INFO] [dir_1]   Licensed                       : Yes                                                             
+[2017-03-13 14:18:30,891] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:30,891] [vautils] [ERROR] The timestamp 2017-03-12_22:55:38_UTC is different from EPi 2017-03-12_22:27:13_UTC
+[2017-03-13 14:18:30,892] [vautils] [INFO] Sleeping 1 seconds to wait
+[2017-03-13 14:18:31,893] [vautils] [INFO] 
+In subroutine: va_check_system_timestamp
+[2017-03-13 14:18:31,894] [feature] [INFO] 
+In subroutine: va_get_epi_uuid
+[2017-03-13 14:18:31,894] [feature] [INFO] show chassis epi
+[2017-03-13 14:18:31,904] [access] [INFO] [dir_1] show chassis epi
+[2017-03-13 14:18:31,904] [access] [INFO] [dir_1] Active EPI:
+[2017-03-13 14:18:31,905] [access] [INFO] [dir_1]   UUID                                  hostname         EP-ID      mode          fabric-ip      management-ip      connected-since connection-type licensed
+[2017-03-13 14:18:31,905] [access] [INFO] [dir_1]   --------------------------------------------------------------------------------------------------------------------
+[2017-03-13 14:18:31,906] [access] [INFO] [dir_1]   564D243B-9060-73C3-9043-5191FEAA2A28  -                 2-6     inline     192.168.1.10/24     10.11.125.93/24 @Sun Mar 12 21:53:22 2017  TLS     yes
+[2017-03-13 14:18:31,906] [access] [INFO] [dir_1] Inactive EPI:
+[2017-03-13 14:18:31,906] [access] [INFO] [dir_1]   UUID                                  hostname             last connected ep         mode
+[2017-03-13 14:18:31,907] [access] [INFO] [dir_1]   ----------------------------------------------------------------------
+[2017-03-13 14:18:31,907] [access] [INFO] [dir_1] Total active EPIs: 1
+[2017-03-13 14:18:31,908] [access] [INFO] [dir_1] Total inactive EPIs: 0
+[2017-03-13 14:18:31,908] [access] [INFO] [dir_1] *: the EPI is not connecting to its primary EP
+[2017-03-13 14:18:31,908] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:31,910] [feature] [INFO] UUID: ['564D243B-9060-73C3-9043-5191FEAA2A28']
+[2017-03-13 14:18:31,910] [feature] [INFO] show system
+[2017-03-13 14:18:31,951] [access] [INFO] [dir_1] show system
+[2017-03-13 14:18:31,951] [access] [INFO] [dir_1]    
+[2017-03-13 14:18:31,952] [access] [INFO] [dir_1]   hostname:                      vArmour
+[2017-03-13 14:18:31,952] [access] [INFO] [dir_1]   fabric interface:              eth0
+[2017-03-13 14:18:31,952] [access] [INFO] [dir_1]   fabric address:                192.168.1.1/24
+[2017-03-13 14:18:31,953] [access] [INFO] [dir_1]   management interface:          eth1
+[2017-03-13 14:18:31,953] [access] [INFO] [dir_1]   management address:            10.11.125.90/24
+[2017-03-13 14:18:31,953] [access] [INFO] [dir_1]   management gateway:            10.11.125.1
+[2017-03-13 14:18:31,953] [access] [INFO] [dir_1]   time:                          Sun Mar 12 22:55:39 UTC 2017
+[2017-03-13 14:18:31,954] [access] [INFO] [dir_1]   uptime:                        51 min,  3 users,  load average: 0.31, 0.21, 0.26
+[2017-03-13 14:18:31,954] [access] [INFO] [dir_1]   model:                         VA3020V
+[2017-03-13 14:18:31,954] [access] [INFO] [dir_1]   serial:                        564DC3A1-35E0-FDBC-B160-F579D21DD81B
+[2017-03-13 14:18:31,955] [access] [INFO] [dir_1]   software version:              3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:31,955] [access] [INFO] [dir_1]   UI package version:            3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:31,955] [access] [INFO] [dir_1]   Orchestration package version: 3.1.0.00293
+[2017-03-13 14:18:31,955] [access] [INFO] [dir_1]   boot directory:                primary
+[2017-03-13 14:18:31,956] [access] [INFO] [dir_1]   varmour security package:      116
+[2017-03-13 14:18:31,956] [access] [INFO] [dir_1]   director connection secret:    4e9a4338eaa6b3d15ad601edc49b1e7f1bd4e5b4
+[2017-03-13 14:18:31,956] [access] [INFO] [dir_1]   DNS server:                    
+[2017-03-13 14:18:31,956] [access] [INFO] [dir_1]   inactivity timeout:            250 min 
+[2017-03-13 14:18:31,956] [access] [INFO] [dir_1]   web inactivity timeout:        20 min 
+[2017-03-13 14:18:31,957] [access] [INFO] [dir_1]   global commit timestamp:       2017-03-12_22:55:38_UTC 
+[2017-03-13 14:18:31,957] [access] [INFO] [dir_1]   license:                       expiration:  2017-03-15 08:00:00
+[2017-03-13 14:18:31,957] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:31,958] [feature] [INFO] show chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:31,998] [access] [INFO] [dir_1] show chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:31,998] [access] [INFO] [dir_1]   Host Name                      : Not configured                                                  
+[2017-03-13 14:18:31,998] [access] [INFO] [dir_1]   State                          : Enabled                                                         
+[2017-03-13 14:18:31,998] [access] [INFO] [dir_1]   Operation mode                 : Inline                                                          
+[2017-03-13 14:18:31,999] [access] [INFO] [dir_1]   Packet poll CPU optimization   : Enabled                                                         
+[2017-03-13 14:18:31,999] [access] [INFO] [dir_1]   UUID                           : 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:31,999] [access] [INFO] [dir_1]   Fabric IP                      : 192.168.1.10/24
+[2017-03-13 14:18:32,000] [access] [INFO] [dir_1]   Primary EP                     : 192.168.1.3
+[2017-03-13 14:18:32,000] [access] [INFO] [dir_1]   Management IP                  : 10.11.125.93/24
+[2017-03-13 14:18:32,000] [access] [INFO] [dir_1]   Management gateway             : 10.11.125.1
+[2017-03-13 14:18:32,000] [access] [INFO] [dir_1]   Connected EP                   : 192.168.1.3                                                     
+[2017-03-13 14:18:32,001] [access] [INFO] [dir_1]   Running version                : 3.1.0-2017-02-09-15-53-38-eng-builtbot                          
+[2017-03-13 14:18:32,001] [access] [INFO] [dir_1]   Installed primary              : 3.1.0-2017-02-09-15-53-38-eng-builtbot                          
+[2017-03-13 14:18:32,001] [access] [INFO] [dir_1]   Installed secondary            : 3.0.B1-7e495f4-release                                          
+[2017-03-13 14:18:32,001] [access] [INFO] [dir_1]   Next boot                      : Primary                                                         
+[2017-03-13 14:18:32,002] [access] [INFO] [dir_1]   Configuration version          : 0x21                                                            
+[2017-03-13 14:18:32,002] [access] [INFO] [dir_1]   Commit timestamp               : 2017-03-12_22:55:37_UTC                                         
+[2017-03-13 14:18:32,002] [access] [INFO] [dir_1]   Last connect time              : Sun Mar 12 21:53:22 2017
+[2017-03-13 14:18:32,002] [access] [INFO] [dir_1]                                        
+[2017-03-13 14:18:32,003] [access] [INFO] [dir_1]   connection type                : tls                                                             
+[2017-03-13 14:18:32,003] [access] [INFO] [dir_1]   Licensed                       : Yes                                                             
+[2017-03-13 14:18:32,003] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:32,003] [vautils] [ERROR] The timestamp 2017-03-12_22:55:38_UTC is different from EPi 2017-03-12_22:55:37_UTC
+[2017-03-13 14:18:32,004] [vautils] [INFO] Sleeping 1 seconds to wait
+[2017-03-13 14:18:33,005] [vautils] [INFO] 
+In subroutine: va_check_system_timestamp
+[2017-03-13 14:18:33,006] [feature] [INFO] 
+In subroutine: va_get_epi_uuid
+[2017-03-13 14:18:33,006] [feature] [INFO] show chassis epi
+[2017-03-13 14:18:33,025] [access] [INFO] [dir_1] show chassis epi
+[2017-03-13 14:18:33,025] [access] [INFO] [dir_1] Active EPI:
+[2017-03-13 14:18:33,025] [access] [INFO] [dir_1]   UUID                                  hostname         EP-ID      mode          fabric-ip      management-ip      connected-since connection-type licensed
+[2017-03-13 14:18:33,026] [access] [INFO] [dir_1]   --------------------------------------------------------------------------------------------------------------------
+[2017-03-13 14:18:33,026] [access] [INFO] [dir_1]   564D243B-9060-73C3-9043-5191FEAA2A28  -                 2-6     inline     192.168.1.10/24     10.11.125.93/24 @Sun Mar 12 21:53:22 2017  TLS     yes
+[2017-03-13 14:18:33,026] [access] [INFO] [dir_1] Inactive EPI:
+[2017-03-13 14:18:33,027] [access] [INFO] [dir_1]   UUID                                  hostname             last connected ep         mode
+[2017-03-13 14:18:33,027] [access] [INFO] [dir_1]   ----------------------------------------------------------------------
+[2017-03-13 14:18:33,027] [access] [INFO] [dir_1] Total active EPIs: 1
+[2017-03-13 14:18:33,027] [access] [INFO] [dir_1] Total inactive EPIs: 0
+[2017-03-13 14:18:33,028] [access] [INFO] [dir_1] *: the EPI is not connecting to its primary EP
+[2017-03-13 14:18:33,028] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:33,030] [feature] [INFO] UUID: ['564D243B-9060-73C3-9043-5191FEAA2A28']
+[2017-03-13 14:18:33,030] [feature] [INFO] show system
+[2017-03-13 14:18:33,080] [access] [INFO] [dir_1] show system
+[2017-03-13 14:18:33,080] [access] [INFO] [dir_1]    
+[2017-03-13 14:18:33,081] [access] [INFO] [dir_1]   hostname:                      vArmour
+[2017-03-13 14:18:33,081] [access] [INFO] [dir_1]   fabric interface:              eth0
+[2017-03-13 14:18:33,081] [access] [INFO] [dir_1]   fabric address:                192.168.1.1/24
+[2017-03-13 14:18:33,081] [access] [INFO] [dir_1]   management interface:          eth1
+[2017-03-13 14:18:33,082] [access] [INFO] [dir_1]   management address:            10.11.125.90/24
+[2017-03-13 14:18:33,082] [access] [INFO] [dir_1]   management gateway:            10.11.125.1
+[2017-03-13 14:18:33,082] [access] [INFO] [dir_1]   time:                          Sun Mar 12 22:55:40 UTC 2017
+[2017-03-13 14:18:33,082] [access] [INFO] [dir_1]   uptime:                        51 min,  3 users,  load average: 0.31, 0.21, 0.26
+[2017-03-13 14:18:33,083] [access] [INFO] [dir_1]   model:                         VA3020V
+[2017-03-13 14:18:33,083] [access] [INFO] [dir_1]   serial:                        564DC3A1-35E0-FDBC-B160-F579D21DD81B
+[2017-03-13 14:18:33,083] [access] [INFO] [dir_1]   software version:              3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:33,083] [access] [INFO] [dir_1]   UI package version:            3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-13 14:18:33,084] [access] [INFO] [dir_1]   Orchestration package version: 3.1.0.00293
+[2017-03-13 14:18:33,084] [access] [INFO] [dir_1]   boot directory:                primary
+[2017-03-13 14:18:33,084] [access] [INFO] [dir_1]   varmour security package:      116
+[2017-03-13 14:18:33,084] [access] [INFO] [dir_1]   director connection secret:    4e9a4338eaa6b3d15ad601edc49b1e7f1bd4e5b4
+[2017-03-13 14:18:33,084] [access] [INFO] [dir_1]   DNS server:                    
+[2017-03-13 14:18:33,085] [access] [INFO] [dir_1]   inactivity timeout:            250 min 
+[2017-03-13 14:18:33,085] [access] [INFO] [dir_1]   web inactivity timeout:        20 min 
+[2017-03-13 14:18:33,085] [access] [INFO] [dir_1]   global commit timestamp:       2017-03-12_22:55:38_UTC 
+[2017-03-13 14:18:33,085] [access] [INFO] [dir_1]   license:                       expiration:  2017-03-15 08:00:00
+[2017-03-13 14:18:33,085] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:33,086] [feature] [INFO] show chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:33,105] [access] [INFO] [dir_1] show chassis epi 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:33,105] [access] [INFO] [dir_1]   Host Name                      : Not configured                                                  
+[2017-03-13 14:18:33,105] [access] [INFO] [dir_1]   State                          : Enabled                                                         
+[2017-03-13 14:18:33,105] [access] [INFO] [dir_1]   Operation mode                 : Inline                                                          
+[2017-03-13 14:18:33,106] [access] [INFO] [dir_1]   Packet poll CPU optimization   : Enabled                                                         
+[2017-03-13 14:18:33,106] [access] [INFO] [dir_1]   UUID                           : 564D243B-9060-73C3-9043-5191FEAA2A28
+[2017-03-13 14:18:33,106] [access] [INFO] [dir_1]   Fabric IP                      : 192.168.1.10/24
+[2017-03-13 14:18:33,106] [access] [INFO] [dir_1]   Primary EP                     : 192.168.1.3
+[2017-03-13 14:18:33,107] [access] [INFO] [dir_1]   Management IP                  : 10.11.125.93/24
+[2017-03-13 14:18:33,107] [access] [INFO] [dir_1]   Management gateway             : 10.11.125.1
+[2017-03-13 14:18:33,107] [access] [INFO] [dir_1]   Connected EP                   : 192.168.1.3                                                     
+[2017-03-13 14:18:33,107] [access] [INFO] [dir_1]   Running version                : 3.1.0-2017-02-09-15-53-38-eng-builtbot                          
+[2017-03-13 14:18:33,108] [access] [INFO] [dir_1]   Installed primary              : 3.1.0-2017-02-09-15-53-38-eng-builtbot                          
+[2017-03-13 14:18:33,108] [access] [INFO] [dir_1]   Installed secondary            : 3.0.B1-7e495f4-release                                          
+[2017-03-13 14:18:33,108] [access] [INFO] [dir_1]   Next boot                      : Primary                                                         
+[2017-03-13 14:18:33,108] [access] [INFO] [dir_1]   Configuration version          : 0x22                                                            
+[2017-03-13 14:18:33,109] [access] [INFO] [dir_1]   Commit timestamp               : 2017-03-12_22:55:38_UTC                                         
+[2017-03-13 14:18:33,109] [access] [INFO] [dir_1]   Last connect time              : Sun Mar 12 21:53:22 2017
+[2017-03-13 14:18:33,109] [access] [INFO] [dir_1]                                        
+[2017-03-13 14:18:33,109] [access] [INFO] [dir_1]   connection type                : tls                                                             
+[2017-03-13 14:18:33,109] [access] [INFO] [dir_1]   Licensed                       : Yes                                                             
+[2017-03-13 14:18:33,110] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:33,110] [vautils] [INFO] Succeed to check timestatmp
+[2017-03-13 14:18:33,110] [vautils] [INFO] 
+In subroutine: va_check_config_status
+[2017-03-13 14:18:33,111] [feature] [INFO] show config status
+[2017-03-13 14:18:33,135] [access] [INFO] [dir_1] show config status
+[2017-03-13 14:18:33,135] [access] [INFO] [dir_1] Director konfd version: 0x22                    Commit timestamp: 2017-03-12_22:55:38_UTC
+[2017-03-13 14:18:33,136] [access] [INFO] [dir_1]  DEV        MGT-IP                 MODE       VERSION      COMMIT TIMESTAMP              STATUS
+[2017-03-13 14:18:33,136] [access] [INFO] [dir_1] ----------------------------------------------------------------------------------------------------------
+[2017-03-13 14:18:33,136] [access] [INFO] [dir_1]  1          10.11.125.90/24        DIR        0x22               2017-03-12_22:55:38_UTC         InSync
+[2017-03-13 14:18:33,137] [access] [INFO] [dir_1]  2          10.11.125.92/24        CP         0x22               2017-03-12_22:55:38_UTC         InSync
+[2017-03-13 14:18:33,137] [access] [INFO] [dir_1]  2-6        10.11.125.93/24        EPI        0x22               2017-03-12_22:55:38_UTC         InSync
+[2017-03-13 14:18:33,137] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:33,139] [vautils] [INFO] Succeed to check status of configuration
+[2017-03-13 14:18:33,139] [vautils] [DEBUG] ###########################################
+[2017-03-13 14:18:33,139] [vautils] [DEBUG] #                                         #
+[2017-03-13 14:18:33,140] [vautils] [DEBUG] # Make sure that EPI connected primary CP #
+[2017-03-13 14:18:33,140] [vautils] [DEBUG] #                                         #
+[2017-03-13 14:18:33,140] [vautils] [DEBUG] ###########################################
+[2017-03-13 14:18:33,141] [feature] [INFO] 
+In subroutine: va_get_epi_connecting_mode
+[2017-03-13 14:18:33,141] [feature] [INFO] show chassis epi
+[2017-03-13 14:18:33,154] [access] [INFO] [dir_1] show chassis epi
+[2017-03-13 14:18:33,155] [access] [INFO] [dir_1] Active EPI:
+[2017-03-13 14:18:33,155] [access] [INFO] [dir_1]   UUID                                  hostname         EP-ID      mode          fabric-ip      management-ip      connected-since connection-type licensed
+[2017-03-13 14:18:33,155] [access] [INFO] [dir_1]   --------------------------------------------------------------------------------------------------------------------
+[2017-03-13 14:18:33,155] [access] [INFO] [dir_1]   564D243B-9060-73C3-9043-5191FEAA2A28  -                 2-6     inline     192.168.1.10/24     10.11.125.93/24 @Sun Mar 12 21:53:22 2017  TLS     yes
+[2017-03-13 14:18:33,156] [access] [INFO] [dir_1] Inactive EPI:
+[2017-03-13 14:18:33,156] [access] [INFO] [dir_1]   UUID                                  hostname             last connected ep         mode
+[2017-03-13 14:18:33,156] [access] [INFO] [dir_1]   ----------------------------------------------------------------------
+[2017-03-13 14:18:33,156] [access] [INFO] [dir_1] Total active EPIs: 1
+[2017-03-13 14:18:33,157] [access] [INFO] [dir_1] Total inactive EPIs: 0
+[2017-03-13 14:18:33,157] [access] [INFO] [dir_1] *: the EPI is not connecting to its primary EP
+[2017-03-13 14:18:33,157] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-13 14:18:33,159] [feature] [INFO] EPI is connecting to its 'primary' EP/CP
+[2017-03-13 14:18:33,159] [access] [INFO] ==============Test Case config end==============
+[2017-03-13 14:18:33,160] [vautils] [DEBUG] #######################################################
+[2017-03-13 14:18:33,160] [vautils] [DEBUG] #                                                     #
+[2017-03-13 14:18:33,161] [vautils] [DEBUG] # Teardown function to Clean up after every test case #
+[2017-03-13 14:18:33,161] [vautils] [DEBUG] #                                                     #
+[2017-03-13 14:18:33,161] [vautils] [DEBUG] #######################################################
+[2017-03-13 14:18:33,161] [vautils] [DEBUG] ##################################
+[2017-03-13 14:18:33,162] [vautils] [DEBUG] #                                #
+[2017-03-13 14:18:33,162] [vautils] [DEBUG] # Check core file on all devices #
+[2017-03-13 14:18:33,162] [vautils] [DEBUG] #                                #
+[2017-03-13 14:18:33,162] [vautils] [DEBUG] ##################################
+[2017-03-13 14:18:33,163] [access] [ERROR] Failed to check core file
+[2017-03-13 14:18:33,163] [vautils] [DEBUG] ##################################################################
+[2017-03-13 14:18:33,163] [vautils] [DEBUG] #                                                                #
+[2017-03-13 14:18:33,163] [vautils] [DEBUG] # Teardown module to restore topology and clean up configuration #
+[2017-03-13 14:18:33,164] [vautils] [DEBUG] #                                                                #
+[2017-03-13 14:18:33,164] [vautils] [DEBUG] ##################################################################

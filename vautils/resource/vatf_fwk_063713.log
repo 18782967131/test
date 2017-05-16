@@ -1,0 +1,97 @@
+[2017-03-02 14:37:13,681] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,681] [access] [INFO] [dir_1] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-02 14:37:13,682] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,682] [access] [INFO] [dir_1] Welcome to vArmour!
+[2017-03-02 14:37:13,682] [access] [INFO] [dir_1] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-02 14:37:13,682] [access] [INFO] [dir_1] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-02 14:37:13,683] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,683] [access] [INFO] [dir_1]  Checking management server status..... 
+[2017-03-02 14:37:13,683] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-02 14:37:13,683] [access] [INFO] [dir_1] The configuration has been installed.
+[2017-03-02 14:37:13,683] [access] [INFO] [dir_1] Connecting to the management console
+[2017-03-02 14:37:13,684] [access] [INFO] [dir_1] Warning: The device is configured with the default password.  Please change
+[2017-03-02 14:37:13,684] [access] [INFO] [dir_1]          the default password to prevent unauthorized logins.
+[2017-03-02 14:37:13,684] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,684] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,684] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,685] [access] [INFO] [dir_1] HA sync stage. Do show high-availability to see HA status.
+[2017-03-02 14:37:13,685] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,685] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-02 14:37:13,687] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,688] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-02 14:37:13,688] [feature] [INFO] cli initiated
+[2017-03-02 14:37:13,688] [feature] [INFO] request cli terminal-length 0
+[2017-03-02 14:37:13,698] [access] [INFO] [dir_1] request cli terminal-length 0
+[2017-03-02 14:37:13,698] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-02 14:37:13,699] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,700] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-02 14:37:13,702] [access] [INFO] [dir_1] configure
+[2017-03-02 14:37:13,702] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-02 14:37:13,703] [feature] [INFO] set system inactivity-timeout 250
+[2017-03-02 14:37:13,709] [access] [INFO] [dir_1] set system inactivity-timeout 250
+[2017-03-02 14:37:13,709] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-02 14:37:13,710] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,711] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-02 14:37:13,854] [access] [INFO] [dir_1] commit
+[2017-03-02 14:37:13,854] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-02 14:37:13,854] [feature] [INFO] config commit succeeded
+[2017-03-02 14:37:13,855] [access] [INFO] [dir_1] 
+[2017-03-02 14:37:13,856] [access] [INFO] [dir_1] varmour@vArmour#ROOT(config)(M)> 
+[2017-03-02 14:37:13,858] [access] [INFO] [dir_1] exit
+[2017-03-02 14:37:13,858] [access] [INFO] [dir_1] varmour@vArmour#ROOT(M)> 
+[2017-03-02 14:37:14,205] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,205] [access] [INFO] [dir_2] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-02 14:37:14,206] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,206] [access] [INFO] [dir_2] Welcome to vArmour!
+[2017-03-02 14:37:14,206] [access] [INFO] [dir_2] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-02 14:37:14,206] [access] [INFO] [dir_2] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-02 14:37:14,207] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,207] [access] [INFO] [dir_2]  Checking management server status..... 
+[2017-03-02 14:37:14,207] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-02 14:37:14,207] [access] [INFO] [dir_2] The configuration has been installed.
+[2017-03-02 14:37:14,207] [access] [INFO] [dir_2] Connecting to the management console
+[2017-03-02 14:37:14,208] [access] [INFO] [dir_2] Warning: The device is configured with the default password.  Please change
+[2017-03-02 14:37:14,208] [access] [INFO] [dir_2]          the default password to prevent unauthorized logins.
+[2017-03-02 14:37:14,208] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,208] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,208] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,208] [access] [INFO] [dir_2] HA sync stage. Do show high-availability to see HA status.
+[2017-03-02 14:37:14,209] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,209] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-02 14:37:14,210] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,210] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-02 14:37:14,211] [feature] [INFO] cli initiated
+[2017-03-02 14:37:14,211] [feature] [INFO] request cli terminal-length 0
+[2017-03-02 14:37:14,219] [access] [INFO] [dir_2] request cli terminal-length 0
+[2017-03-02 14:37:14,219] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-02 14:37:14,221] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,221] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-02 14:37:14,222] [access] [INFO] [dir_2] configure
+[2017-03-02 14:37:14,223] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-02 14:37:14,223] [feature] [INFO] set system inactivity-timeout 250
+[2017-03-02 14:37:14,227] [access] [INFO] [dir_2] set system inactivity-timeout 250
+[2017-03-02 14:37:14,227] [access] [INFO] [dir_2] Command is not supported on high-availability backup/ineligible device
+[2017-03-02 14:37:14,227] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-02 14:37:14,229] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,229] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-02 14:37:14,232] [access] [INFO] [dir_2] commit
+[2017-03-02 14:37:14,232] [access] [INFO] [dir_2] Nothing to commit!
+[2017-03-02 14:37:14,232] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-02 14:37:14,232] [feature] [INFO] config commit succeeded
+[2017-03-02 14:37:14,234] [access] [INFO] [dir_2] 
+[2017-03-02 14:37:14,234] [access] [INFO] [dir_2] varmour@vArmour#ROOT(config)(PB)> 
+[2017-03-02 14:37:14,236] [access] [INFO] [dir_2] exit
+[2017-03-02 14:37:14,236] [access] [INFO] [dir_2] varmour@vArmour#ROOT(PB)> 
+[2017-03-02 14:37:14,572] [access] [INFO] [cp_1] 
+[2017-03-02 14:37:14,572] [access] [INFO] [cp_1] Build: 3.1.0-2017-02-09-15-53-38-eng-ep-builtbot
+[2017-03-02 14:37:14,572] [access] [INFO] [cp_1] 
+[2017-03-02 14:37:14,572] [access] [INFO] [cp_1] Welcome to vArmour!
+[2017-03-02 14:37:14,572] [access] [INFO] [cp_1] Trying to connect to vArmour Management server ..'console': unknown terminal type.
+[2017-03-02 14:37:14,572] [access] [INFO] [cp_1] ### VAOS 3.1.0-2017-02-09-15-53-38-eng-builtbot
+[2017-03-02 14:37:14,573] [access] [INFO] [cp_1] 
+[2017-03-02 14:37:14,573] [access] [INFO] [cp_1]  Running inside CP cli console
+[2017-03-02 14:37:14,573] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-02 14:37:14,573] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-02 14:37:14,574] [access] [INFO] [cp_1] 
+[2017-03-02 14:37:14,575] [access] [INFO] [cp_1] varmour@vArmour#ROOT> 
+[2017-03-02 14:37:14,575] [feature] [INFO] cli initiated

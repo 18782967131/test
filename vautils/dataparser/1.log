@@ -1,0 +1,182 @@
+[2017-04-13 14:30:27,763] [feature] [INFO] cli initiated
+[2017-04-13 14:30:28,852] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:30:29,010] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:30:29,017] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:30:29,189] [feature] [INFO] config commit succeeded
+[2017-04-13 14:30:29,194] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:30:29,194] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:30:29,208] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:30:29,345] [feature] [INFO] config commit succeeded
+[2017-04-13 14:30:29,746] [feature] [INFO] cli initiated
+[2017-04-13 14:30:30,207] [feature] [INFO] cli initiated
+[2017-04-13 14:30:31,296] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:30:31,428] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:30:31,436] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:30:31,585] [feature] [INFO] config commit succeeded
+[2017-04-13 14:30:31,590] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:30:31,590] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:30:31,605] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:30:31,700] [feature] [INFO] config commit succeeded
+[2017-04-13 14:30:32,012] [feature] [INFO] cli initiated
+[2017-04-13 14:30:32,415] [feature] [INFO] cli initiated
+[2017-04-13 14:30:32,646] [feature] [INFO] cli initiated
+[2017-04-13 14:30:33,065] [feature] [INFO] cli initiated
+[2017-04-13 14:30:33,321] [feature] [INFO] cli initiated
+[2017-04-13 14:30:33,711] [feature] [INFO] cli initiated
+[2017-04-13 14:30:33,905] [feature] [INFO] cli initiated
+[2017-04-13 14:33:59,346] [feature] [INFO] cli initiated
+[2017-04-13 14:34:00,436] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:34:00,589] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:34:00,596] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:34:00,787] [feature] [INFO] config commit succeeded
+[2017-04-13 14:34:00,792] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:34:00,792] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:34:00,805] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:34:00,934] [feature] [INFO] config commit succeeded
+[2017-04-13 14:34:01,280] [feature] [INFO] cli initiated
+[2017-04-13 14:34:01,719] [feature] [INFO] cli initiated
+[2017-04-13 14:34:02,798] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:34:02,937] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:34:02,943] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:34:03,265] [feature] [INFO] config commit succeeded
+[2017-04-13 14:34:03,269] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:34:03,269] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:34:03,284] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:34:03,481] [feature] [INFO] config commit succeeded
+[2017-04-13 14:34:03,814] [feature] [INFO] cli initiated
+[2017-04-13 14:34:04,237] [feature] [INFO] cli initiated
+[2017-04-13 14:34:04,470] [feature] [INFO] cli initiated
+[2017-04-13 14:34:04,853] [feature] [INFO] cli initiated
+[2017-04-13 14:34:05,101] [feature] [INFO] cli initiated
+[2017-04-13 14:34:05,973] [feature] [INFO] cli initiated
+[2017-04-13 14:34:06,162] [feature] [INFO] cli initiated
+[2017-04-13 14:35:36,672] [feature] [INFO] cli initiated
+[2017-04-13 14:35:37,753] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:35:37,903] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:35:37,911] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:35:38,225] [feature] [INFO] config commit succeeded
+[2017-04-13 14:35:38,229] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:35:38,229] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:35:38,241] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:35:38,531] [feature] [INFO] config commit succeeded
+[2017-04-13 14:35:38,841] [feature] [INFO] cli initiated
+[2017-04-13 14:35:39,312] [feature] [INFO] cli initiated
+[2017-04-13 14:35:40,404] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:35:40,541] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:35:40,547] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:35:40,712] [feature] [INFO] config commit succeeded
+[2017-04-13 14:35:40,717] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:35:40,717] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:35:40,729] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:35:40,840] [feature] [INFO] config commit succeeded
+[2017-04-13 14:35:41,206] [feature] [INFO] cli initiated
+[2017-04-13 14:35:41,615] [feature] [INFO] cli initiated
+[2017-04-13 14:35:41,873] [feature] [INFO] cli initiated
+[2017-04-13 14:35:42,274] [feature] [INFO] cli initiated
+[2017-04-13 14:35:42,531] [feature] [INFO] cli initiated
+[2017-04-13 14:35:42,917] [feature] [INFO] cli initiated
+[2017-04-13 14:35:43,113] [feature] [INFO] cli initiated
+[2017-04-13 14:43:15,424] [feature] [INFO] cli initiated
+[2017-04-13 14:43:16,527] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:43:16,677] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:43:16,684] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:43:16,868] [feature] [INFO] config commit succeeded
+[2017-04-13 14:43:16,872] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:43:16,872] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:43:16,885] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:43:17,034] [feature] [INFO] config commit succeeded
+[2017-04-13 14:43:17,365] [feature] [INFO] cli initiated
+[2017-04-13 14:43:17,913] [feature] [INFO] cli initiated
+[2017-04-13 14:43:18,998] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:43:19,134] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:43:19,142] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:43:19,300] [feature] [INFO] config commit succeeded
+[2017-04-13 14:43:19,305] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:43:19,305] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:43:19,320] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:43:19,418] [feature] [INFO] config commit succeeded
+[2017-04-13 14:43:19,716] [feature] [INFO] cli initiated
+[2017-04-13 14:43:20,160] [feature] [INFO] cli initiated
+[2017-04-13 14:43:20,399] [feature] [INFO] cli initiated
+[2017-04-13 14:43:20,803] [feature] [INFO] cli initiated
+[2017-04-13 14:43:21,062] [feature] [INFO] cli initiated
+[2017-04-13 14:43:21,454] [feature] [INFO] cli initiated
+[2017-04-13 14:43:21,678] [feature] [INFO] cli initiated
+[2017-04-13 14:46:12,041] [feature] [INFO] cli initiated
+[2017-04-13 14:46:13,142] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:46:13,289] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:46:13,298] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:46:13,464] [feature] [INFO] config commit succeeded
+[2017-04-13 14:46:13,469] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:46:13,470] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:46:13,484] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:46:13,641] [feature] [INFO] config commit succeeded
+[2017-04-13 14:46:13,962] [feature] [INFO] cli initiated
+[2017-04-13 14:46:14,398] [feature] [INFO] cli initiated
+[2017-04-13 14:46:15,483] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:46:15,623] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:46:15,629] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:46:15,791] [feature] [INFO] config commit succeeded
+[2017-04-13 14:46:15,797] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:46:15,797] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:46:15,813] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:46:15,955] [feature] [INFO] config commit succeeded
+[2017-04-13 14:46:16,236] [feature] [INFO] cli initiated
+[2017-04-13 14:46:16,655] [feature] [INFO] cli initiated
+[2017-04-13 14:46:16,894] [feature] [INFO] cli initiated
+[2017-04-13 14:46:17,301] [feature] [INFO] cli initiated
+[2017-04-13 14:46:17,557] [feature] [INFO] cli initiated
+[2017-04-13 14:46:17,932] [feature] [INFO] cli initiated
+[2017-04-13 14:46:18,129] [feature] [INFO] cli initiated
+[2017-04-13 14:47:52,443] [feature] [INFO] cli initiated
+[2017-04-13 14:47:53,535] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:47:53,700] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:47:53,704] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:47:53,902] [feature] [INFO] config commit succeeded
+[2017-04-13 14:47:53,907] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:47:53,907] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:47:53,919] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:47:54,037] [feature] [INFO] config commit succeeded
+[2017-04-13 14:47:54,409] [feature] [INFO] cli initiated
+[2017-04-13 14:47:54,880] [feature] [INFO] cli initiated
+[2017-04-13 14:47:55,957] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:47:56,082] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:47:56,087] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:47:56,245] [feature] [INFO] config commit succeeded
+[2017-04-13 14:47:56,249] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:47:56,250] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:47:56,263] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:47:56,362] [feature] [INFO] config commit succeeded
+[2017-04-13 14:47:56,699] [feature] [INFO] cli initiated
+[2017-04-13 14:47:57,131] [feature] [INFO] cli initiated
+[2017-04-13 14:47:57,382] [feature] [INFO] cli initiated
+[2017-04-13 14:47:57,781] [feature] [INFO] cli initiated
+[2017-04-13 14:47:58,024] [feature] [INFO] cli initiated
+[2017-04-13 14:47:58,415] [feature] [INFO] cli initiated
+[2017-04-13 14:47:58,595] [feature] [INFO] cli initiated
+[2017-04-13 14:49:56,096] [feature] [INFO] cli initiated
+[2017-04-13 14:49:57,202] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:49:57,354] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:49:57,361] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:49:57,621] [feature] [INFO] config commit succeeded
+[2017-04-13 14:49:57,625] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:49:57,626] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:49:57,639] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:49:57,763] [feature] [INFO] config commit succeeded
+[2017-04-13 14:49:58,107] [feature] [INFO] cli initiated
+[2017-04-13 14:49:58,599] [feature] [INFO] cli initiated
+[2017-04-13 14:49:59,682] [feature] [INFO] sudo grep -A3 'varmour_no_cli' /etc/bash.bashrc
+[2017-04-13 14:49:59,835] [feature] [INFO] set system user varmour_no_cli role admin
+[2017-04-13 14:49:59,842] [feature] [INFO] set system user varmour_no_cli password
+[2017-04-13 14:50:00,001] [feature] [INFO] config commit succeeded
+[2017-04-13 14:50:00,007] [feature] [INFO] Succeed to add user varmour_no_cli
+[2017-04-13 14:50:00,007] [feature] [INFO] request cli terminal-length 0
+[2017-04-13 14:50:00,022] [feature] [INFO] set system inactivity-timeout 250
+[2017-04-13 14:50:00,127] [feature] [INFO] config commit succeeded
+[2017-04-13 14:50:00,476] [feature] [INFO] cli initiated
+[2017-04-13 14:50:00,903] [feature] [INFO] cli initiated
+[2017-04-13 14:50:01,133] [feature] [INFO] cli initiated
+[2017-04-13 14:50:01,516] [feature] [INFO] cli initiated
+[2017-04-13 14:50:01,778] [feature] [INFO] cli initiated
+[2017-04-13 14:50:02,397] [feature] [INFO] cli initiated
+[2017-04-13 14:50:02,576] [feature] [INFO] cli initiated
