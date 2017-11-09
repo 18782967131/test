@@ -1,0 +1,166 @@
+#coding:utf-8
+import paramiko
+import time
+import socket
+import select
+
+class AuthFail(Exception):
+    def __init__(self,user,password):
+        self._user=user
+        self._password=password
+    def __str__(self):
+        return repr("username:{user},password:{password} auth fail".format(user=self._user,password=self._password))
+class client():
+    def __init__(
+    self,
+    host=None,
+    port=22,
+    user='junchen',
+    password='5596855'
+    ):
+        self._host=host
+        self._port=port
+        self._user = user
+        self._password = password
+        self._transport = None
+    def set_transport(self, transport):
+        self._transport = transport
+    def get_transport(self):
+        return self._transport
+    def _authenticate(self):
+        try:
+            transport = self.get_transport()
+            transport.auth_password(
+                    self._user, self._password, fallback=True
+            )
+        except Exception as e:
+            self.disconnect()
+            raise AuthFail(user=self._user, password=self._password)
+        else:
+            return True
+    def disconnect(self):
+        transport = self.get_transport()
+        if transport:
+            transport.close()
+    def connect(self,retry_timeout=60):
+        retry=True
+        end_time = time.time() + retry_timeout
+        while retry:
+            if time.time() < end_time:
+                try:
+                    transport = paramiko.Transport((self._host, self._port))
+                    self.set_transport(transport)
+                    transport.start_client()
+                    authd = self._authenticate()
+                except (paramiko.ssh_exception.SSHException,
+                        socket.timeout) as e:
+                    self.disconnect()
+                else:
+                    retry = False
+                    if authd:
+                        print('cg')
+            else:
+                retry = False
+                print('timeout')
+                
+    def open_channel(self, term='console', height=24, width=80):
+        if self.connected():
+            try:
+                channel = self._transport.open_session()
+                channel.get_pty(term, width, height)
+                channel.invoke_shell()
+                channel.set_combine_stderr(True)
+            except paramiko.ssh_exception.SSHException as e:
+                self.disconnect()
+                raise ChannelFail(e)
+            else:
+                if self._debug:
+                    self._log.debug(
+                        "Transport channel created to {}".format(self._host)
+                    )
+                return channel
+    def connected(self):
+        transport = self.get_transport()
+        if transport:
+            return transport.is_active()
+        else:
+            return False
+class Windows_shell():
+    def __init__(
+    self,
+    host=None,
+    port=22,
+    user='neil',
+    password='cj5596855'
+    ):
+        self._host=host
+        self._port=port
+        self._user = user
+        self._password = password
+        self._transport = None
+        self._client = client(host, port, user, password)
+    def exec_command(self,command=None,timeout=60,retry_count=3,retry_delay=5):
+        if not self._client.connected():
+            self._client.connect()
+        output, exit_status = self._exec_shell_command(
+                                  command,
+                                  timeout=timeout,
+                                  retry_count=retry_count,
+                                  retry_delay=retry_delay
+                              )
+        if exit_status != 0:
+            print('command could not be executed as expected')
+        return output, exit_status
+        
+    def _exec_shell_command(self, command, timeout, retry_count, retry_delay):
+        try:
+            channel = self._client._transport.open_session()
+        except socket.error:
+            if retry_count == 0:
+                raise
+        
+            self._reconnect(retry_count, retry_delay)
+            channel = self._client.transport.open_session()
+        channel.set_combine_stderr(True)
+
+        start_time = time.time()
+        try:
+            channel.exec_command(command)
+        except paramiko.SSHException:
+            if not self._client.connected():
+                raise
+
+        channel_closed = False
+        data_received = ''
+        while not channel_closed:
+
+            r, w, x = select.select([channel], [], [], 10)
+
+            if timeout and (time.time() - start_time) > timeout:
+                    raise NameError('timeout')
+
+            if len(r) > 0:
+                new_data = channel.recv(1024)
+                if len(new_data) > 0:
+                    #decoded_data = new_data.decode('utf-8')
+                    decoded_data = new_data.decode('gb2312')
+                    data_received += decoded_data
+                else:
+                    channel_closed = True
+            elif channel.exit_status_ready():
+                channel_closed = True
+
+        while not channel.exit_status_ready():
+            if timeout and (time.time() - start_time) > timeout:
+                    raise NameError('timeout')
+            else:
+                time.sleep(0.5)
+
+        exit_status = channel.recv_exit_status()
+        channel.close()
+        
+        return data_received, exit_status
+        
+pc1=Windows_shell('192.168.2.104',22,'junchen','5596855')
+output,status=pc1.exec_command('ping 192.168.2.1')
+print(output)
